@@ -1,0 +1,19 @@
+\contentsline {section}{Ad hoc}{2}
+\contentsline {subsection}{Go up for ultras}{2}
+\contentsline {section}{Estrutura de Dados}{3}
+\contentsline {subsection}{Consultas Horr\IeC {\'\i }veis}{3}
+\contentsline {section}{Paradigmas}{3}
+\contentsline {subsection}{Garota Hiperativa}{3}
+\contentsline {subsection}{Hard Problem}{4}
+\contentsline {section}{Matem\IeC {\'a}tica}{5}
+\contentsline {subsection}{Quantos zeros e quantos digitos?}{5}
+\contentsline {section}{Grafos}{5}
+\contentsline {subsection}{Floid Fill}{5}
+\contentsline {subsubsection}{Lazy Painting}{5}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{6}
+\contentsline {subsubsection}{The Cool Monkeys}{6}
+\contentsline {section}{Strings}{7}
+\contentsline {subsubsection}{YATG}{7}
+\contentsline {subsubsection}{Vasiliy's Multiset}{8}
+\contentsline {section}{Geometria}{8}
+\contentsline {subsubsection}{Dividindo a coca}{8}

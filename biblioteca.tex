@@ -25,15 +25,48 @@ basicstyle=\scriptsize\ttfamily,
 columns=fullflexible
 }
 
-\newcommand\includefile[4]{
+\newcommand\includes[4]{
+   \subsection{#2}
+   \lstinputlisting[language=#1]{#3/#4}
+}
+\newcommand\includess[4]{
+   \subsubsection{#2}
    \lstinputlisting[language=#1]{#3/#4}
 }
 
 \begin{document}
+\tableofcontents
 \thispagestyle{fancy}
+\newpage
 \begin{multicols}{2}
 
-asddas
+\section{Ad hoc}
+\includes{c++}{Go up for ultras}{adhoc}{ultra.cpp}
+
+\section{Estrutura de Dados}
+\includes{c++}{Consultas Horríveis}{ed}{horrivel.cpp}
+\section{Paradigmas}
+\includes{c++}{Garota Hiperativa}{paradigma}{hiper.cpp}
+\includes{c++}{Hard Problem}{paradigma}{hard.cpp}
+
+\section{Matemática}
+\includes{c++}{Quantos zeros e quantos digitos?}{math}{zeros.cpp}
+
+\section{Grafos}
+\subsection{Floid Fill}
+\includess{c++}{Lazy Painting}{graph}{lazypaint.cpp}
+
+
+\subsection{Fluxo Máximo}
+\includess{c++}{The Cool Monkeys}{graph}{coolMonkeys.cpp}
+
+\section{Strings}
+\includess{c++}{YATG}{strings}{YATG.cpp}
+\includess{c++}{Vasiliy's Multiset}{strings}{multiset.cpp}
+
+\section{Geometria}
+\includess{c++}{Dividindo a coca}{geometria}{coca.cpp}
+
 
 \end{multicols}
 \end{document}
