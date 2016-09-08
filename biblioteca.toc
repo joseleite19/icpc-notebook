@@ -10,10 +10,12 @@
 \contentsline {section}{Grafos}{5}
 \contentsline {subsection}{Floid Fill}{5}
 \contentsline {subsubsection}{Lazy Painting}{5}
+\contentsline {subsubsection}{Colonia LCA}{6}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{6}
 \contentsline {subsubsection}{The Cool Monkeys}{6}
-\contentsline {section}{Strings}{7}
-\contentsline {subsubsection}{YATG}{7}
+\contentsline {section}{Strings}{8}
+\contentsline {subsubsection}{YATG}{8}
 \contentsline {subsubsection}{Vasiliy's Multiset}{8}
-\contentsline {section}{Geometria}{8}
-\contentsline {subsubsection}{Dividindo a coca}{8}
+\contentsline {subsubsection}{Trie ponteiro}{9}
+\contentsline {section}{Geometria}{10}
+\contentsline {subsubsection}{Dividindo a coca}{10}
