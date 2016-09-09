@@ -2,23 +2,25 @@
 \contentsline {subsection}{Go up for ultras}{2}
 \contentsline {section}{Estrutura de Dados}{3}
 \contentsline {subsection}{Consultas Horr\IeC {\'\i }veis}{3}
-\contentsline {section}{Paradigmas}{3}
-\contentsline {subsection}{Garota Hiperativa}{3}
-\contentsline {subsection}{Hard Problem}{4}
-\contentsline {subsection}{Cart\IeC {\~o}es}{4}
-\contentsline {section}{Matem\IeC {\'a}tica}{5}
-\contentsline {subsection}{Quantos zeros e quantos digitos?}{5}
-\contentsline {subsection}{RSA com Euclides Extendido}{5}
-\contentsline {section}{Grafos}{6}
-\contentsline {subsection}{Floid Fill}{6}
-\contentsline {subsubsection}{Lazy Painting}{6}
-\contentsline {subsection}{LCA}{7}
-\contentsline {subsubsection}{Colonia LCA}{7}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{8}
-\contentsline {subsubsection}{The Cool Monkeys}{8}
-\contentsline {section}{Strings}{9}
-\contentsline {subsubsection}{YATG}{9}
-\contentsline {subsubsection}{Vasiliy's Multiset}{10}
-\contentsline {subsubsection}{Trie ponteiro}{10}
-\contentsline {section}{Geometria}{11}
-\contentsline {subsubsection}{Dividindo a coca}{11}
+\contentsline {subsection}{Contra Ataque Ramsay}{3}
+\contentsline {section}{Paradigmas}{5}
+\contentsline {subsection}{Garota Hiperativa}{5}
+\contentsline {subsection}{Hard Problem}{5}
+\contentsline {subsection}{Cart\IeC {\~o}es}{6}
+\contentsline {section}{Matem\IeC {\'a}tica}{6}
+\contentsline {subsection}{Quantos zeros e quantos digitos?}{6}
+\contentsline {subsection}{RSA com Euclides Extendido}{7}
+\contentsline {section}{Grafos}{7}
+\contentsline {subsection}{Floid Fill}{7}
+\contentsline {subsubsection}{Lazy Painting}{7}
+\contentsline {subsection}{LCA}{8}
+\contentsline {subsubsection}{Colonia LCA}{8}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{9}
+\contentsline {subsubsection}{The Cool Monkeys}{9}
+\contentsline {section}{Strings}{10}
+\contentsline {subsubsection}{YATG}{10}
+\contentsline {subsubsection}{Vasiliy's Multiset}{11}
+\contentsline {subsubsection}{Trie ponteiro}{12}
+\contentsline {subsubsection}{Trie}{12}
+\contentsline {section}{Geometria}{13}
+\contentsline {subsubsection}{Dividindo a coca}{13}
