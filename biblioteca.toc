@@ -5,17 +5,20 @@
 \contentsline {section}{Paradigmas}{3}
 \contentsline {subsection}{Garota Hiperativa}{3}
 \contentsline {subsection}{Hard Problem}{4}
+\contentsline {subsection}{Cart\IeC {\~o}es}{4}
 \contentsline {section}{Matem\IeC {\'a}tica}{5}
 \contentsline {subsection}{Quantos zeros e quantos digitos?}{5}
-\contentsline {section}{Grafos}{5}
-\contentsline {subsection}{Floid Fill}{5}
-\contentsline {subsubsection}{Lazy Painting}{5}
-\contentsline {subsubsection}{Colonia LCA}{6}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{6}
-\contentsline {subsubsection}{The Cool Monkeys}{6}
-\contentsline {section}{Strings}{8}
-\contentsline {subsubsection}{YATG}{8}
-\contentsline {subsubsection}{Vasiliy's Multiset}{8}
-\contentsline {subsubsection}{Trie ponteiro}{9}
-\contentsline {section}{Geometria}{10}
-\contentsline {subsubsection}{Dividindo a coca}{10}
+\contentsline {subsection}{RSA com Euclides Extendido}{5}
+\contentsline {section}{Grafos}{6}
+\contentsline {subsection}{Floid Fill}{6}
+\contentsline {subsubsection}{Lazy Painting}{6}
+\contentsline {subsection}{LCA}{7}
+\contentsline {subsubsection}{Colonia LCA}{7}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{8}
+\contentsline {subsubsection}{The Cool Monkeys}{8}
+\contentsline {section}{Strings}{9}
+\contentsline {subsubsection}{YATG}{9}
+\contentsline {subsubsection}{Vasiliy's Multiset}{10}
+\contentsline {subsubsection}{Trie ponteiro}{10}
+\contentsline {section}{Geometria}{11}
+\contentsline {subsubsection}{Dividindo a coca}{11}
