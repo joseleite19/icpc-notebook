@@ -25,5 +25,6 @@
 \contentsline {subsubsection}{Vasiliy's Multiset}{15}
 \contentsline {subsubsection}{Trie ponteiro}{16}
 \contentsline {subsubsection}{Trie}{17}
-\contentsline {section}{Geometria}{17}
-\contentsline {subsubsection}{Dividindo a coca}{17}
+\contentsline {subsubsection}{Corasick}{17}
+\contentsline {section}{Geometria}{18}
+\contentsline {subsubsection}{Dividindo a coca}{18}
