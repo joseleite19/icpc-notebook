@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  31 OCT 2016 03:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  9 NOV 2016 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,32 +766,33 @@ Overfull \hbox (28.52937pt too wide) in paragraph at lines 131--132
 ][][][][][][][][][][][][][] 
  []
 
-) (./strings/YATG.cpp [14]) (./strings/multiset.cpp [15])
-(./strings/trie_ponteiro.cpp) (./strings/trieXor.cpp [16])
-(./strings/aho-corasick.cpp [17]
+) (./graph/centroid_decomp.cpp [14]) (./strings/YATG.cpp [15])
+(./strings/multiset.cpp) (./strings/trie_ponteiro.cpp [16])
+(./strings/trieXor.cpp [17]) (./strings/aho-corasick.cpp [18]
 Overfull \hbox (14.12851pt too wide) in paragraph at lines 46--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./geometria/coca.cpp [18]) [19] (./biblioteca.aux) ) 
+) (./strings/suffix_array.cpp [19]) (./geometria/coca.cpp) [20]
+(./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5770 strings out of 494910
- 73316 string characters out of 6179837
- 201141 words of memory out of 5000000
- 8902 multiletter control sequences out of 15000+600000
+ 5816 strings out of 494910
+ 73898 string characters out of 6179837
+ 219141 words of memory out of 5000000
+ 8942 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1923s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
-rb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (19 pages, 105232 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/courier/ucrro8a.pfb>
+Output written on biblioteca.pdf (20 pages, 112320 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

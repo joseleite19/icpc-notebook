@@ -20,11 +20,14 @@
 \contentsline {subsubsection}{Query on Tree II}{11}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{13}
 \contentsline {subsubsection}{The Cool Monkeys}{13}
-\contentsline {section}{Strings}{14}
-\contentsline {subsubsection}{YATG}{14}
-\contentsline {subsubsection}{Vasiliy's Multiset}{15}
+\contentsline {subsection}{Centroid}{14}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{14}
+\contentsline {section}{Strings}{15}
+\contentsline {subsubsection}{YATG}{15}
+\contentsline {subsubsection}{Vasiliy's Multiset}{16}
 \contentsline {subsubsection}{Trie ponteiro}{16}
 \contentsline {subsubsection}{Trie}{17}
-\contentsline {subsubsection}{Corasick}{17}
-\contentsline {section}{Geometria}{18}
-\contentsline {subsubsection}{Dividindo a coca}{18}
+\contentsline {subsubsection}{Corasick}{18}
+\contentsline {subsubsection}{Suffix Array}{19}
+\contentsline {section}{Geometria}{20}
+\contentsline {subsubsection}{Dividindo a coca}{20}
