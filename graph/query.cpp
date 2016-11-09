@@ -31,6 +31,7 @@ int f(int u, int j){
 	if(dp[u][j] != -1) return dp[u][j];
 	return dp[u][j] = f(f(u, j-1), j-1);
 }
+
 ll h(int u, int j){
 	if(j == 0) return pw[u];
 	if(dp2[u][j] != -1) return dp2[u][j];

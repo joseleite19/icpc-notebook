@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  9 SEP 2016 17:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  9 NOV 2016 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,11 +580,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write3
-\openout3 = `biblioteca.toc'.
-
-
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -593,7 +589,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2]
+])
+\tf@toc=\write3
+\openout3 = `biblioteca.toc'.
+
+ [2]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -661,38 +661,40 @@ Overfull \hbox (38.12938pt too wide) in paragraph at lines 76--77
  []
 
 ) [5] (./paradigma/hiper.cpp) (./paradigma/hard.cpp [6])
-(./paradigma/cartoes.cpp) (./math/zeros.cpp) (./math/rsaEuclides.cpp [7]
+(./paradigma/cartoes.cpp) (./paradigma/fft.cpp) (./paradigma/fft_iter.cpp
+[7]) (./paradigma/ntt.cpp) (./math/zeros.cpp [8]) (./math/rsaEuclides.cpp
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 53.
 )
-(./graph/lazypaint.cpp [8]) (./graph/colonia_LCA.cpp [9]) (./graph/memoria.cpp
-[10]) (./graph/query.cpp [11]) (./graph/coolMonkeys.cpp [12]
+(./graph/lazypaint.cpp [9]) (./graph/colonia_LCA.cpp [10]) (./graph/memoria.cpp
+[11]) (./graph/query.cpp [12]) (./graph/coolMonkeys.cpp [13]
 Overfull \hbox (28.52937pt too wide) in paragraph at lines 131--132
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
-) (./strings/YATG.cpp [13]) (./strings/multiset.cpp [14])
-(./strings/trie_ponteiro.cpp [15]) (./strings/trieXor.cpp [16])
-(./geometria/coca.cpp) [17] (./biblioteca.aux) ) 
+) [14] (./graph/hopcroftkarp.cpp) (./strings/YATG.cpp [15])
+(./strings/multiset.cpp [16]) (./strings/trie_ponteiro.cpp [17])
+(./strings/trieXor.cpp [18]) (./geometria/coca.cpp) [19] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5614 strings out of 495004
- 71950 string characters out of 6180662
+ 5698 strings out of 495004
+ 72774 string characters out of 6180662
  199036 words of memory out of 5000000
- 8680 multiletter control sequences out of 15000+600000
+ 8752 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1921s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/
-fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (17 pages, 102356 bytes).
+{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
+ourier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8
+a.pfb>
+Output written on biblioteca.pdf (19 pages, 107606 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
