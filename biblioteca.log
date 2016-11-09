@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  9 NOV 2016 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  9 NOV 2016 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,10 +776,10 @@ Overfull \hbox (14.12851pt too wide) in paragraph at lines 46--47
 ) (./strings/suffix_array.cpp [19]) (./geometria/coca.cpp) [20]
 (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5816 strings out of 494910
- 73898 string characters out of 6179837
- 219141 words of memory out of 5000000
- 8942 multiletter control sequences out of 15000+600000
+ 5814 strings out of 494910
+ 73882 string characters out of 6179837
+ 220141 words of memory out of 5000000
+ 8940 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1923s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -789,7 +789,7 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (20 pages, 112320 bytes).
+Output written on biblioteca.pdf (20 pages, 112322 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

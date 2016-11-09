@@ -30,7 +30,7 @@ int lcp(int a, int b) {
 }
 
 void suffix_array(char *s, int N){
-	REP(i, N) buc[0][i] = s[i] + 1;
+	for(i = 0; i < N; i++) buc[0][i] = s[i] + 1;
 
 	for(L = 0; (1<<L) < 2*N; ++L){
 		for(x = 0; x < N; x++) srt[x] = {buc[L][x] << 30, x};
