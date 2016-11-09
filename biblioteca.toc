@@ -8,51 +8,36 @@
 \contentsline {subsection}{Garota Hiperativa}{6}
 \contentsline {subsection}{Hard Problem}{7}
 \contentsline {subsection}{Cart\IeC {\~o}es}{7}
-<<<<<<< HEAD
-\contentsline {subsection}{FFT}{7}
-\contentsline {subsection}{FFT iterativa}{7}
-\contentsline {subsection}{NTT}{8}
-\contentsline {section}{Matem\IeC {\'a}tica}{8}
-\contentsline {subsection}{Quantos zeros e quantos digitos?}{8}
+\contentsline {subsection}{FFT}{8}
+\contentsline {subsection}{FFT iterativa}{8}
+\contentsline {subsection}{NTT}{9}
+\contentsline {section}{Matem\IeC {\'a}tica}{9}
+\contentsline {subsection}{Quantos zeros e quantos digitos?}{9}
 \contentsline {subsection}{RSA com Euclides Extendido}{9}
-=======
-\contentsline {section}{Matem\IeC {\'a}tica}{8}
-\contentsline {subsection}{Quantos zeros e quantos digitos?}{8}
-\contentsline {subsection}{RSA com Euclides Extendido}{8}
->>>>>>> e9ec7c29fe11651b1929bd1ae63c737478b67af6
-\contentsline {section}{Grafos}{9}
-\contentsline {subsection}{Floid Fill}{9}
-\contentsline {subsubsection}{Lazy Painting}{9}
-\contentsline {subsection}{LCA}{10}
-\contentsline {subsubsection}{Colonia}{10}
-<<<<<<< HEAD
-\contentsline {subsubsection}{Jogo da Memoria}{11}
-\contentsline {subsubsection}{Query on Tree II}{12}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{13}
-\contentsline {subsubsection}{The Cool Monkeys}{13}
+\contentsline {section}{Grafos}{10}
+\contentsline {subsection}{Floid Fill}{10}
+\contentsline {subsubsection}{Lazy Painting}{10}
+\contentsline {subsection}{LCA}{11}
+\contentsline {subsubsection}{Colonia}{11}
+\contentsline {subsubsection}{Jogo da Memoria}{12}
+\contentsline {subsubsection}{Query on Tree II}{13}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{14}
+\contentsline {subsubsection}{The Cool Monkeys}{14}
 \contentsline {subsubsection}{Batalha Naval}{15}
-\contentsline {section}{Strings}{15}
-\contentsline {subsubsection}{YATG}{15}
-\contentsline {subsubsection}{Vasiliy's Multiset}{16}
-\contentsline {subsubsection}{Trie ponteiro}{17}
-\contentsline {subsubsection}{Trie}{18}
-\contentsline {section}{Geometria}{19}
-\contentsline {subsubsection}{Dividindo a coca}{19}
-=======
-\contentsline {subsubsection}{Jogo da Memoria}{10}
-\contentsline {subsubsection}{Query on Tree II}{11}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{13}
-\contentsline {subsubsection}{The Cool Monkeys}{13}
-\contentsline {subsubsection}{Dinic}{14}
-\contentsline {subsection}{Centroid}{15}
-\contentsline {subsubsection}{Junior e Falta de Ideias}{15}
-\contentsline {section}{Strings}{16}
-\contentsline {subsubsection}{YATG}{16}
-\contentsline {subsubsection}{Vasiliy's Multiset}{16}
-\contentsline {subsubsection}{Trie ponteiro}{17}
-\contentsline {subsubsection}{Trie}{18}
-\contentsline {subsubsection}{Corasick}{19}
-\contentsline {subsubsection}{Suffix Array}{20}
-\contentsline {section}{Geometria}{21}
-\contentsline {subsubsection}{Dividindo a coca}{21}
->>>>>>> e9ec7c29fe11651b1929bd1ae63c737478b67af6
+\contentsline {subsubsection}{Dinic}{16}
+\contentsline {subsubsection}{Min Cost Max Flow}{17}
+\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{18}
+\contentsline {subsection}{Centroid}{19}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{19}
+\contentsline {section}{Strings}{20}
+\contentsline {subsubsection}{YATG}{20}
+\contentsline {subsubsection}{Vasiliy's Multiset}{20}
+\contentsline {subsubsection}{Trie ponteiro}{21}
+\contentsline {subsubsection}{Trie}{22}
+\contentsline {subsubsection}{Aho Corasick}{23}
+\contentsline {subsubsection}{Suffix Array}{24}
+\contentsline {subsubsection}{Z Algorithm}{24}
+\contentsline {subsubsection}{Min rotation}{25}
+\contentsline {subsubsection}{All palindrome}{25}
+\contentsline {section}{Geometria}{25}
+\contentsline {subsubsection}{Dividindo a coca}{25}
