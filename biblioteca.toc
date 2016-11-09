@@ -3,21 +3,29 @@
 \contentsline {section}{Estrutura de Dados}{4}
 \contentsline {subsection}{Consultas Horr\IeC {\'\i }veis}{4}
 \contentsline {subsection}{Contra Ataque Ramsay}{4}
+\contentsline {subsection}{Sparse Table}{6}
 \contentsline {section}{Paradigmas}{6}
 \contentsline {subsection}{Garota Hiperativa}{6}
-\contentsline {subsection}{Hard Problem}{6}
+\contentsline {subsection}{Hard Problem}{7}
 \contentsline {subsection}{Cart\IeC {\~o}es}{7}
+<<<<<<< HEAD
 \contentsline {subsection}{FFT}{7}
 \contentsline {subsection}{FFT iterativa}{7}
 \contentsline {subsection}{NTT}{8}
 \contentsline {section}{Matem\IeC {\'a}tica}{8}
 \contentsline {subsection}{Quantos zeros e quantos digitos?}{8}
 \contentsline {subsection}{RSA com Euclides Extendido}{9}
+=======
+\contentsline {section}{Matem\IeC {\'a}tica}{8}
+\contentsline {subsection}{Quantos zeros e quantos digitos?}{8}
+\contentsline {subsection}{RSA com Euclides Extendido}{8}
+>>>>>>> e9ec7c29fe11651b1929bd1ae63c737478b67af6
 \contentsline {section}{Grafos}{9}
 \contentsline {subsection}{Floid Fill}{9}
 \contentsline {subsubsection}{Lazy Painting}{9}
 \contentsline {subsection}{LCA}{10}
 \contentsline {subsubsection}{Colonia}{10}
+<<<<<<< HEAD
 \contentsline {subsubsection}{Jogo da Memoria}{11}
 \contentsline {subsubsection}{Query on Tree II}{12}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{13}
@@ -30,3 +38,21 @@
 \contentsline {subsubsection}{Trie}{18}
 \contentsline {section}{Geometria}{19}
 \contentsline {subsubsection}{Dividindo a coca}{19}
+=======
+\contentsline {subsubsection}{Jogo da Memoria}{10}
+\contentsline {subsubsection}{Query on Tree II}{11}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{13}
+\contentsline {subsubsection}{The Cool Monkeys}{13}
+\contentsline {subsubsection}{Dinic}{14}
+\contentsline {subsection}{Centroid}{15}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{15}
+\contentsline {section}{Strings}{16}
+\contentsline {subsubsection}{YATG}{16}
+\contentsline {subsubsection}{Vasiliy's Multiset}{16}
+\contentsline {subsubsection}{Trie ponteiro}{17}
+\contentsline {subsubsection}{Trie}{18}
+\contentsline {subsubsection}{Corasick}{19}
+\contentsline {subsubsection}{Suffix Array}{20}
+\contentsline {section}{Geometria}{21}
+\contentsline {subsubsection}{Dividindo a coca}{21}
+>>>>>>> e9ec7c29fe11651b1929bd1ae63c737478b67af6
