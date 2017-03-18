@@ -57,14 +57,14 @@ void decomp(int v, int p){
 
 	for(pair<int,int> x : G[cent]){
 		if(!vis[x.ff]){
-			procurar_ans(x.ff,v,1,x.ss);
-			atualiza_distancia(x.ff,v,1,x.ss);
+			procurar_ans(x.ff,cent,1,x.ss);
+			atualiza_distancia(x.ff,cent,1,x.ss);
 		}
 	}
 
 	for(pair<int,int> x : G[cent]){
 		if(!vis[x.ff])
-			decomp(x.ff, v);
+			decomp(x.ff, cent);
 	}
 }
 
