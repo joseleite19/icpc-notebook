@@ -128,7 +128,8 @@ int main(){
 	for(int i = 0; i < nb; i++)
 		scanf("%d", hb+i);
 
-	if(buildRun(ha, na, hb, nb)  == m || buildRun(hb, nb, ha, na) == m) printf("S\n");
+	if(buildRun(ha, na, hb, nb)  == m ||
+	   buildRun(hb, nb, ha, na) == m) printf("S\n");
 	else printf("N\n");
 
 	return 0;

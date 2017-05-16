@@ -14,30 +14,34 @@
 \contentsline {section}{Matem\IeC {\'a}tica}{9}
 \contentsline {subsection}{Quantos zeros e quantos digitos?}{9}
 \contentsline {subsection}{RSA com Euclides Extendido}{9}
-\contentsline {section}{Grafos}{10}
-\contentsline {subsection}{Floid Fill}{10}
-\contentsline {subsubsection}{Lazy Painting}{10}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
+\contentsline {section}{Grafos}{11}
+\contentsline {subsection}{Floid Fill}{11}
+\contentsline {subsubsection}{Lazy Painting}{11}
 \contentsline {subsection}{LCA}{11}
 \contentsline {subsubsection}{Colonia}{11}
 \contentsline {subsubsection}{Jogo da Memoria}{12}
 \contentsline {subsubsection}{Query on Tree II}{13}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{14}
 \contentsline {subsubsection}{The Cool Monkeys}{14}
-\contentsline {subsubsection}{Batalha Naval}{15}
-\contentsline {subsubsection}{Dinic}{16}
-\contentsline {subsubsection}{Min Cost Max Flow}{17}
-\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{18}
-\contentsline {subsection}{Centroid}{19}
-\contentsline {subsubsection}{Junior e Falta de Ideias}{19}
-\contentsline {section}{Strings}{20}
-\contentsline {subsubsection}{YATG}{20}
-\contentsline {subsubsection}{Vasiliy's Multiset}{20}
-\contentsline {subsubsection}{Trie ponteiro}{21}
-\contentsline {subsubsection}{Trie}{22}
-\contentsline {subsubsection}{Aho Corasick}{23}
-\contentsline {subsubsection}{Suffix Array}{24}
-\contentsline {subsubsection}{Z Algorithm}{24}
-\contentsline {subsubsection}{Min rotation}{25}
-\contentsline {subsubsection}{All palindrome}{25}
-\contentsline {section}{Geometria}{25}
-\contentsline {subsubsection}{Dividindo a coca}{25}
+\contentsline {subsubsection}{Batalha Naval}{16}
+\contentsline {subsubsection}{Dinic}{17}
+\contentsline {subsubsection}{Min Cost Max Flow}{18}
+\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{19}
+\contentsline {subsection}{Centroid}{20}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{20}
+\contentsline {section}{Strings}{21}
+\contentsline {subsubsection}{YATG}{21}
+\contentsline {subsubsection}{Vasiliy's Multiset}{22}
+\contentsline {subsubsection}{Trie ponteiro}{23}
+\contentsline {subsubsection}{Trie}{23}
+\contentsline {subsubsection}{Aho Corasick}{24}
+\contentsline {subsubsection}{Suffix Array}{25}
+\contentsline {subsubsection}{Z Algorithm}{26}
+\contentsline {subsubsection}{Min rotation}{26}
+\contentsline {subsubsection}{All palindrome}{26}
+\contentsline {section}{Geometria}{27}
+\contentsline {subsection}{Convex Hull}{27}
+\contentsline {subsection}{Nearest Points}{27}
+\contentsline {subsection}{Dividindo a coca}{28}
+\contentsline {subsection}{Determinante}{28}
