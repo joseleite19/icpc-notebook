@@ -26,22 +26,23 @@
 \contentsline {subsubsection}{The Cool Monkeys}{14}
 \contentsline {subsubsection}{Batalha Naval}{16}
 \contentsline {subsubsection}{Dinic}{17}
-\contentsline {subsubsection}{Min Cost Max Flow}{18}
-\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{19}
-\contentsline {subsection}{Centroid}{20}
-\contentsline {subsubsection}{Junior e Falta de Ideias}{20}
-\contentsline {section}{Strings}{21}
-\contentsline {subsubsection}{YATG}{21}
-\contentsline {subsubsection}{Vasiliy's Multiset}{22}
+\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{18}
+\contentsline {subsubsection}{Min Cost Max Flow}{19}
+\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{20}
+\contentsline {subsection}{Centroid}{21}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{21}
+\contentsline {section}{Strings}{22}
+\contentsline {subsubsection}{YATG}{22}
+\contentsline {subsubsection}{Vasiliy's Multiset}{23}
 \contentsline {subsubsection}{Trie ponteiro}{23}
-\contentsline {subsubsection}{Trie}{23}
-\contentsline {subsubsection}{Aho Corasick}{24}
-\contentsline {subsubsection}{Suffix Array}{25}
-\contentsline {subsubsection}{Z Algorithm}{26}
-\contentsline {subsubsection}{Min rotation}{26}
-\contentsline {subsubsection}{All palindrome}{26}
-\contentsline {section}{Geometria}{27}
-\contentsline {subsection}{Convex Hull}{27}
-\contentsline {subsection}{Nearest Points}{27}
-\contentsline {subsection}{Dividindo a coca}{28}
-\contentsline {subsection}{Determinante}{28}
+\contentsline {subsubsection}{Trie}{24}
+\contentsline {subsubsection}{Aho Corasick}{25}
+\contentsline {subsubsection}{Suffix Array}{26}
+\contentsline {subsubsection}{Z Algorithm}{27}
+\contentsline {subsubsection}{Min rotation}{27}
+\contentsline {subsubsection}{All palindrome}{27}
+\contentsline {section}{Geometria}{28}
+\contentsline {subsection}{Convex Hull}{28}
+\contentsline {subsection}{Nearest Points}{28}
+\contentsline {subsection}{Dividindo a coca}{29}
+\contentsline {subsection}{Determinante}{29}

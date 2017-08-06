@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  16 MAY 2017 11:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  6 AUG 2017 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -728,7 +728,7 @@ Overfull \hbox (138.9288pt too wide) in paragraph at lines 164--166
 ][][][][][][][][][][][][][][][][] 
  []
 
-) (./graph/mcmf_dijkstra.cpp [18]
+) (./graph/mcmf.cpp [18]) (./graph/mcmf_dijkstra.cpp [19]
 Overfull \hbox (28.52948pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -740,28 +740,27 @@ Overfull \hbox (28.52948pt too wide) in paragraph at lines 48--49
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./graph/mcmf_dfs.cpp [19]) (./graph/centroid_decomp.cpp [20])
-(./strings/YATG.cpp [21]) (./strings/multiset.cpp) [22]
-(./strings/trie_ponteiro.cpp) (./strings/trieXor.cpp [23])
-(./strings/aho-corasick.cpp [24]
+) (./graph/mcmf_dfs.cpp [20]) (./graph/centroid_decomp.cpp [21])
+(./strings/YATG.cpp [22]) (./strings/multiset.cpp) (./strings/trie_ponteiro.cpp
+[23]) (./strings/trieXor.cpp [24]) (./strings/aho-corasick.cpp [25]
 Overfull \hbox (14.12851pt too wide) in paragraph at lines 46--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./strings/suffix_array.cpp [25]) (./strings/z_algo.cpp)
-(./strings/min_rot.cpp) (./strings/all_palindrome.cpp [26])
+) (./strings/suffix_array.cpp [26]) (./strings/z_algo.cpp)
+(./strings/min_rot.cpp) (./strings/all_palindrome.cpp) [27]
 (./math/convexhull.cpp
 Overfull \hbox (23.72894pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./math/near.cpp [27]) (./geometria/coca.cpp) (./geometria/det.cpp) [28]
+) (./math/near.cpp [28]) (./geometria/coca.cpp) (./geometria/det.cpp) [29]
 (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5971 strings out of 495004
- 75670 string characters out of 6180662
- 257036 words of memory out of 5000000
- 8984 multiletter control sequences out of 15000+600000
+ 5986 strings out of 495004
+ 75836 string characters out of 6180662
+ 246036 words of memory out of 5000000
+ 8996 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1921s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -771,10 +770,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (28 pages, 133278 bytes).
+Output written on biblioteca.pdf (29 pages, 135153 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
