@@ -13,13 +13,11 @@ using namespace std;
 class ft_normal {
 public:
 
-	int *ft;
+	vector<int> ft;
 	int n;
 	
-	ft_normal (int size) {
-		n = size; ft = new int[n];
-		for (int i = 0; i < n; i++) ft[i] = 0; }
-	int query_cf(int a) { int resp = 0;
+	ft_normal (int size) : n(size), ft(n, 0){}
+	int query_cf(int a) const{ int resp = 0;
 		for (int i = a; i; i -= (i & -i)) resp += ft[i];
 		return resp; }
 	int update_cf (int a, int v) {
@@ -32,13 +30,11 @@ public:
 class ft_invert {
 public:
 
-	int *ft_inv;
+	vector<int> ft_inv;
 	int n;
 	
-	ft_invert (int size) {
-		n = size; ft_inv = new int[n];
-		for (int i = 0; i < n; i++) ft_inv[i] = 0; }
-	int query_cf_inv(int a) { int resp = 0;
+	ft_invert (int size) : n(size), ft_inv(n, 0){}
+	int query_cf_inv(int a) const{ int resp = 0;
 		for (int i = a; i < n; i += (i & -i)) resp += ft_inv[i];
 		return resp; }
 	int update_cf_inv (int a, int v) {
@@ -51,14 +47,13 @@ public:
 class ft_diff {
 public:
 	int n;
-	int *ft;
-	int *ft_inv;
-	int *vet;
+	vector<int> ft;
+	vector<int> ft_inv;
+	vector<int> vet;
 	
-	ft_diff(int size) {
-		n = size; ft = new int[n]; ft_inv = new int[n]; vet = new int[n];
-		for (int i = 1; i < n; i++) {ft[i] = ft_inv[i] = i; vet[i] = 0;} }
-	int query_rmq (int a, int b) {
+	ft_diff(int size) : n(size), ft(n, 0), ft_inv(n, 0), vet(n, 0){
+		for (int i = 1; i < n; i++) ft[i] = ft_inv[i] = i; }
+	int query_rmq (int a, int b) const{
 		int i, mini = a;
 		//bit normal
 		for (i = a; i <= b; i += (i & -i))
@@ -80,7 +75,7 @@ public:
 		vet[a] = v;
 		return 0;
 	}
-	int update_rmq (int a, int v) {
+	int update_rmq (int a, int v) const{
 	//printf("UPDATE %d %d\n", a, v);
 		int mini_l = a, mini_r = a;
 		//bit normal
