@@ -1,48 +1,41 @@
+\contentsline {subsection}{Template}{3}
 \contentsline {section}{Ad hoc}{3}
 \contentsline {subsection}{Go up for ultras}{3}
-\contentsline {section}{Estrutura de Dados}{4}
-\contentsline {subsection}{Consultas Horr\IeC {\'\i }veis}{4}
+\contentsline {section}{Estrutura de Dados}{3}
+\contentsline {subsection}{Segtree}{3}
 \contentsline {subsection}{Contra Ataque Ramsay}{4}
-\contentsline {subsection}{Sparse Table}{6}
-\contentsline {section}{Paradigmas}{6}
-\contentsline {subsection}{Garota Hiperativa}{6}
-\contentsline {subsection}{Hard Problem}{7}
-\contentsline {subsection}{Cart\IeC {\~o}es}{7}
-\contentsline {subsection}{FFT}{8}
-\contentsline {subsection}{FFT iterativa}{8}
-\contentsline {subsection}{NTT}{9}
+\contentsline {subsection}{Sparse Table}{5}
+\contentsline {subsection}{Merge Sort Tree}{6}
+\contentsline {subsection}{Bit bolada}{6}
+\contentsline {section}{Paradigmas}{7}
+\contentsline {subsection}{FFT}{7}
+\contentsline {subsection}{NTT}{8}
 \contentsline {section}{Matem\IeC {\'a}tica}{9}
-\contentsline {subsection}{Quantos zeros e quantos digitos?}{9}
-\contentsline {subsection}{RSA com Euclides Extendido}{9}
-\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
-\contentsline {section}{Grafos}{11}
-\contentsline {subsection}{Floid Fill}{11}
-\contentsline {subsubsection}{Lazy Painting}{11}
-\contentsline {subsection}{LCA}{11}
-\contentsline {subsubsection}{Colonia}{11}
-\contentsline {subsubsection}{Jogo da Memoria}{12}
-\contentsline {subsubsection}{Query on Tree II}{13}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{14}
-\contentsline {subsubsection}{The Cool Monkeys}{14}
-\contentsline {subsubsection}{Batalha Naval}{16}
-\contentsline {subsubsection}{Dinic}{17}
-\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{18}
-\contentsline {subsubsection}{Min Cost Max Flow}{19}
-\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{20}
-\contentsline {subsection}{Centroid}{21}
-\contentsline {subsubsection}{Junior e Falta de Ideias}{21}
-\contentsline {section}{Strings}{22}
-\contentsline {subsubsection}{YATG}{22}
-\contentsline {subsubsection}{Vasiliy's Multiset}{23}
-\contentsline {subsubsection}{Trie ponteiro}{23}
-\contentsline {subsubsection}{Trie}{24}
-\contentsline {subsubsection}{Aho Corasick}{25}
-\contentsline {subsubsection}{Suffix Array}{26}
-\contentsline {subsubsection}{Z Algorithm}{27}
-\contentsline {subsubsection}{Min rotation}{27}
-\contentsline {subsubsection}{All palindrome}{27}
-\contentsline {section}{Geometria}{28}
-\contentsline {subsection}{Convex Hull}{28}
-\contentsline {subsection}{Nearest Points}{28}
-\contentsline {subsection}{Dividindo a coca}{29}
-\contentsline {subsection}{Determinante}{29}
+\contentsline {subsection}{Euclides Extendido}{9}
+\contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{9}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{9}
+\contentsline {section}{Grafos}{9}
+\contentsline {subsection}{LCA}{9}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{10}
+\contentsline {subsubsection}{The Cool Monkeys}{10}
+\contentsline {subsubsection}{Batalha Naval}{12}
+\contentsline {subsubsection}{Circulation}{13}
+\contentsline {subsubsection}{Dinic}{14}
+\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{14}
+\contentsline {subsubsection}{Min Cost Max Flow}{15}
+\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{16}
+\contentsline {subsection}{Centroid}{17}
+\contentsline {subsubsection}{Junior e Falta de Ideias}{17}
+\contentsline {section}{Strings}{18}
+\contentsline {subsubsection}{YATG}{18}
+\contentsline {subsubsection}{Trie ponteiro}{18}
+\contentsline {subsubsection}{Trie}{19}
+\contentsline {subsubsection}{Aho Corasick}{20}
+\contentsline {subsubsection}{Suffix Array}{21}
+\contentsline {subsubsection}{Z Algorithm}{22}
+\contentsline {subsubsection}{Min rotation}{22}
+\contentsline {subsubsection}{All palindrome}{22}
+\contentsline {section}{Geometria}{23}
+\contentsline {subsection}{Convex Hull}{23}
+\contentsline {subsection}{Nearest Points}{23}
+\contentsline {subsection}{Determinante}{23}

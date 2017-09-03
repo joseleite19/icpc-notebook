@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  6 AUG 2017 14:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  3 SEP 2017 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,18 +466,18 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 (./biblioteca.aux)
 \openout1 = `biblioteca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -572,11 +572,11 @@ e
 
 \c@lstlisting=\count126
 (./biblioteca.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -594,21 +594,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \openout3 = `biblioteca.toc'.
 
  [2]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (./adhoc/ultra.cpp
+) (./template.cpp
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
-
-[3]) (./ed/horrivel.cpp
-Overfull \hbox (14.12947pt too wide) in paragraph at lines 41--42
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
-) (./ed/contra_ataque_ramsay.cpp [4]
+)
+(./adhoc/ultra.cpp) (./ed/horrivel.cpp [3]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 36.
+) (./ed/contra_ataque_ramsay.cpp
 Overfull \hbox (18.92915pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
@@ -660,75 +657,12 @@ Overfull \hbox (38.12938pt too wide) in paragraph at lines 76--77
 ][][] 
  []
 
-) [5] (./ed/sparse_table.cpp) (./paradigma/hiper.cpp [6]) (./paradigma/hard.cpp
-) (./paradigma/cartoes.cpp [7]) (./paradigma/fft.cpp) (./paradigma/fft_iter.cpp
-) (./paradigma/ntt.cpp [8]) (./math/zeros.cpp) (./math/rsaEuclides.cpp [9]
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 53.
-)
-(./math/gauss.cpp [10]) (./graph/lazypaint.cpp) (./graph/colonia_LCA.cpp
-[11]) (./graph/memoria.cpp [12]) (./graph/query.cpp [13])
-(./graph/coolMonkeys.cpp [14] [15]) (./graph/hopcroftkarp.cpp [16])
-(./graph/dinic.cpp
-Overfull \hbox (52.5296pt too wide) in paragraph at lines 10--12
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][] 
- []
-
-[17]
-Overfull \hbox (47.72917pt too wide) in paragraph at lines 105--106
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (71.72919pt too wide) in paragraph at lines 106--107
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (76.5294pt too wide) in paragraph at lines 110--111
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (9.32915pt too wide) in paragraph at lines 147--148
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.72853pt too wide) in paragraph at lines 153--154
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][] 
- []
-
-
-Overfull \hbox (23.72873pt too wide) in paragraph at lines 156--158
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][] 
- []
-
-
-Overfull \hbox (129.3288pt too wide) in paragraph at lines 159--161
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (110.12878pt too wide) in paragraph at lines 163--164
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (138.9288pt too wide) in paragraph at lines 164--166
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][] 
- []
-
-) (./graph/mcmf.cpp [18]) (./graph/mcmf_dijkstra.cpp [19]
+[4]) (./ed/sparse_table.cpp [5]) (./ed/merge_sort_tree.cpp) (./ed/bit.cpp
+[6]) (./paradigma/fft_iter.cpp [7]) (./paradigma/ntt.cpp) [8]
+(./math/euclides.cpp) (./math/tot.cpp) (./math/gauss.cpp) (./graph/query.cpp
+[9]) (./graph/coolMonkeys.cpp [10] [11]) (./graph/hopcroftkarp.cpp)
+(./graph/circulation.cpp [12]) (./graph/dinic.cpp [13]) (./graph/mcmf.cpp
+[14]) (./graph/mcmf_dijkstra.cpp [15]
 Overfull \hbox (28.52948pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -740,40 +674,41 @@ Overfull \hbox (28.52948pt too wide) in paragraph at lines 48--49
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./graph/mcmf_dfs.cpp [20]) (./graph/centroid_decomp.cpp [21])
-(./strings/YATG.cpp [22]) (./strings/multiset.cpp) (./strings/trie_ponteiro.cpp
-[23]) (./strings/trieXor.cpp [24]) (./strings/aho-corasick.cpp [25]
+) (./graph/mcmf_dfs.cpp [16]) (./graph/centroid_decomp.cpp [17])
+(./strings/YATG.cpp) (./strings/trie_ponteiro.cpp [18]) (./strings/trieXor.cpp
+[19]) (./strings/aho-corasick.cpp [20]
 Overfull \hbox (14.12851pt too wide) in paragraph at lines 46--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./strings/suffix_array.cpp [26]) (./strings/z_algo.cpp)
-(./strings/min_rot.cpp) (./strings/all_palindrome.cpp) [27]
-(./math/convexhull.cpp
-Overfull \hbox (23.72894pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+) (./strings/suffix_array.cpp [21]) (./strings/z_algo.cpp)
+(./strings/min_rot.cpp) (./strings/all_palindrome.cpp) [22]
+(./geometria/convexhull.cpp
+Overfull \hbox (14.12947pt too wide) in paragraph at lines 2--3
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./math/near.cpp [28]) (./geometria/coca.cpp) (./geometria/det.cpp) [29]
-(./biblioteca.aux) ) 
+) (./geometria/near.cpp) (./geometria/det.cpp [23]) [24] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5986 strings out of 495004
- 75836 string characters out of 6180662
- 246036 words of memory out of 5000000
- 8996 multiletter control sequences out of 15000+600000
+ 5919 strings out of 495004
+ 75278 string characters out of 6180662
+ 201048 words of memory out of 5000000
+ 8944 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 38i,11n,58p,249b,1921s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (29 pages, 135153 bytes).
+ 38i,11n,58p,249b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
+ourier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8
+a.pfb>
+Output written on biblioteca.pdf (24 pages, 122537 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

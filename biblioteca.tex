@@ -20,7 +20,7 @@
 \cfoot{\thepage}
 
 \usepackage{listings}
-\lstset{language=C++,
+\lstset{language=C++,tab=4,
 basicstyle=\scriptsize\ttfamily,
 columns=fullflexible
 }
@@ -33,44 +33,47 @@ columns=fullflexible
    \subsubsection{#2}
    \lstinputlisting[language=#1]{#3/#4}
 }
-
+\newcommand\includeslocal[3]{
+   \subsection{#2}
+   \lstinputlisting[language=#1]{#3}
+}
+\newcommand\includesslocal[3]{
+   \subsubsection{#2}
+   \lstinputlisting[language=#1]{#3}
+}
 \begin{document}
 \tableofcontents
 \thispagestyle{fancy}
 \newpage
 \begin{multicols}{2}
 
+\includeslocal{c++}{Template}{template.cpp}
+
 \section{Ad hoc}
 \includes{c++}{Go up for ultras}{adhoc}{ultra.cpp}
 
 \section{Estrutura de Dados}
-\includes{c++}{Consultas Horríveis}{ed}{horrivel.cpp}
+\includes{c++}{Segtree}{ed}{horrivel.cpp}
 \includes{c++}{Contra Ataque Ramsay}{ed}{contra_ataque_ramsay.cpp}
 \includes{c++}{Sparse Table}{ed}{sparse_table.cpp}
+\includes{c++}{Merge Sort Tree}{ed}{merge_sort_tree.cpp}
+\includes{c++}{Bit bolada}{ed}{bit.cpp}
 
 \section{Paradigmas}
-\includes{c++}{Garota Hiperativa}{paradigma}{hiper.cpp}
-\includes{c++}{Hard Problem}{paradigma}{hard.cpp}
-\includes{c++}{Cartões}{paradigma}{cartoes.cpp}
-\includes{c++}{FFT}{paradigma}{fft.cpp}
-\includes{c++}{FFT iterativa}{paradigma}{fft_iter.cpp}
+\includes{c++}{FFT}{paradigma}{fft_iter.cpp}
 \includes{c++}{NTT}{paradigma}{ntt.cpp}
 
 \section{Matemática}
-\includes{c++}{Quantos zeros e quantos digitos?}{math}{zeros.cpp}
-\includes{c++}{RSA com Euclides Extendido}{math}{rsaEuclides.cpp}
+\includes{c++}{Euclides Extendido}{math}{euclides.cpp}
+\includes{c++}{Função totiente}{math}{tot.cpp}
 \includes{c++}{Eliminação Gaussiana}{math}{gauss.cpp}
 
 \section{Grafos}
-\subsection{Floid Fill}
-\includess{c++}{Lazy Painting}{graph}{lazypaint.cpp}
-\subsection{LCA}
-\includess{c++}{Colonia}{graph}{colonia_LCA.cpp}
-\includess{c++}{Jogo da Memoria}{graph}{memoria.cpp}
-\includess{c++}{Query on Tree II}{graph}{query.cpp}
+\includes{c++}{LCA}{graph}{query.cpp}
 \subsection{Fluxo Máximo}
 \includess{c++}{The Cool Monkeys}{graph}{coolMonkeys.cpp}
 \includess{c++}{Batalha Naval}{graph}{hopcroftkarp.cpp}
+\includess{c++}{Circulation}{graph}{circulation.cpp}
 \includess{c++}{Dinic}{graph}{dinic.cpp}
 \includess{c++}{Min Cost Max Flow(code by Nson)}{graph}{mcmf.cpp}
 \includess{c++}{Min Cost Max Flow}{graph}{mcmf_dijkstra.cpp}
@@ -81,7 +84,6 @@ columns=fullflexible
 
 \section{Strings}
 \includess{c++}{YATG}{strings}{YATG.cpp}
-\includess{c++}{Vasiliy's Multiset}{strings}{multiset.cpp}
 \includess{c++}{Trie ponteiro}{strings}{trie_ponteiro.cpp}
 \includess{c++}{Trie}{strings}{trieXor.cpp}
 \includess{c++}{Aho Corasick}{strings}{aho-corasick.cpp}
@@ -91,9 +93,8 @@ columns=fullflexible
 \includess{c++}{All palindrome}{strings}{all_palindrome.cpp}
 
 \section{Geometria}
-\includes{c++}{Convex Hull}{math}{convexhull.cpp}
-\includes{c++}{Nearest Points}{math}{near.cpp}
-\includes{c++}{Dividindo a coca}{geometria}{coca.cpp}
+\includes{c++}{Convex Hull}{geometria}{convexhull.cpp}
+\includes{c++}{Nearest Points}{geometria}{near.cpp}
 \includes{c++}{Determinante}{geometria}{det.cpp}
 
 
