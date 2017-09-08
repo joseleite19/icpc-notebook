@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  3 SEP 2017 18:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.9)  8 SEP 2017 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -602,17 +602,12 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
 )
-(./adhoc/ultra.cpp) (./ed/horrivel.cpp [3]
+(./adhoc/ultra.cpp) (./adhoc/stl.cpp
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 36.
-) (./ed/contra_ataque_ramsay.cpp
-Overfull \hbox (18.92915pt too wide) in paragraph at lines 16--17
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (42.92917pt too wide) in paragraph at lines 17--18
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 9.
+ [3]) (./ed/horrivel.cpp)
+(./ed/contra_ataque_ramsay.cpp
+Overfull \hbox (14.12936pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][] 
  []
@@ -623,46 +618,40 @@ Overfull \hbox (4.52957pt too wide) in paragraph at lines 28--29
 ][][][][][][][][][][][][][][] 
  []
 
-
+[4]
 Overfull \hbox (23.72958pt too wide) in paragraph at lines 45--46
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
 
 
-Overfull \hbox (23.72873pt too wide) in paragraph at lines 52--53
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (52.52875pt too wide) in paragraph at lines 54--55
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
- []
-
-
-Overfull \hbox (52.52875pt too wide) in paragraph at lines 58--59
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (81.32877pt too wide) in paragraph at lines 60--61
+Overfull \hbox (23.72916pt too wide) in paragraph at lines 60--61
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
  []
 
 
-Overfull \hbox (38.12938pt too wide) in paragraph at lines 76--77
+Overfull \hbox (23.72948pt too wide) in paragraph at lines 76--77
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
  []
 
-[4]) (./ed/sparse_table.cpp [5]) (./ed/merge_sort_tree.cpp) (./ed/bit.cpp
-[6]) (./paradigma/fft_iter.cpp [7]) (./paradigma/ntt.cpp) [8]
-(./math/euclides.cpp) (./math/tot.cpp) (./math/gauss.cpp) (./graph/query.cpp
-[9]) (./graph/coolMonkeys.cpp [10] [11]) (./graph/hopcroftkarp.cpp)
-(./graph/circulation.cpp [12]) (./graph/dinic.cpp [13]) (./graph/mcmf.cpp
-[14]) (./graph/mcmf_dijkstra.cpp [15]
+) (./ed/sparse_table.cpp [5]) (./ed/merge_sort_tree.cpp [6]) (./ed/bit.cpp
+[7]) (./ed/ptree.cpp
+Overfull \hbox (28.52959pt too wide) in paragraph at lines 1--3
+[][][][] 
+ []
+
+
+Overfull \hbox (32.12956pt too wide) in paragraph at lines 7--9
+[][][][][] 
+ []
+
+[8]) (./paradigma/fft_iter.cpp [9]) (./paradigma/ntt.cpp) (./math/euclides.cpp)
+(./math/tot.cpp) (./math/gauss.cpp [10]) (./graph/query.cpp [11])
+(./graph/coolMonkeys.cpp [12]) (./graph/hopcroftkarp.cpp [13])
+(./graph/circulation.cpp [14]) (./graph/dinic.cpp [15]) (./graph/mcmf.cpp
+[16]) (./graph/mcmf_dijkstra.cpp
 Overfull \hbox (28.52948pt too wide) in paragraph at lines 47--48
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -674,41 +663,31 @@ Overfull \hbox (28.52948pt too wide) in paragraph at lines 48--49
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./graph/mcmf_dfs.cpp [16]) (./graph/centroid_decomp.cpp [17])
-(./strings/YATG.cpp) (./strings/trie_ponteiro.cpp [18]) (./strings/trieXor.cpp
-[19]) (./strings/aho-corasick.cpp [20]
-Overfull \hbox (14.12851pt too wide) in paragraph at lines 46--47
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) (./strings/suffix_array.cpp [21]) (./strings/z_algo.cpp)
-(./strings/min_rot.cpp) (./strings/all_palindrome.cpp) [22]
-(./geometria/convexhull.cpp
-Overfull \hbox (14.12947pt too wide) in paragraph at lines 2--3
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) (./geometria/near.cpp) (./geometria/det.cpp [23]) [24] (./biblioteca.aux) ) 
+) (./graph/mcmf_dfs.cpp [17]) (./graph/centroid_decomp.cpp [18])
+(./strings/YATG.cpp [19]) (./strings/trie_ponteiro.cpp [20])
+(./strings/trieXor.cpp [21]) (./strings/aho-corasick.cpp [22])
+(./strings/suffix_array.cpp) (./strings/z_algo.cpp) (./strings/min_rot.cpp
+[23]) (./strings/all_palindrome.cpp) (./geometria/convexhull.cpp)
+(./geometria/near.cpp [24]) (./geometria/det.cpp) (./adhoc/cht.cpp [25])
+[26] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5919 strings out of 495004
- 75278 string characters out of 6180662
- 201048 words of memory out of 5000000
- 8944 multiletter control sequences out of 15000+600000
+ 6004 strings out of 495004
+ 76091 string characters out of 6180662
+ 252056 words of memory out of 5000000
+ 9020 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/
-usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
-ourier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8
-a.pfb>
-Output written on biblioteca.pdf (24 pages, 122537 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/courier/ucrro8a.pfb>
+Output written on biblioteca.pdf (26 pages, 127965 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

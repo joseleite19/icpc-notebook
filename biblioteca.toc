@@ -1,41 +1,43 @@
 \contentsline {subsection}{Template}{3}
 \contentsline {section}{Ad hoc}{3}
 \contentsline {subsection}{Go up for ultras}{3}
-\contentsline {section}{Estrutura de Dados}{3}
-\contentsline {subsection}{Segtree}{3}
+\contentsline {subsection}{Small to Large}{3}
+\contentsline {section}{Estrutura de Dados}{4}
+\contentsline {subsection}{Segtree}{4}
 \contentsline {subsection}{Contra Ataque Ramsay}{4}
 \contentsline {subsection}{Sparse Table}{5}
 \contentsline {subsection}{Merge Sort Tree}{6}
-\contentsline {subsection}{Bit bolada}{6}
-\contentsline {section}{Paradigmas}{7}
-\contentsline {subsection}{FFT}{7}
-\contentsline {subsection}{NTT}{8}
-\contentsline {section}{Matem\IeC {\'a}tica}{9}
-\contentsline {subsection}{Euclides Extendido}{9}
-\contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{9}
-\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{9}
-\contentsline {section}{Grafos}{9}
-\contentsline {subsection}{LCA}{9}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{10}
-\contentsline {subsubsection}{The Cool Monkeys}{10}
-\contentsline {subsubsection}{Batalha Naval}{12}
-\contentsline {subsubsection}{Circulation}{13}
-\contentsline {subsubsection}{Dinic}{14}
-\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{14}
-\contentsline {subsubsection}{Min Cost Max Flow}{15}
-\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{16}
-\contentsline {subsection}{Centroid}{17}
-\contentsline {subsubsection}{Junior e Falta de Ideias}{17}
-\contentsline {section}{Strings}{18}
-\contentsline {subsubsection}{YATG}{18}
-\contentsline {subsubsection}{Trie ponteiro}{18}
-\contentsline {subsubsection}{Trie}{19}
-\contentsline {subsubsection}{Aho Corasick}{20}
-\contentsline {subsubsection}{Suffix Array}{21}
-\contentsline {subsubsection}{Z Algorithm}{22}
-\contentsline {subsubsection}{Min rotation}{22}
-\contentsline {subsubsection}{All palindrome}{22}
-\contentsline {section}{Geometria}{23}
-\contentsline {subsection}{Convex Hull}{23}
-\contentsline {subsection}{Nearest Points}{23}
-\contentsline {subsection}{Determinante}{23}
+\contentsline {subsection}{Bit bolada}{7}
+\contentsline {subsection}{Palindromic Tree}{8}
+\contentsline {section}{Paradigmas}{9}
+\contentsline {subsection}{FFT}{9}
+\contentsline {subsection}{NTT}{10}
+\contentsline {section}{Matem\IeC {\'a}tica}{10}
+\contentsline {subsection}{Euclides Extendido}{10}
+\contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{10}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
+\contentsline {section}{Grafos}{11}
+\contentsline {subsection}{LCA}{11}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{12}
+\contentsline {subsubsection}{The Cool Monkeys}{12}
+\contentsline {subsubsection}{Batalha Naval}{13}
+\contentsline {subsubsection}{Circulation}{14}
+\contentsline {subsubsection}{Dinic}{15}
+\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{16}
+\contentsline {subsubsection}{Min Cost Max Flow}{17}
+\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{18}
+\contentsline {subsection}{Junior e Falta de Ideias}{18}
+\contentsline {section}{Strings}{19}
+\contentsline {subsubsection}{YATG}{19}
+\contentsline {subsubsection}{Trie ponteiro}{20}
+\contentsline {subsubsection}{Trie}{21}
+\contentsline {subsubsection}{Aho Corasick}{22}
+\contentsline {subsubsection}{Suffix Array}{23}
+\contentsline {subsubsection}{Z Algorithm}{23}
+\contentsline {subsubsection}{Min rotation}{23}
+\contentsline {subsubsection}{All palindrome}{24}
+\contentsline {section}{Geometria}{24}
+\contentsline {subsection}{Convex Hull}{24}
+\contentsline {subsection}{Nearest Points}{24}
+\contentsline {subsection}{Determinante}{25}
+\contentsline {subsection}{Convex Hull Trick}{25}

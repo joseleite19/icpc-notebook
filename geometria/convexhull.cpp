@@ -1,5 +1,6 @@
 ll D(const Point& P, const Point& Q, const Point& R){
-    return (P.x * Q.y + P.y * R.x + Q.x * R.y) - (R.x * Q.y + R.y * P.x + Q.x * P.y);
+    return (P.x * Q.y + P.y * R.x + Q.x * R.y) -
+        (R.x * Q.y + R.y * P.x + Q.x * P.y);
 }
 
 vector<Point> monotone_chain_ch(vector<Point> P){
