@@ -1,11 +1,12 @@
 \contentsline {subsection}{Template}{3}
+\contentsline {subsection}{.vimrc}{3}
 \contentsline {section}{Ad hoc}{3}
 \contentsline {subsection}{Go up for ultras}{3}
-\contentsline {subsection}{Small to Large}{3}
+\contentsline {subsection}{Small to Large}{4}
 \contentsline {section}{Estrutura de Dados}{4}
 \contentsline {subsection}{Segtree}{4}
 \contentsline {subsection}{Contra Ataque Ramsay}{4}
-\contentsline {subsection}{Sparse Table}{5}
+\contentsline {subsection}{Sparse Table}{6}
 \contentsline {subsection}{Merge Sort Tree}{6}
 \contentsline {subsection}{Bit bolada}{7}
 \contentsline {subsection}{Palindromic Tree}{8}
@@ -15,7 +16,7 @@
 \contentsline {section}{Matem\IeC {\'a}tica}{10}
 \contentsline {subsection}{Euclides Extendido}{10}
 \contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{10}
-\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{11}
 \contentsline {section}{Grafos}{11}
 \contentsline {subsection}{LCA}{11}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{12}
@@ -26,18 +27,18 @@
 \contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{16}
 \contentsline {subsubsection}{Min Cost Max Flow}{17}
 \contentsline {subsubsection}{Min Cost Max Flow(DFS)}{18}
-\contentsline {subsection}{Junior e Falta de Ideias}{18}
-\contentsline {section}{Strings}{19}
-\contentsline {subsubsection}{YATG}{19}
+\contentsline {subsection}{Junior e Falta de Ideias}{19}
+\contentsline {section}{Strings}{20}
+\contentsline {subsubsection}{YATG}{20}
 \contentsline {subsubsection}{Trie ponteiro}{20}
 \contentsline {subsubsection}{Trie}{21}
 \contentsline {subsubsection}{Aho Corasick}{22}
 \contentsline {subsubsection}{Suffix Array}{23}
 \contentsline {subsubsection}{Z Algorithm}{23}
-\contentsline {subsubsection}{Min rotation}{23}
+\contentsline {subsubsection}{Min rotation}{24}
 \contentsline {subsubsection}{All palindrome}{24}
 \contentsline {section}{Geometria}{24}
 \contentsline {subsection}{Convex Hull}{24}
-\contentsline {subsection}{Nearest Points}{24}
+\contentsline {subsection}{Nearest Points}{25}
 \contentsline {subsection}{Determinante}{25}
 \contentsline {subsection}{Convex Hull Trick}{25}
