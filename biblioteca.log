@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  7 NOV 2017 15:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  7 NOV 2017 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,7 +642,7 @@ Overfull \hbox (32.12956pt too wide) in paragraph at lines 7--9
 (./math/tot.cpp [9]) (./math/gauss.cpp) (./graph/query.cpp [10])
 (./graph/hopcroftkarp.cpp [11]) (./graph/circulation.cpp [12])
 (./graph/dinic.cpp) (./graph/mcmf.cpp [13] [14]) (./graph/centroid_decomp.cpp
-[15]) (./graph/scc.cpp) (./graph/scc2.cpp) (./strings/YATG.cpp [16])
+[15]) (./graph/kosaraju.cpp) (./graph/tarjan.cpp) (./strings/YATG.cpp [16])
 (./strings/trie_ponteiro.cpp [17]) (./strings/trieXor.cpp [18])
 (./strings/aho-corasick.cpp [19]) (./strings/suffix_array.cpp)
 (./strings/z_algo.cpp) (./strings/pf.cpp [20]) (./strings/min_rot.cpp)
@@ -651,7 +651,7 @@ Overfull \hbox (32.12956pt too wide) in paragraph at lines 7--9
 (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
  5993 strings out of 495004
- 75793 string characters out of 6180662
+ 75814 string characters out of 6180662
  288056 words of memory out of 5000000
  9024 multiletter control sequences out of 15000+600000
  7402 words of font info for 27 fonts, out of 8000000 for 9000
