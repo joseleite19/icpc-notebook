@@ -2,11 +2,11 @@
 \contentsline {subsection}{.vimrc}{3}
 \contentsline {section}{Ad hoc}{3}
 \contentsline {subsection}{Go up for ultras}{3}
-\contentsline {subsection}{Small to Large}{4}
+\contentsline {subsection}{Small to Large}{3}
 \contentsline {section}{Estrutura de Dados}{4}
 \contentsline {subsection}{Segtree}{4}
 \contentsline {subsection}{Contra Ataque Ramsay}{4}
-\contentsline {subsection}{Sparse Table}{6}
+\contentsline {subsection}{Sparse Table}{5}
 \contentsline {subsection}{Merge Sort Tree}{6}
 \contentsline {subsection}{Bit bolada}{7}
 \contentsline {subsection}{Palindromic Tree}{8}
@@ -16,30 +16,32 @@
 \contentsline {section}{Matem\IeC {\'a}tica}{10}
 \contentsline {subsection}{Euclides Extendido}{10}
 \contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{10}
-\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{11}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
 \contentsline {section}{Grafos}{11}
 \contentsline {subsection}{LCA}{11}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{12}
 \contentsline {subsubsection}{Batalha Naval}{12}
 \contentsline {subsubsection}{Circulation}{13}
 \contentsline {subsubsection}{Dinic}{14}
-\contentsline {subsubsection}{Min Cost Max Flow}{15}
+\contentsline {subsubsection}{Min Cost Max Flow}{14}
 \contentsline {subsection}{Junior e Falta de Ideias}{16}
-\contentsline {subsection}{Componentes Fortemente Conexas}{17}
-\contentsline {subsection}{Kosaraju}{17}
+\contentsline {subsection}{Componentes Fortemente Conexas}{16}
+\contentsline {subsection}{Kosaraju}{16}
 \contentsline {subsection}{Tarjan}{17}
-\contentsline {section}{Strings}{17}
-\contentsline {subsubsection}{YATG}{17}
+\contentsline {subsection}{Clique}{17}
+\contentsline {subsection}{Clique m\IeC {\'a}ximo por meet in the meddle}{17}
+\contentsline {section}{Strings}{18}
+\contentsline {subsubsection}{YATG}{18}
 \contentsline {subsubsection}{Trie ponteiro}{18}
 \contentsline {subsubsection}{Trie}{19}
 \contentsline {subsubsection}{Aho Corasick}{20}
 \contentsline {subsubsection}{Suffix Array}{21}
 \contentsline {subsubsection}{Z Algorithm}{21}
-\contentsline {subsubsection}{Prefix function/KMP}{21}
+\contentsline {subsubsection}{Prefix function/KMP}{22}
 \contentsline {subsubsection}{Min rotation}{22}
 \contentsline {subsubsection}{All palindrome}{22}
-\contentsline {section}{Geometria}{22}
-\contentsline {subsection}{Convex Hull}{22}
+\contentsline {section}{Geometria}{23}
+\contentsline {subsection}{Convex Hull}{23}
 \contentsline {subsection}{Nearest Points}{23}
 \contentsline {subsection}{Determinante}{23}
-\contentsline {subsection}{Convex Hull Trick}{23}
+\contentsline {subsection}{Convex Hull Trick}{24}

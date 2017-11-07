@@ -1,10 +1,10 @@
-/**************************************************************************************
+/***********************************************************************
 
   This code counts number of palindrome substrings of the string.
   Based on problem 1750 from informatics.mccme.ru:
 http://informatics.mccme.ru/moodle/mod/statements/view.php?chapterid=1750
 
- **************************************************************************************/
+ ***********************************************************************/
 
 #include <iostream>
 #include <cstdio>
