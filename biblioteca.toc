@@ -1,44 +1,45 @@
-\contentsline {subsection}{Template}{3}
-\contentsline {subsection}{.vimrc}{3}
-\contentsline {section}{Ad hoc}{3}
-\contentsline {subsection}{Go up for ultras}{3}
-\contentsline {subsection}{Small to Large}{4}
-\contentsline {section}{Estrutura de Dados}{4}
-\contentsline {subsection}{Segtree}{4}
-\contentsline {subsection}{Contra Ataque Ramsay}{4}
-\contentsline {subsection}{Sparse Table}{6}
-\contentsline {subsection}{Merge Sort Tree}{6}
-\contentsline {subsection}{Bit bolada}{7}
-\contentsline {subsection}{Palindromic Tree}{8}
-\contentsline {section}{Paradigmas}{9}
-\contentsline {subsection}{FFT}{9}
-\contentsline {subsection}{NTT}{10}
-\contentsline {section}{Matem\IeC {\'a}tica}{10}
-\contentsline {subsection}{Euclides Extendido}{10}
-\contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{10}
-\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{11}
-\contentsline {section}{Grafos}{11}
-\contentsline {subsection}{LCA}{11}
-\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{12}
-\contentsline {subsubsection}{Batalha Naval}{12}
-\contentsline {subsubsection}{Circulation}{13}
-\contentsline {subsubsection}{Dinic}{14}
-\contentsline {subsubsection}{Min Cost Max Flow}{15}
-\contentsline {subsection}{Junior e Falta de Ideias}{16}
-\contentsline {subsection}{Componentes Fortemente Conexas (TAG)}{17}
-\contentsline {subsection}{SCC}{17}
-\contentsline {section}{Strings}{17}
-\contentsline {subsubsection}{YATG}{17}
-\contentsline {subsubsection}{Trie ponteiro}{18}
-\contentsline {subsubsection}{Trie}{19}
-\contentsline {subsubsection}{Aho Corasick}{20}
-\contentsline {subsubsection}{Suffix Array}{21}
-\contentsline {subsubsection}{Z Algorithm}{21}
-\contentsline {subsubsection}{Prefix function/KMP}{21}
-\contentsline {subsubsection}{Min rotation}{22}
-\contentsline {subsubsection}{All palindrome}{22}
-\contentsline {section}{Geometria}{22}
-\contentsline {subsection}{Convex Hull}{22}
-\contentsline {subsection}{Nearest Points}{23}
-\contentsline {subsection}{Determinante}{23}
-\contentsline {subsection}{Convex Hull Trick}{23}
+\contentsline {subsection}{Template}{2}
+\contentsline {subsection}{.vimrc}{2}
+\contentsline {section}{Ad hoc}{2}
+\contentsline {subsection}{Go up for ultras}{2}
+\contentsline {subsection}{Small to Large}{3}
+\contentsline {section}{Estrutura de Dados}{3}
+\contentsline {subsection}{Segtree}{3}
+\contentsline {subsection}{Contra Ataque Ramsay}{3}
+\contentsline {subsection}{Sparse Table}{5}
+\contentsline {subsection}{Merge Sort Tree}{5}
+\contentsline {subsection}{Bit bolada}{6}
+\contentsline {subsection}{Palindromic Tree}{7}
+\contentsline {section}{Paradigmas}{8}
+\contentsline {subsection}{FFT}{8}
+\contentsline {subsection}{NTT}{9}
+\contentsline {section}{Matem\IeC {\'a}tica}{9}
+\contentsline {subsection}{Euclides Extendido}{9}
+\contentsline {subsection}{Fun\IeC {\c c}\IeC {\~a}o totiente}{9}
+\contentsline {subsection}{Elimina\IeC {\c c}\IeC {\~a}o Gaussiana}{10}
+\contentsline {section}{Grafos}{10}
+\contentsline {subsection}{LCA}{10}
+\contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{11}
+\contentsline {subsubsection}{Batalha Naval}{11}
+\contentsline {subsubsection}{Circulation}{12}
+\contentsline {subsubsection}{Dinic}{13}
+\contentsline {subsubsection}{Min Cost Max Flow}{14}
+\contentsline {subsection}{Junior e Falta de Ideias}{15}
+\contentsline {subsection}{Componentes Fortemente Conexas}{16}
+\contentsline {subsection}{Kosajaru}{16}
+\contentsline {subsection}{Tarjan}{16}
+\contentsline {section}{Strings}{16}
+\contentsline {subsubsection}{YATG}{16}
+\contentsline {subsubsection}{Trie ponteiro}{17}
+\contentsline {subsubsection}{Trie}{18}
+\contentsline {subsubsection}{Aho Corasick}{19}
+\contentsline {subsubsection}{Suffix Array}{20}
+\contentsline {subsubsection}{Z Algorithm}{20}
+\contentsline {subsubsection}{Prefix function/KMP}{20}
+\contentsline {subsubsection}{Min rotation}{21}
+\contentsline {subsubsection}{All palindrome}{21}
+\contentsline {section}{Geometria}{21}
+\contentsline {subsection}{Convex Hull}{21}
+\contentsline {subsection}{Nearest Points}{22}
+\contentsline {subsection}{Determinante}{22}
+\contentsline {subsection}{Convex Hull Trick}{22}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  7 NOV 2017 14:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  7 NOV 2017 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -571,16 +571,11 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count126
-(./biblioteca.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+(./biblioteca.toc)
+\tf@toc=\write3
+\openout3 = `biblioteca.toc'.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -589,11 +584,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-])
-\tf@toc=\write3
-\openout3 = `biblioteca.toc'.
-
- [2]
+]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -602,11 +593,11 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
 )
-(./vimrc) (./adhoc/ultra.cpp) [3] (./adhoc/stl.cpp
+(./vimrc) (./adhoc/ultra.cpp) [2] (./adhoc/stl.cpp
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 9.
 ) (./ed/horrivel.cpp)
-(./ed/contra_ataque_ramsay.cpp [4]
+(./ed/contra_ataque_ramsay.cpp [3]
 Overfull \hbox (14.12936pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][] 
@@ -636,8 +627,8 @@ Overfull \hbox (23.72948pt too wide) in paragraph at lines 76--77
 ][][] 
  []
 
-) [5] (./ed/sparse_table.cpp) (./ed/merge_sort_tree.cpp [6]) (./ed/bit.cpp
-[7]) (./ed/ptree.cpp
+) [4] (./ed/sparse_table.cpp) (./ed/merge_sort_tree.cpp [5]) (./ed/bit.cpp
+[6]) (./ed/ptree.cpp
 Overfull \hbox (28.52959pt too wide) in paragraph at lines 1--3
 [][][][] 
  []
@@ -647,34 +638,35 @@ Overfull \hbox (32.12956pt too wide) in paragraph at lines 7--9
 [][][][][] 
  []
 
-[8]) (./paradigma/fft_iter.cpp [9]) (./paradigma/ntt.cpp) (./math/euclides.cpp)
-(./math/tot.cpp [10]) (./math/gauss.cpp) (./graph/query.cpp [11])
-(./graph/hopcroftkarp.cpp [12]) (./graph/circulation.cpp [13])
-(./graph/dinic.cpp) (./graph/mcmf.cpp [14] [15]) (./graph/centroid_decomp.cpp
-[16]) (./graph/scc.cpp) (./strings/YATG.cpp [17]) (./strings/trie_ponteiro.cpp
-[18]) (./strings/trieXor.cpp [19]) (./strings/aho-corasick.cpp [20])
-(./strings/suffix_array.cpp) (./strings/z_algo.cpp) (./strings/pf.cpp) [21]
-(./strings/min_rot.cpp) (./strings/all_palindrome.cpp)
-(./geometria/convexhull.cpp [22]) (./geometria/near.cpp) (./geometria/det.cpp)
-(./adhoc/cht.cpp [23]) [24] (./biblioteca.aux) ) 
+[7]) (./paradigma/fft_iter.cpp [8]) (./paradigma/ntt.cpp) (./math/euclides.cpp)
+(./math/tot.cpp [9]) (./math/gauss.cpp) (./graph/query.cpp [10])
+(./graph/hopcroftkarp.cpp [11]) (./graph/circulation.cpp [12])
+(./graph/dinic.cpp) (./graph/mcmf.cpp [13] [14]) (./graph/centroid_decomp.cpp
+[15]) (./graph/scc.cpp) (./graph/scc2.cpp) (./strings/YATG.cpp [16])
+(./strings/trie_ponteiro.cpp [17]) (./strings/trieXor.cpp [18])
+(./strings/aho-corasick.cpp [19]) (./strings/suffix_array.cpp)
+(./strings/z_algo.cpp) (./strings/pf.cpp [20]) (./strings/min_rot.cpp)
+(./strings/all_palindrome.cpp) (./geometria/convexhull.cpp [21])
+(./geometria/near.cpp) (./geometria/det.cpp) (./adhoc/cht.cpp [22]) [23]
+(./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 6026 strings out of 495004
- 76325 string characters out of 6180662
- 280056 words of memory out of 5000000
- 9042 multiletter control sequences out of 15000+600000
- 11450 words of font info for 43 fonts, out of 8000000 for 9000
+ 5993 strings out of 495004
+ 75793 string characters out of 6180662
+ 288056 words of memory out of 5000000
+ 9024 multiletter control sequences out of 15000+600000
+ 7402 words of font info for 27 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/
-fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (24 pages, 124208 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/courier/ucrro8a.pfb>
+Output written on biblioteca.pdf (23 pages, 112336 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

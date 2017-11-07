@@ -1,59 +1,32 @@
-#include <bits/stdc++.h>
 
-using namespace std;
+vector<int> g[N], gt[N], S;
 
-const int N = 100005;
-
-vector<int> g[N], gt[N];
-
-int tempo = 1;
-int c[N], f[N], cor[N];
+int vis[N], cor[N], tempo = 1;
 
 void dfs(int u){
-	c[u] = tempo++;
-
-	for(int v : g[u]) if(!c[v])
+	vis[u] = 1;
+	for(int v : g[u]) if(!vis[v])
 		dfs(v);
-
-	f[u] = tempo++;
+	S.push_back(u);
 }
-
-void dfst(int u, int c){
-	cor[u] = c;
+int e;
+void dfst(int u){
+	cor[u] = e;
 	for(int v : gt[u]) if(!cor[v])
-		dfst(v, c);
+		dfst(v);
 }
 
 int main(){
-
-	int n, m;
-
-	scanf("%d %d", &n, &m);
 	
-	for(int i = 0; i < m; i++){
-		int u, v;
-		scanf("%d %d", &u, &v);
-		g[u].push_back(v);
-		gt[v].push_back(u);
-	}
-	memset(c, 0, sizeof c);
-	memset(f, 0, sizeof f);
+	memset(vis, 0, sizeof vis);
 	memset(cor, 0, sizeof color);
 
-	for(int i = 1; i <= n; i++) if(!c[i])
+	for(int i = 1; i <= n; i++) if(!vis[i])
 		dfs(i);
 
-	vector<int> tmp;
-	for(int i = 1; i <= n; i++)
-		tmp.push_back(i);
-	
-	sort(tmp.begin(), tmp.end(), [=](int a, int b){
-		return f[a] > f[b];
-	});
-
-	int e = 0;
-	for(int u : tmp) if(!cor[u])
-		dfst(u, ++e);
+	e = 0;
+	for(int u : S) if(!cor[u])
+		e++, dfst(u);
 
 	return 0;
 }
