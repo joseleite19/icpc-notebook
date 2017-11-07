@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  28 OCT 2017 16:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  7 NOV 2017 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,45 +649,32 @@ Overfull \hbox (32.12956pt too wide) in paragraph at lines 7--9
 
 [8]) (./paradigma/fft_iter.cpp [9]) (./paradigma/ntt.cpp) (./math/euclides.cpp)
 (./math/tot.cpp [10]) (./math/gauss.cpp) (./graph/query.cpp [11])
-(./graph/coolMonkeys.cpp [12]) (./graph/hopcroftkarp.cpp [13])
-(./graph/circulation.cpp [14]) (./graph/dinic.cpp [15]) (./graph/mcmf.cpp
-[16]) (./graph/mcmf_dijkstra.cpp
-Overfull \hbox (28.52948pt too wide) in paragraph at lines 47--48
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (28.52948pt too wide) in paragraph at lines 48--49
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[17]) (./graph/mcmf_dfs.cpp [18]) (./graph/centroid_decomp.cpp)
-(./strings/YATG.cpp [19]) (./strings/trie_ponteiro.cpp [20])
-(./strings/trieXor.cpp [21]) (./strings/aho-corasick.cpp [22])
-(./strings/suffix_array.cpp) (./strings/z_algo.cpp [23]) (./strings/min_rot.cpp
-) (./strings/all_palindrome.cpp) (./geometria/convexhull.cpp [24])
-(./geometria/near.cpp) (./geometria/det.cpp) (./adhoc/cht.cpp [25]) [26]
-(./biblioteca.aux) ) 
+(./graph/hopcroftkarp.cpp [12]) (./graph/circulation.cpp [13])
+(./graph/dinic.cpp) (./graph/mcmf.cpp [14] [15]) (./graph/centroid_decomp.cpp
+[16]) (./graph/scc.cpp) (./strings/YATG.cpp [17]) (./strings/trie_ponteiro.cpp
+[18]) (./strings/trieXor.cpp [19]) (./strings/aho-corasick.cpp [20])
+(./strings/suffix_array.cpp) (./strings/z_algo.cpp) (./strings/pf.cpp) [21]
+(./strings/min_rot.cpp) (./strings/all_palindrome.cpp)
+(./geometria/convexhull.cpp [22]) (./geometria/near.cpp) (./geometria/det.cpp)
+(./adhoc/cht.cpp [23]) [24] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 6059 strings out of 495004
- 76706 string characters out of 6180662
- 290056 words of memory out of 5000000
- 9072 multiletter control sequences out of 15000+600000
+ 6026 strings out of 495004
+ 76325 string characters out of 6180662
+ 280056 words of memory out of 5000000
+ 9042 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  38i,11n,58p,249b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/courier/ucrro8a.pfb>
-Output written on biblioteca.pdf (26 pages, 128679 bytes).
+{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on biblioteca.pdf (24 pages, 124208 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

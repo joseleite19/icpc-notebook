@@ -1,95 +1,123 @@
 #include <bits/stdc++.h>
 
+#define forn(i, n) for(int i = 0; i < int(n); i++)
+#define fore(i, a, b) for(int i = int(a); i <= int(b); i++)
+#define ff first
+#define ss second
+#define mp make_pair
+#define mt make_tuple
+#define pb push_back
+#define eb emplace_back
+
 using namespace std;
 
-const int N = 20;
-const int oo= 1000000000;
+typedef long long ll;
+const ll oo = 1e18;
+const int N = 505;
+const int E = 30006;
 
-class edge{
-    public:
-        int to, cost, cap, rev;
-        edge(int to = 0, int cost = 0, int cap = 0, int rev = 0) :
-            to(to), cost(cost), cap(cap), rev(rev) {}
-};
+vector<int> g[N];
 
-vector<edge> g[2*N];
-int d[2*N], p[2*N], id[2*N];
-int n, source, target;
+int ne;
 
-void addEdge(int from, int to, int cost, int cap){
-    edge a(to, cost, cap, g[to].size());
-    edge b(from, -cost, 0, g[from].size());
-    g[from].push_back(a);
-    g[to].push_back(b);
-}
+struct Edge{
+    int from, to;
+    ll cap, cost;
+} edge[E];
 
-int back(int s, int minE){
+int lvl[N], vis[N], pass, source, target, p[N], px[N];
+
+ll d[N];
+
+ll back(int s, ll minE){
     if(s == source) return minE;
 
-    int f = back(p[s], min(minE, g[ p[s] ][ id[s] ].cap));
+    int e = p[s];
 
-    g[ p[s] ][ id[s] ].cap -= f;
-    g[s][ g[ p[s] ][ id[s] ].rev ].cap += f;
+    ll f = back(edge[e].from, min(minE, edge[e].cap));
+    edge[e].cap -= f;
+    edge[e^1].cap += f;
     return f;
 }
 
 int dijkstra(){
-    for(int i = 0; i < 2*N; i++) d[i] = oo;
+    forn(i, N) d[i] = oo;
+
+    priority_queue<pair<ll, int> > q;
+
     d[source] = 0;
-    priority_queue<pair<int, int> > pq;
-    pq.push({0, source});
-    while(!pq.empty()){
-        int u = pq.top().second;
-        int r = -pq.top().first; pq.pop();
-        if(r > d[u]) continue;
-        for(int i = 0; i < g[u].size(); i++){
-            auto x = g[u][i];
-            if(!x.cap) continue;
-            int w = r + x.cost;
-            int v = x.to;
-            if(w < d[v]){
-                id[v] = i;
-                p[v] = u;
-                d[v] = w;
-                pq.push({-w, v});
+
+    q.emplace(0, source);
+
+    while(!q.empty()){
+        ll dis = -q.top().ff;
+        int u = q.top().ss; q.pop();
+
+        if(dis > d[u]) continue;
+
+        for(int e : g[u]){
+            auto v = edge[e];
+            if(v.cap <= 0) continue;
+            if(d[u] + v.cost < d[v.to]){
+                d[v.to] = d[u] + v.cost;
+                p[v.to] = e;
+                q.emplace(-d[v.to], v.to);
             }
         }
     }
-
     return d[target] != oo;
 }
 
-pair<int, int> mincost(){ // return <min cost, max flow>
-    int mf = 0, ans = 0;
+pair<ll, ll> mincost(){
+    ll ans = 0, mf = 0;
     while(dijkstra()){
-        int f = back(target, oo);
+        ll f = back(target, oo);
         mf += f;
-        ans += 1LL * f * d[target];
+        ans += f * d[target];
     }
-    return {ans, mf};
+    return {mf, ans};
 }
+
+void addEdge(int u, int v, ll c, ll cost){
+    edge[ne] = {u, v, c, cost};
+    g[u].pb(ne++);
+}
+
+char s[55][55];
 
 int main(){
 
+    int n, m;
+    for(int tc = 1; scanf("%d %d", &n, &m) == 2; tc++){
+        ne = 0;
 
-    scanf("%d", &n);
-
-    source = 0, target = 2*N-1;
-
-    for(int i = 1; i <= n; i++){
-        addEdge(source, i, 0, 1);
-        addEdge(i+n+1, target, 0, 1);
-
-        for(int j = 1; j <= n; j++){
-            int x;
-            scanf("%d", &x);
-            addEdge(i, n+j+1, x, 1);
+        int a, b, c;
+        forn(i, m){
+            scanf("%d %d %d", &a, &b, &c);
+            addEdge(a, b, 0, c);
+            addEdge(b, a, 0, -c);
+            addEdge(b, a, 0, c);
+            addEdge(a, b, 0, -c);
         }
+        int d, k;
+
+        scanf("%d %d", &d, &k);
+
+        forn(i, ne) if(i % 2 == 0) edge[i].cap = k;
+
+        source = 0, target = n;
+
+        addEdge(0, 1, d, 0);
+        addEdge(1, 0, 0, 0);
+
+        pair<ll, ll> ans = mincost();
+        printf("Instancia %d\n", tc);
+        if(ans.ff < d) printf("impossivel\n");
+        else printf("%lld\n", ans.ss);
+
+        printf("\n");
+        forn(i, N) g[i].clear();
     }
 
-    printf("%d\n", mincost().first);
-
-
-    return 0;
 }
 

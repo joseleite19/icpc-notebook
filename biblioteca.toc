@@ -20,25 +20,25 @@
 \contentsline {section}{Grafos}{11}
 \contentsline {subsection}{LCA}{11}
 \contentsline {subsection}{Fluxo M\IeC {\'a}ximo}{12}
-\contentsline {subsubsection}{The Cool Monkeys}{12}
-\contentsline {subsubsection}{Batalha Naval}{13}
-\contentsline {subsubsection}{Circulation}{14}
-\contentsline {subsubsection}{Dinic}{15}
-\contentsline {subsubsection}{Min Cost Max Flow(code by Nson)}{16}
-\contentsline {subsubsection}{Min Cost Max Flow}{17}
-\contentsline {subsubsection}{Min Cost Max Flow(DFS)}{18}
-\contentsline {subsection}{Junior e Falta de Ideias}{19}
-\contentsline {section}{Strings}{20}
-\contentsline {subsubsection}{YATG}{20}
-\contentsline {subsubsection}{Trie ponteiro}{20}
-\contentsline {subsubsection}{Trie}{21}
-\contentsline {subsubsection}{Aho Corasick}{22}
-\contentsline {subsubsection}{Suffix Array}{23}
-\contentsline {subsubsection}{Z Algorithm}{23}
-\contentsline {subsubsection}{Min rotation}{24}
-\contentsline {subsubsection}{All palindrome}{24}
-\contentsline {section}{Geometria}{24}
-\contentsline {subsection}{Convex Hull}{24}
-\contentsline {subsection}{Nearest Points}{25}
-\contentsline {subsection}{Determinante}{25}
-\contentsline {subsection}{Convex Hull Trick}{25}
+\contentsline {subsubsection}{Batalha Naval}{12}
+\contentsline {subsubsection}{Circulation}{13}
+\contentsline {subsubsection}{Dinic}{14}
+\contentsline {subsubsection}{Min Cost Max Flow}{15}
+\contentsline {subsection}{Junior e Falta de Ideias}{16}
+\contentsline {subsection}{Componentes Fortemente Conexas (TAG)}{17}
+\contentsline {subsection}{SCC}{17}
+\contentsline {section}{Strings}{17}
+\contentsline {subsubsection}{YATG}{17}
+\contentsline {subsubsection}{Trie ponteiro}{18}
+\contentsline {subsubsection}{Trie}{19}
+\contentsline {subsubsection}{Aho Corasick}{20}
+\contentsline {subsubsection}{Suffix Array}{21}
+\contentsline {subsubsection}{Z Algorithm}{21}
+\contentsline {subsubsection}{Prefix function/KMP}{21}
+\contentsline {subsubsection}{Min rotation}{22}
+\contentsline {subsubsection}{All palindrome}{22}
+\contentsline {section}{Geometria}{22}
+\contentsline {subsection}{Convex Hull}{22}
+\contentsline {subsection}{Nearest Points}{23}
+\contentsline {subsection}{Determinante}{23}
+\contentsline {subsection}{Convex Hull Trick}{23}
