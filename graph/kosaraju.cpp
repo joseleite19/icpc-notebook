@@ -25,6 +25,7 @@ int main(){
 		dfs(i);
 
 	e = 0;
+	reverse(S.begin(), S.end());
 	for(int u : S) if(!cor[u])
 		e++, dfst(u);
 
