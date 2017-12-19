@@ -13,7 +13,7 @@ using namespace std;
 
 typedef long long ll;
 
-const int N = 100005;
+const int N = 4000006;
 
 int main(){
 
