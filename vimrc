@@ -1,2 +1,2 @@
-set statusline+=%F nu showcmd cindent autoindent smartindent tabstop=4 shiftwidth=4
+set ai ts=4 sw=4 sta nu rnu sc stl+=%F
 syntax on
