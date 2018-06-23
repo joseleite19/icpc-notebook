@@ -5,24 +5,18 @@ int vis[N], cor[N], tempo = 1;
 
 void dfs(int u){
 	vis[u] = 1;
-	for(int v : g[u]) if(!vis[v])
-		dfs(v);
+	for(int v : g[u]) if(!vis[v]) dfs(v);
 	S.push_back(u);
 }
 int e;
 void dfst(int u){
 	cor[u] = e;
-	for(int v : gt[u]) if(!cor[v])
-		dfst(v);
+	for(int v : gt[u]) if(!cor[v]) dfst(v);
 }
 
 int main(){
 	
-	memset(vis, 0, sizeof vis);
-	memset(cor, 0, sizeof color);
-
-	for(int i = 1; i <= n; i++) if(!vis[i])
-		dfs(i);
+	for(int i = 1; i <= n; i++) if(!vis[i]) dfs(i);
 
 	e = 0;
 	reverse(S.begin(), S.end());

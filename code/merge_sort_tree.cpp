@@ -1,10 +1,6 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 struct MergeTree{
     int n;
-    vector<vector<int> > st;
+    vector<vector<int>> st;
 
     void build(int p, int L, int R, const int v[]){
         if(L == R){
@@ -31,7 +27,7 @@ struct MergeTree{
             query(2*p+1, mid+1, R, i, j, x);
     }
 
-    public:
+public:
     MergeTree(int sz, const int v[]): n(sz), st(4*sz){
         build(1, 1, n, v);
     }
@@ -43,16 +39,3 @@ struct MergeTree{
     }
 };
 
-int n, v[100005];
-
-int main(){
-    
-    scanf("%d", &n);
-
-    for(int i = 1; i <= n; i++)
-        scanf("%d", v+i);
-
-    MergeTree mst(n, v);
-
-    return 0;
-}

@@ -1,5 +1,6 @@
 
-const int N = 205, int E = 30006;
+const int N = 205;
+const int E = 30006;
 vector<int> g[N];
 
 int ne;

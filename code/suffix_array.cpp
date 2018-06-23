@@ -5,17 +5,18 @@ int n, sa[N], tsa[N], lcp[N], r[N], nr[N], c[N];
 void sort(int k, int mx){
     mx++;
     memset(c, 0, sizeof(int) * mx);
-    forn(i, n) c[i + k < n ? r[i+k]+1 : 1]++;
+    for(int i = 0; i < n; i++) c[i + k < n ? r[i+k]+1 : 1]++;
     partial_sum(c, c+mx, c);
     int t;
-    forn(i, n) t = sa[i]+k < n ? r[ sa[i]+k ] : 0,
-               tsa[ c[t]++ ] = sa[i];
+    for(int i = 0; i < n; i++)
+		t = sa[i]+k < n ? r[ sa[i]+k ] : 0,
+        tsa[ c[t]++ ] = sa[i];
     memcpy(sa, tsa, sizeof(int) * n);
 }
 
 void build_sa(){
 
-    forn(i, n) sa[i] = i, r[i] = s[i];
+    for(int i = 0; i < n; i++) sa[i] = i, r[i] = s[i];
 
     int t = 300, a, b;
     for(int sz = 1; sz < n; sz *= 2){
@@ -33,9 +34,9 @@ void build_sa(){
 
 void build_lcp(){ // lcp[i] = lcp(s[:i], s[:i+1])
     int k = 0;
-    forn(i, n) r[ sa[i] ] = i;
+    for(int i = 0; i < n; i++) r[ sa[i] ] = i;
 
-    forn(i, n){
+    for(int i = 0; i < n; i++){
         if(r[i] == n-1) k = 0;
         else{
             int j = sa[r[i]+1];

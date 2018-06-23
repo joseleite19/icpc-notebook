@@ -1,28 +1,3 @@
-/***********************************************************************
-
-  This code counts number of palindrome substrings of the string.
-  Based on problem 1750 from informatics.mccme.ru:
-http://informatics.mccme.ru/moodle/mod/statements/view.php?chapterid=1750
-
- ***********************************************************************/
-
-#include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <map>
-#include <string>
-#include <utility>
-#include <cstring>
-#include <cassert>
-#include <cmath>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
 const int MAXN = 105000;
 
 struct node {
@@ -43,9 +18,9 @@ bool addLetter(int pos) {
     int cur = suff, curlen = 0;
     int let = s[pos] - 'a';
 
-    while (true) {
+    while(true){
         curlen = tree[cur].len;
-        if (pos - 1 - curlen >= 0 && s[pos - 1 - curlen] == s[pos])     
+        if (pos-1 - curlen >= 0 && s[pos-1 - curlen] == s[pos])     
             break;  
         cur = tree[cur].sufflink;
     }       
@@ -59,16 +34,16 @@ bool addLetter(int pos) {
     tree[num].len = tree[cur].len + 2;
     tree[cur].next[let] = num;
 
-    if (tree[num].len == 1) {
+    if (tree[num].len == 1){
         tree[num].sufflink = 2;
         tree[num].num = 1;
         return true;
     }
 
-    while (true) {
+    while (true){
         cur = tree[cur].sufflink;
         curlen = tree[cur].len;
-        if (pos - 1 - curlen >= 0 && s[pos - 1 - curlen] == s[pos]) {
+        if(pos-1 - curlen >= 0 && s[pos-1 - curlen] == s[pos]){
             tree[num].sufflink = tree[cur].next[let];
             break;
         }       
@@ -86,20 +61,12 @@ void initTree() {
 }
 
 int main() {
-    //assert(freopen("input.txt", "r", stdin));
-    //assert(freopen("output.txt", "w", stdout));
-
-    gets(s);
-    len = strlen(s);
 
     initTree();
 
     for (int i = 0; i < len; i++) {
         addLetter(i);
-        ans += tree[suff].num;
     }
-
-    cout << ans << endl;
 
     return 0;
 }

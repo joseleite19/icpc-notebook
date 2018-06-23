@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt,oneside]{article}
+\setcounter{secnumdepth}{-1} 
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{courier}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{pdflscape}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[inline]{enumitem}
+\usepackage{verbatim}
+\usepackage{pxfonts}
+
+\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\fancyhf{}
+\rhead{\fancyplain{}{\nouppercase{\rightmark}}, page \bfseries\thepage}
+%\lhead{É dificil xover um nome}
+\lhead{University of Brasilia}
+%\chead{É dificil xover um nome}
+% \cfoot{\thepage}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{2ex}{1ex}
+
+\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+
+\lstset{
+	language=c++,
+	tabsize=4,
+	%frame=tb,
+	aboveskip=.1em,
+	belowskip=.1em,
+	showstringspaces=false,
+	basicstyle={\small\ttfamily},
+	columns=fullflexible,
+	numbers=none,
+	%keywordstyle=\bfseries,
+	%breaklines=true,
+	breakindent=1.1em,
+	breakatwhitespace=false,
+	commentstyle=\color{gray},
+}
+
+\newcommand\includes[2]{
+   \subsection{#1}
+   \lstinputlisting{#2}
+}
+
+
+\setlength{\columnseprule}{1pt}
+
+\title{ACM ICPC Reference}
+\author{University of Brasilia}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\begin{multicols}{2}
+\thispagestyle{fancy}
+
+\includes{.vimrc}{vimrc}
+\includes{.bashrc}{bashrc}
+
+\section{Ad hoc}
+\includes{Small to Large}{code/stl.cpp}
+\includes{Convex Hull Trick}{code/cht.cpp}
+
+\section{Estrutura de Dados}
+\includes{Merge Sort Tree}{code/merge_sort_tree.cpp}
+
+\section{Paradigmas}
+\includes{FFT}{code/fft_iter.cpp}
+\includes{NTT}{code/ntt.cpp}
+
+\section{Matemática}
+\includes{Euclides Extendido}{code/euclides.cpp}
+
+\section{Grafos}
+\includes{Dinic}{code/dinic.cpp}
+\includes{Min Cost Max Flow}{code/mcmf.cpp}
+\includes{Junior e Falta de Ideias}{code/centroid_decomp.cpp}
+\includes{Kosaraju}{code/kosaraju.cpp}
+\includes{Tarjan}{code/tarjan.cpp}
+
+\section{Strings}
+\includes{Aho Corasick}{code/aho-corasick.cpp}
+\includes{Suffix Array}{code/suffix_array.cpp}
+\includes{Z Algorithm}{code/z_algo.cpp}
+\includes{Prefix function/KMP}{code/pf.cpp}
+\includes{Min rotation}{code/min_rot.cpp}
+\includes{All palindrome}{code/all_palindrome.cpp}
+\includes{Palindromic Tree}{code/ptree.cpp}
+
+\section{Geometria}
+\includes{Nearest Points}{code/near.cpp}
+\includes{Determinante}{code/det.cpp}
+
+\end{multicols}
+\end{document}
