@@ -1,4 +1,3 @@
-
 const int N = 205;
 const int E = 30006;
 vector<int> g[N];

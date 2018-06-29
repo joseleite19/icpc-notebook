@@ -1,4 +1,4 @@
-vector<int> pf(const string &s){
+vector<int> preffix_function(const string &s){
 	int n = s.size();
 	vector<int> b(n+1);
 	b[0] = -1;
@@ -11,14 +11,14 @@ vector<int> pf(const string &s){
 }
 
 void kmp(const string &t, const string &p){
-	vector<int> b = pf(p);
-	int n = t.size();
+	vector<int> b = preffix_function(p);
+	int n = t.size(), m = p.size();
 	int j = 0;
 	for(int i = 0; i < n; i++){
 		while(j >= 0 && t[i] != p[j]) j = b[j];
 		j++;
 		if(j == m){
-			//patern found
+			//patern of p found on t
 			j = b[j];
 		}
 	}

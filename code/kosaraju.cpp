@@ -1,4 +1,3 @@
-
 vector<int> g[N], gt[N], S;
 
 int vis[N], cor[N], tempo = 1;

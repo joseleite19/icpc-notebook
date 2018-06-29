@@ -1,4 +1,3 @@
-
 long long adj[N], dp[N];
 
 for(int i = 0; i < n; i++){

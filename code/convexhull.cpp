@@ -4,7 +4,7 @@ ll D(const Point& P, const Point& Q, const Point& R){
 }
 
 vector<Point> monotone_chain_ch(vector<Point> P){
-    sort(P.begin(), P.end());
+    sort(P.begin(), P.end()); // smaller x then smaller y
 
     vector<Point> L, U;
 
@@ -24,8 +24,7 @@ vector<Point> monotone_chain_ch(vector<Point> P){
         U.push_back(p);
     }
 
-    L.pop_back();
-    U.pop_back();
+    L.pop_back(), U.pop_back();
 
     L.reserve(L.size() + U.size());
     L.insert(L.end(), U.begin(), U.end()); 
