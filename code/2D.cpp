@@ -137,7 +137,7 @@ struct segment{
 		return min((o-q).len(), (o-p).len());
 	}
 	bool contains(const vec &o) const{
-		return eq(line(p, q).eval(o), 0) && onstrip(o);
+		return eq(p.cross(q, o), 0) && onstrip(o);
 	}
 	bool intersect(const segment &o) const{
 		auto d1 = p.cross(q, o.p);
