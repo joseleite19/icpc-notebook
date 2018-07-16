@@ -14,3 +14,18 @@ ll rho(ll n){
 	return d;
 }
 
+ll pollard_rho(ll n){
+	ll x, c, y, d, k;
+	int i;
+	do{
+		i = 1;
+		x = llrand() % n, c = llrand() % n;
+		y = x, k = 4;
+		do{
+			if(++i == k) y = x, k *= 2;
+			x = add(mul(x, x, n), c, n);
+			d = __gcd(abs(x - y), n);
+		}while(d == 1);
+	}while(d == n);
+	return d;
+}
