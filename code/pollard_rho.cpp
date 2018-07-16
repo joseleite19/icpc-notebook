@@ -29,3 +29,18 @@ ll pollard_rho(ll n){
 	}while(d == n);
 	return d;
 }
+
+void factorize(ll val, map<ll, int> &fac){
+	if(rabin(val)) fac[ val ]++;
+	else{
+		ll d = pollard_rho(val);
+		factorize(d, fac);
+		factorize(val / d, fac);
+	}
+}
+
+map<ll, int> factor(ll val){
+    map<ll, int> fac;
+    if(val > 1) factorize(val, fac);
+    return fac;
+}
