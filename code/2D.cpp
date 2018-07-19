@@ -39,6 +39,12 @@ struct vec{
 	coord len() const{
 		return sqrt(x * x + y * y); // <
 	}
+	double angle(const vec &a, const vec &b) const{
+		return atan2(cross(a, b), dot(a, b));
+	}
+	double tan(const vec &a, const vec &b) const{
+		return cross(a, b) / dot(a, b);
+	}
 	vec unit() const{
 		return operator/(len());
 	}
