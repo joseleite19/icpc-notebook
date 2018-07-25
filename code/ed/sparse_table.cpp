@@ -10,7 +10,7 @@ int fn(int i, int j){
 
 int lg(int x){ return 31 - __builtin_clz(x); }
 
-int getmn(int l, int r){
+int getmn(int l, int r){ // [l, r]
 	int lz = lg(r - l + 1);
 	return min(fn(l, lz), fn(r - (1 << lz) + 1, lz));
 }

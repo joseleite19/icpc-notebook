@@ -1,12 +1,13 @@
+template<typename T>
 class minQ{
-	deque<tuple<int, int, int> > p;
-	int delta, sz;
+	deque<tuple<T, int, int> > p;
+	T delta;
+	int sz;
 public:
 	minQ() : delta(0), sz(0) {}
-
 	inline int size() const{ return sz; }
-	inline void add(int x){ delta += x; }
-	inline void push(int x, int id){
+	inline void add(T x){ delta += x; }
+	inline void push(T x, int id){
 		x -= delta, sz++;
 		int t = 1;
 		while(p.size() > 0 && get<0>(p.back()) >= x)
@@ -17,6 +18,6 @@ public:
 		get<1>(p.front())--, sz--;
 		if(!get<1>(p.front())) p.pop_front();
 	}
-	int getmin()const{ return get<0>(p.front())+delta; }
+	T getmin() const{ return get<0>(p.front())+delta; }
 	int getid() const{ return get<2>(p.front()); }
 };

@@ -1,8 +1,8 @@
 // typedef complex<double> base;
 struct base{
 	double r, i;
-	base(double r_ = 0, double i_ = 0) : r(r_), i(i_) {}
-	base operator*(base &o){
+	base(double _r = 0, double _i = 0) : r(_r), i(_i) {}
+	base operator*(base &o) const{
 		return {r*o.r - i*o.i, r*o.i + o.r*i};
 	}
 	double real() const{ return r; }
@@ -26,21 +26,22 @@ void fft(vector<base> &a, bool inv){
 		if(i < j) swap(a[i], a[j]);
 	}
  
-	for(int len = 2; len <= n; len <<= 1) {
-		double ang = 2*PI/len * (inv ? -1 : 1);
+	for(int sz = 2; sz <= n; sz <<= 1) {
+		double ang = 2*PI/sz * (inv ? -1 : 1);
 		base wlen(cos(ang), sin(ang));
-		for(int i = 0; i < n; i += len){
+		for(int i = 0; i < n; i += sz){
 			base w(1);
-			for(int j = 0; j < len/2; j++){
-				base u = a[i+j], v = a[i+j+len/2] * w;
+			for(int j = 0; j < sz/2; j++){
+				base u = a[i+j], v = a[i+j+sz/2] * w;
 				a[i+j] = u + v;
-				a[i+j+len/2] = u - v;
+				a[i+j+sz/2] = u - v;
 				w *= wlen;
 			}
 		}
 	}
 	if(inv) for(int i = 0; i < n; i++) a[i] /= n;
 }
+
 void multiply(const vector<int> &a, const vector<int> &b, vector<int> &res){
 	vector<base> fa(a.begin(), a.end());
 	vector<base> fb(b.begin(), b.end());

@@ -3,14 +3,14 @@ struct Line{
 	ll m, b;
 	mutable function<const Line*()> succ;
 	bool operator<(const Line& rhs) const{
-		if (rhs.b != is_query) return m < rhs.m;
+		if(rhs.b != is_query) return m < rhs.m;
 		const Line* s = succ();
-		if (!s) return 0;
+		if(!s) return 0;
 		ll x = rhs.m;
 		return b - s->b < (s->m - m) * x;
 	}
 };
-struct HullDynamic : public multiset<Line>{ // will maintain upper hull for maximum
+struct Cht : public multiset<Line>{ // maintain max
 	bool bad(iterator y){
 		auto z = next(y);
 		if(y == begin()){
@@ -24,7 +24,7 @@ struct HullDynamic : public multiset<Line>{ // will maintain upper hull for maxi
 	void insert_line(ll m, ll b){
 		auto y = insert({ m, b });
 		y->succ = [=]{ return next(y) == end() ? 0 : &*next(y); };
-		if(bad(y)) { erase(y); return; }
+		if(bad(y)){ erase(y); return; }
 		while(next(y) != end() && bad(next(y))) erase(next(y));
 		while(y != begin() && bad(prev(y))) erase(prev(y));
 	}

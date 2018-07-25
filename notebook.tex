@@ -1,5 +1,5 @@
 \documentclass[a4paper,10pt,oneside]{article}
-\setcounter{secnumdepth}{-1} 
+% \setcounter{secnumdepth}{-1} 
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -17,16 +17,21 @@
 \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+
 \pagestyle{fancy}
 
-\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
 
 \fancyhf{}
-\rhead{\fancyplain{}{\nouppercase{\rightmark}}, page \bfseries\thepage}
+%\rhead{\fancyplain{}{\nouppercase{\rightmark}}, page \bfseries\thepage}
+%\rhead{\leftmark\ \-- \rightmark}
+\rhead{\leftmark}
+
 %\lhead{É dificil xover um nome}
 \lhead{University of Brasilia}
 %\chead{É dificil xover um nome}
-% \cfoot{\thepage}
+\cfoot{\thepage}
 
 \usepackage{titlesec}
 \titlespacing*{\section}
@@ -59,7 +64,8 @@
 
 \setlength{\columnseprule}{1pt}
 
-\title{ACM ICPC Reference}
+%\title{ACM ICPC Reference}
+\title{100\% É Pouco,Pagode Importa D+}
 \author{University of Brasilia}
 
 \begin{document}
@@ -69,51 +75,56 @@
 \begin{multicols}{2}
 \thispagestyle{fancy}
 
-\includes{.vimrc}{vimrc}
-\includes{.bashrc}{bashrc}
+\lstinputlisting[language=bash]{vimrc}
 
-\section{Estrutura de Dados}
-\includes{Merge Sort Tree}{code/merge_sort_tree.cpp}
-\includes{Ordered Set}{code/ordered.cpp}
-\includes{Convex Hull Trick}{code/cht.cpp}
-\includes{Min queue}{code/minq.cpp}
+\lstinputlisting[language=bash]{bashrc}
 
-\section{Paradigmas}
+\section{Data Structures}
+\includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
+\includes{Ordered Set}{code/ed/ordered.cpp}
+\includes{Convex Hull Trick}{code/ed/cht.cpp}
+\includes{Min queue}{code/ed/minq.cpp}
+\includes{Sparse Table}{code/ed/sparse_table.cpp}
+
+\section{Paradigms}
 \includes{FFT}{code/fft.cpp}
 \includes{NTT}{code/ntt.cpp}
 
-\section{Matemática}
-\includes{Euclides Extendido}{code/euclides.cpp}
-\includes{Preffix inverse}{code/inv.cpp}
-\includes{Pollard Rho}{code/pollard_rho.cpp}
-\includes{Miller Rabin}{code/miller_rabin.cpp}
-\includes{Totiente}{code/tot.cpp}
-\includes{Mulmod TOP}{code/mod.cpp}
+\section{Math}
+\includes{Euclides Extendido}{code/math/euclides.cpp}
+\includes{Preffix inverse}{code/math/inv.cpp}
+\includes{Pollard Rho}{code/math/pollard_rho.cpp}
+\includes{Miller Rabin}{code/math/miller_rabin.cpp}
+\includes{Totiente}{code/math/tot.cpp}
+\includes{Mulmod TOP}{code/math/mod.cpp}
+\includes{Determinant}{code/math/det.cpp}
 
-\section{Grafos}
-\includes{Dinic}{code/dinic.cpp}
-\includes{Min Cost Max Flow}{code/mcmf.cpp}
-\includes{Small to Large}{code/stl.cpp}
-\includes{Junior e Falta de Ideias}{code/centroid_decomp.cpp}
-\includes{Kosaraju}{code/kosaraju.cpp}
-\includes{Tarjan}{code/tarjan.cpp}
-\includes{Max Clique}{code/maxcliq.cpp}
+\section{Graphs}
+\includes{Dinic}{code/graph/dinic.cpp}
+\includes{Min Cost Max Flow}{code/graph/mcmf.cpp}
+\includes{Small to Large}{code/graph/stl.cpp}
+\includes{Junior e Falta de Ideias}{code/graph/centroid_decomp.cpp}
+\includes{Kosaraju}{code/graph/kosaraju.cpp}
+\includes{Tarjan}{code/graph/tarjan.cpp}
+\includes{Max Clique}{code/graph/maxcliq.cpp}
 
 \section{Strings}
-\includes{Aho Corasick}{code/aho-corasick.cpp}
-\includes{Suffix Array}{code/suffix_array.cpp}
-\includes{Z Algorithm}{code/z_algo.cpp}
-\includes{Prefix function/KMP}{code/pf.cpp}
-\includes{Min rotation}{code/min_rot.cpp}
-\includes{All palindrome}{code/all_palindrome.cpp}
-\includes{Palindromic Tree}{code/ptree.cpp}
+\includes{Aho Corasick}{code/string/aho-corasick.cpp}
+\includes{Suffix Array}{code/string/suffix_array.cpp}
+\includes{Z Algorithm}{code/string/z_algo.cpp}
+\includes{Prefix function/KMP}{code/string/pf.cpp}
+\includes{Min rotation}{code/string/min_rot.cpp}
+\includes{All palindrome}{code/string/all_palindrome.cpp}
+\includes{Palindromic Tree}{code/string/ptree.cpp}
 
-\section{Geometria}
-\includes{2D basics}{code/2D.cpp}
-\includes{Nearest Points}{code/near.cpp}
-\includes{Determinante}{code/det.cpp}
-\includes{Convex Hull}{code/convexhull.cpp}
-\includes{Check point inside polygon, borders included}{code/in_poly.cpp}
+\section{Geometry}
+\includes{2D basics}{code/geometry/2D.cpp}
+\includes{Nearest Points}{code/geometry/near.cpp}
+\includes{Convex Hull}{code/geometry/convexhull.cpp}
+\includes{Check point inside polygon, borders included}{code/geometry/in_poly.cpp}
+
+\section{Miscellaneous}
+\includes{LIS}{code/misc/lis.cpp}
 
 \end{multicols}
 \end{document}

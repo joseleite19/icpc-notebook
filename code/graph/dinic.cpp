@@ -8,11 +8,11 @@ struct Edge{
     ll flow, cap;
 } edge[E];
 
-int lvl[N], vis[N], pass, source = N-2, target = N-1;
+int lvl[N], vis[N], pass, start = N-2, target = N-1;
 int qu[N], qt, px[N];
 
-ll run(int s, ll minE){
-    if(s == target) return minE;
+ll run(int s, int sink, ll minE){
+    if(s == sink) return minE;
 
     ll ans = 0;
 
@@ -20,7 +20,7 @@ ll run(int s, ll minE){
         int e = g[s][ px[s] ];
         auto &v = edge[e], &rev = edge[e^1];
         if(lvl[v.to] != lvl[s]+1 || v.flow >= v.cap) continue;
-        ll tmp = run(v.to, min(minE, v.cap-v.flow));
+        ll tmp = run(v.to, sink,min(minE, v.cap-v.flow));
         v.flow += tmp, rev.flow -= tmp;
         ans += tmp, minE -= tmp;
         if(minE == 0) break;
@@ -28,7 +28,7 @@ ll run(int s, ll minE){
     return ans;
 }
 
-bool bfs(){
+bool bfs(int source, int sink){
     qt = 0;
     qu[qt++] = source;
     lvl[source] = 1;
@@ -37,22 +37,23 @@ bool bfs(){
     for(int i = 0; i < qt; i++){
         int u = qu[i];
         px[u] = 0;
-		if(u == target) return true;
+		if(u == sink) return true;
 
         for(int e : g[u]){
             auto v = edge[e];
             if(v.flow >= v.cap || vis[v.to] == pass) continue;
             vis[v.to] = pass;
-            lvl[v.to] = lvl[u] + 1;
+            lvl[v.to] = lvl[u]+1;
             qu[qt++] = v.to;
         }
     }
     return false;
 }
 
-ll flow(){
+ll flow(int source = start, int sink = target){
     ll ans = 0;
-    while(bfs()) ans += run(source, oo);
+    while(bfs(source, sink))
+		ans += run(source, sink, oo);
     return ans;
 }
 
@@ -67,3 +68,4 @@ void reset_flow(){
 	for(int i = 0; i < ne; i++)
 		edge[i].flow = 0;
 }
+
