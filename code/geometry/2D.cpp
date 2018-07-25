@@ -76,7 +76,7 @@ struct vec{
 
 struct line{
 	coord a, b, c; vec n;
-	line(vec q, vec w){ // (w - q) ^ ((x, y) - q) = 0
+	line(vec q, vec w){ // q.cross(w, (x, y)) = 0
 		a = -(w.y-q.y);
 		b = w.x-q.x;
 		c = -(a * q.x + b * q.y);
