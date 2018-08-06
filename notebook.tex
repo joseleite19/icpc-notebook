@@ -81,6 +81,7 @@
 
 \section{Data Structures}
 \includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
+\includes{Wavelet Tree}{code/ed/wavelet_tree.cpp}
 \includes{Ordered Set}{code/ed/ordered.cpp}
 \includes{Convex Hull Trick}{code/ed/cht.cpp}
 \includes{Min queue}{code/ed/minq.cpp}
@@ -124,32 +125,34 @@
 \includes{Check point inside polygon, borders included}{code/geometry/in_poly.cpp}
 
 \subsection{Triangulo}
-\textbf{Baricentro} (centroide ou centro de massa), que é o ponto de interseção entre as três medianas (segmentos de reta que unem um vértice ao ponto médio do lado oposto). O baricentro divide uma mediana na proporção de 2:1, isto é, ele está a um terço de distância do lado oposto.
+\textbf{Baricentro} (centro de massa), ponto de interseção entre as três medianas(segmentos de reta que unem um vértice ao ponto médio do lado oposto). Divide cada mediana na proporção de 2:1. As coordenadas são a média aritmética entre as coordenadas dos vértices.
 
-As coordenadas do baricentro podem ser computadas diretamente a partir das coordenadas dos vértices: serão a média aritmética entre as mesmas.
+O \textbf{ortocentro} de um triângulo é o ponto de encontro de suas três alturas(reta passando por um vértice e perpendicular ao lado oposto). O ortocentro pode mesmo estar fora do triângulo (no caso de um obtusângulo). No caso de um triângulo retângulo, o ortocentro sempre coincide com o vértice oposto à hipotenusa.
 
-O \textbf{ortocentro} de um triângulo é o ponto de encontro de suas três alturas. O ortocentro pode mesmo estar fora do triângulo (no caso de um obtusângulo). No caso de um triângulo retângulo, o ortocentro sempre coincide com o vértice oposto à hipotenusa.
+O simétrico do ortocentro em relação a qualquer um dos lados pertence ao circuncírculo.
+O simétrico do ortocentro em relação a qualquer uma das medianas dos lados do triângulo também encontra-se sobre o circuncírculo.
+Sendo H o ortocentro e O o circuncentro do triângulo ABC, o ângulo ABH = OAC.
 
 O \textbf{incentro} de um triângulo é o ponto de encontro de suas bissetrizes (retas que dividem um ângulo interno na metade). Além de ser sempre um ponto interior do triângulo, o incentro é o centro do círculo inscrito no triângulo, isto é, o maior círculo que cabe dentro do triângulo e que toca todos os seus três lados (os lados são tangentes ao círculo inscrito).
 
-O raio do círculo inscrito é dado pela razão entre o dobro da área e o perímetro. As coordenadas do centro O do círculo inscrito são obtidas pela média ponderada das coordenadas x e y pelos comprimentos dos lados opostos. As fórmulas abaixo sintetizam estas afirmações.
+O raio do círculo inscrito é dado pela razão entre o dobro da área e o perímetro. As coordenadas do centro O do círculo inscrito são obtidas pela média ponderada das coordenadas x e y pelos comprimentos dos lados opostos. As fórmulas abaixo sintetizam estas afirmações $p = a+b+c$.
 
 $r = \frac{2A}{p}, Ox = \frac{a*A_x + b*B_x + c*C_x}{p}, Oy = \frac{a*A_y + b*B_y + c*C_y}{p}$
 
-O circuncentro é o ponto de encontro entre as retas bisectoras perpendiculares (isto é, retas perpendiculares aos lados do triângulo que os interceptam nos pontos médios). O circuncentro é o centro do círculo circunscrito do triângulo, isto é, o círculo que passa pelos três vértices do triângulo.
+O \textbf{circuncentro} é o ponto de encontro entre as retas bisectoras perpendiculares (isto é, retas perpendiculares aos lados do triângulo que os interceptam nos pontos médios). O circuncentro é o centro do círculo circunscrito do triângulo, isto é, o círculo que passa pelos três vértices do triângulo.
 
-O \textbf{circuncentro}, assim como o ortocentro, pode estar localizado do lado externo do triângulo. Um caso especial interessante é o do triângulo retângulo, onde o circuncentro se localiza no ponto médio da hipotenusa.
+O circuncentro, assim como o ortocentro, pode estar localizado do lado externo do triângulo. Um caso especial interessante é o do triângulo retângulo, onde o circuncentro se localiza no ponto médio da hipotenusa.
 
-O raio do circuncentro é dado pela razão entre o produto das medidas de seus lados e o quádruplo de sua área. As coordenadas do circuncentro podem ser determinadas pelas expressões abaixo, onde $|A|^2 = Ax^2 + Ay^2$.
+O raio do circuncentro é dado pela razão entre o produto das medidas de seus lados e o quádruplo de sua área. As coordenadas do circuncentro podem ser determinadas pelas expressões abaixo, onde $|A|^2 = Ax^2 + Ay^2$, ou $A*A$.
 
 $r = \frac{a*b*c}{4A}, S_x = \frac{1}{2d} * \begin{vmatrix}
-\mid A\mid^2 & A_y & 1 \\
-\mid B\mid^2 & B_y & 1 \\
-\mid C\mid^2 & C_y & 1 \\
+|A|^2 & A_y & 1 \\
+|B|^2 & B_y & 1 \\
+|C|^2 & C_y & 1 \\
 \end{vmatrix}, S_y = \frac{1}{2d} * \begin{vmatrix}
-A_x & \mid A\mid^2 & 1 \\
-B_x & \mid B\mid^2 & 1 \\
-C_x & \mid C\mid^2 & 1 \\
+A_x & |A|^2 & 1 \\
+B_x & |B|^2 & 1 \\
+C_x & |C|^2 & 1 \\
 \end{vmatrix}$
 
 $d = \begin{vmatrix}
@@ -158,7 +161,7 @@ B_x & B_y & 1 \\
 C_x & C_y & 1 \\
 \end{vmatrix}$
 
-$\mid A\mid^2$ é dot product do vetor $A$.
+$\mid A\mid^2$ é dot product do vetor $A$ com si mesmo.
 
 \section{Miscellaneous}
 \includes{LIS}{code/misc/lis.cpp}
