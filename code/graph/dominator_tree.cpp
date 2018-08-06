@@ -27,8 +27,9 @@ int fnd(int u, int flag = 0){
 	return flag ? v : label[u];
 }
 
-void build_dominator_tree(int root){
-	// memset(id, 0, sizeof id);
+void build_dominator_tree(int root, int sz){
+	// memset(id, 0, sizeof(int) * (sz + 1));
+	// for(int i = 0; i <= sz; i++) T[i].clear();
 	prep(root);
 
 	reverse(S.begin(), S.end());
@@ -36,7 +37,7 @@ void build_dominator_tree(int root){
 	int w;
 	for(int u : S){
 
-		for(int v : gt[u]) if(id[v]){
+		for(int v : gt[u]){
 			w = fnd(v);
 			if(id[ sdom[w] ] < id[ sdom[u] ])
 				sdom[u] = sdom[w];
