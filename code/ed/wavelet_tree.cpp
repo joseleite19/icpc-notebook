@@ -65,4 +65,6 @@ public:
 		if(rig) ans += rig->sumk(r(i-1)+1, r(j), k);
 		return ans;
 	}
+
+	// swap (i, i+1) just need to update "array" l[i]
 };
