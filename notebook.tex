@@ -87,9 +87,6 @@
 \includes{Min queue}{code/ed/minq.cpp}
 \includes{Sparse Table}{code/ed/sparse_table.cpp}
 
-\section{Paradigms}
-\includes{FFT}{code/fft.cpp}
-\includes{NTT}{code/ntt.cpp}
 
 \section{Math}
 \includes{Euclides Extendido}{code/math/euclides.cpp}
@@ -97,8 +94,11 @@
 \includes{Pollard Rho}{code/math/pollard_rho.cpp}
 \includes{Miller Rabin}{code/math/miller_rabin.cpp}
 \includes{Totiente}{code/math/tot.cpp}
+\includes{Mobius Function}{code/math/mobius.cpp}
 \includes{Mulmod TOP}{code/math/mod.cpp}
 \includes{Determinant}{code/math/det.cpp}
+\includes{FFT}{code/fft.cpp}
+\includes{NTT}{code/ntt.cpp}
 
 \section{Graphs}
 \includes{Dinic}{code/graph/dinic.cpp}
@@ -168,5 +168,24 @@ $\mid A\mid^2$ é dot product do vetor $A$ com si mesmo.
 \includes{LIS}{code/misc/lis.cpp}
 \includes{DSU rollback}{code/misc/bipar.cpp}
 
+\subsection{Burnside's Lemma}
+Let G be a finite group that acts on a set X. For each g in G let $X^g$ denote the set of elements in $X$ that are fixed by g(also said to be left invariant by g), i.e. $X^g = \{x \in X \mid g*x = x \}$. Number of orbits
+
+$\mid X / G \mid = \frac{1}{|G|} \sum_{g \in G}{|X^g|}$
+
+Number of necklaces: $N_k(n) = \frac{1}{n} \sum_{d|n}{\varphi(d)k^{n/d}}$.
+
 \end{multicols}
+
+\section{DP}
+$\centering \begin{array}{|c|c|c|c|c|}
+\hline
+\text{Name} & \text{Recurrence} & \text{Condition} & \text{Old} & \text{New} \\ \hline
+\text{Convex Hull} & dp[i] = min_{j < i}\{dp[j] + b[j]*a[i]\} & b[j] \ge b[j+1], a[i] \le a[i+1] & O(n^2) & O(n) \\ \hline
+\text{Convex Hull} & dp[i][j] = min_{k < j}\{dp[i-1][k] + b[k]*a[j]\} & b[k] \ge b[k+1], a[j] \le a[j+1] & O(kn^2) & O(kn) \\ \hline
+\text{D\&C} & dp[i][j] = min_{j < i}\{dp[i-1][k] + C[k][j]\} & A[i][j] \le A[i][j+1] & O(kn^2) & O(knlogn) \\ \hline
+\text{Knuth} & dp[i][j] = min_{i < k < j}\{dp[i][k] + dp[k][j]\} + C[i][j] & A[i][j-1] \le A[i][j] \le A[i+1][j] & O(n^3) & O(n^2) \\ \hline
+\text{Alien} & - & - & - & - \\ \hline
+\end{array}$
+
 \end{document}

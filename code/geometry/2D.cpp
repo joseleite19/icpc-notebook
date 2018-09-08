@@ -33,6 +33,10 @@ struct vec{
 	coord cross(const vec &a, const vec &b) const{
 		return (a-(*this)) ^ (b-(*this));
 	}
+    int ccw(const vec &a, const vec &b) const{
+        coord tmp = cross(a, b);
+        return (tmp > eps) - (tmp < -eps);
+    }
 	coord dot(const vec &a, const vec &b) const{
 		return (a-(*this)) * (b-(*this));
 	}
@@ -146,15 +150,12 @@ struct segment{
 		return eq(p.cross(q, o), 0) && onstrip(o);
 	}
 	bool intersect(const segment &o) const{
-		auto d1 = p.cross(q, o.p);
-		if(eq(d1, 0) && contains(o.p)) return true;
-		auto d2 = p.cross(q, o.q);
-		if(eq(d2, 0) && contains(o.q)) return true;
-		auto d3 = o.p.cross(o.q, q);
-		if(eq(d3, 0) && o.contains(q)) return true;
-		auto d4 = o.p.cross(o.q, p);
-		if(eq(d4, 0) && o.contains(p)) return true;
-		return d1 * d2 < 0 && d3 * d4 < 0;
+		if(contains(o.p)) return true;
+		if(contains(o.q)) return true;
+		if(o.contains(q)) return true;
+		if(o.contains(p)) return true;
+		return p.ccw(q, o.p) * p.ccw(q, o.q) == -1
+        && o.p.ccw(o.q, q) * o.p.ccw(o.q, p) == -1;
 	}
 	bool intersect(const line &o) const{
 		return o.eval(p) * o.eval(q) <= 0;
