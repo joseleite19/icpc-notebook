@@ -1,8 +1,10 @@
+int cnt = 0, root;
 void dfs(int u, int p = -1){
 	low[u] = num[u] = ++t;
 	for(int v : g[u]){
 		if(!num[v]){
 			dfs(v, u);
+            if(v == root) cnt++;
 			if(low[v] >= num[u]) u PONTO DE ARTICULACAO;
 			if(low[v] > num[u]) ARESTA u->v PONTE;
 			low[u] = min(low[u], low[v]);
@@ -10,6 +12,8 @@ void dfs(int u, int p = -1){
 		else if(v != p) low[u] = min(low[u], num[v]);
 	}
 }
+
+root PONTO DE ARTICULACAO <=> cnt > 1
 
 void tarjanSCC(int u){
 	low[u] = num[u] = cnt++;
