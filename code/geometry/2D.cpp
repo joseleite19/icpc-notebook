@@ -74,7 +74,7 @@ struct vec{
 	}
 	vec rot90() const{ return {-y, x}; }
 	vec rot(double a) const{
-		return {cos(a)*x - sin(a)*y, sin(a)*x + cos(a)*y};
+		return {cos(a)*x -sin(a)*y, sin(a)*x +cos(a)*y};
 	}
 };
 
@@ -120,7 +120,7 @@ struct line{
 		}
 
 		auto tmp = n ^ o.n;
-		return {(o.c*b - c*o.b)/tmp, (o.a*c - a*o.c)/tmp};
+		return {(o.c*b -c*o.b)/tmp, (o.a*c -a*o.c)/tmp};
 	}
 	vec at_x(coord x) const{
 		return {x, (-c-a*x)/b};

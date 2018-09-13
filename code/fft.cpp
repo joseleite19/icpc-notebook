@@ -5,12 +5,14 @@ struct base{
         return {r*o.r - i*o.i, r*o.i + o.r*i};
     }
     double real() const{ return r; }
-    void operator*=(const base &o){ (*this) = {r*o.r-i*o.i, r*o.i+o.r*i};}
-    void operator+=(const base &o){ r += o.r, i += o.i; }
+    void operator*=(const base &o){
+        (*this) = {r*o.r-i*o.i, r*o.i+o.r*i};
+    }
+    void operator+=(const base &o){r += o.r, i += o.i; }
     void operator/=(const double &o){ r /= o, i /= o; }
-    void operator-=(const base &o){ r -= o.r, i -= o.i; }
-    base operator+(const base &o){ return {r+o.r, i+o.i}; }
-    base operator-(const base &o){ return {r-o.r, i-o.i}; } 
+    void operator-=(const base &o){r -= o.r, i -= o.i; }
+    base operator+(const base &o){return {r+o.r,i+o.i};}
+    base operator-(const base &o){return {r-o.r,i-o.i};} 
 };
 
 double PI = acos(-1);

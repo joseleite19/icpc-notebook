@@ -178,15 +178,5 @@ Number of necklaces: $N_k(n) = \frac{1}{n} \sum_{d|n}{\varphi(d)k^{n/d}}$.
 
 \end{multicols}
 
-\section{DP}
-$\centering \begin{array}{|c|c|c|c|c|}
-\hline
-\text{Name} & \text{Recurrence} & \text{Condition} & \text{Old} & \text{New} \\ \hline
-\text{Convex Hull} & dp[i] = min_{j < i}\{dp[j] + b[j]*a[i]\} & b[j] \ge b[j+1], a[i] \le a[i+1] & O(n^2) & O(n) \\ \hline
-\text{Convex Hull} & dp[i][j] = min_{k < j}\{dp[i-1][k] + b[k]*a[j]\} & b[k] \ge b[k+1], a[j] \le a[j+1] & O(kn^2) & O(kn) \\ \hline
-\text{D\&C} & dp[i][j] = min_{j < i}\{dp[i-1][k] + C[k][j]\} & A[i][j] \le A[i][j+1] & O(kn^2) & O(knlogn) \\ \hline
-\text{Knuth} & dp[i][j] = min_{i < k < j}\{dp[i][k] + dp[k][j]\} + C[i][j] & A[i][j-1] \le A[i][j] \le A[i+1][j] & O(n^3) & O(n^2) \\ \hline
-\text{Alien} & - & - & - & - \\ \hline
-\end{array}$
 
 \end{document}
