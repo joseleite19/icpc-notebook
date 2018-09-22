@@ -58,8 +58,8 @@ public:
 
 	// sum of elements <= k on [i, j]
 	T sumk(int i, int j, T k){
+        if(L == R) return R <= k ? L * (j - i + 1) : 0;
 		if(R <= k) return sum[j] - sum[i-1];
-		if(L == R || L > k) return 0;
 		int ans = 0;
 		if(lef) ans += lef->sumk(l[i-1]+1, l[j], k);
 		if(rig) ans += rig->sumk(r(i-1)+1, r(j), k);
