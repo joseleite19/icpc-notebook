@@ -136,6 +136,8 @@
 \includes{Rand}{code/misc/rand.cpp}
 \includes{Klondike}{code/misc/klondike.cpp}
 \includes{Hilbert Order}{code/misc/hilbert_order.cpp}
+\includes{Modular Factorial}{code/misc/factmod.cpp}
+\includes{Enumaratin all submasks of a bitmask}{code/misc/submasks.cpp}
 
 \subsection{Burnside's Lemma}
 Let G be a finite group that acts on a set X. For each g in G let $X^g$ denote the set of elements in $X$ that are fixed by g(also said to be left invariant by g), i.e. $X^g = \{x \in X \mid g*x = x \}$. Number of orbits
@@ -150,6 +152,18 @@ Number of bracelets: $B_k(n) =
 \frac{1}{2}N_k(n) + \frac{1}{2}k^{\frac{n+1}{2}},\text{ n odd}
 
 \end{cases}$
+
+\subsection{Wilson's Theorem}
+$(n-1)! = -1 \mod n \iff n\text{ is prime}$
+
+\subsection{Fibonacci}
+\begin{itemize}
+\item $F_{n-1}F_{n+1} - F_n^2 = (-1)^n$
+\item $F_{n+k} = F_kF_{n+1} + F_{k-1}F_n$
+\item $GCD(F_n, F_m) = F_{GCD(n, m)}$
+\item $F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$
+
+\end{itemize}
 
 \end{multicols}
 
