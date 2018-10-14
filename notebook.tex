@@ -141,18 +141,9 @@
 \includes{Enumaratin all submasks of a bitmask}{code/misc/submasks.cpp}
 
 \subsection{Burnside's Lemma}
-Let G be a finite group that acts on a set X. For each g in G let $X^g$ denote the set of elements in $X$ that are fixed by g(also said to be left invariant by g), i.e. $X^g = \{x \in X \mid g*x = x \}$. Number of orbits
+Let $(G, \oplus)$ be a finite group that acts on a set $X$. It should hold that $e_g*x=x$ and $g_1 *(g_2 * x) = (g_1 \oplus g_2) * x$, $\forall x \in X, g_1, g_2 \in G$. For each $g \in G$ let $X^g = \{x \in X \mid g*x = x \}$. The number of orbits its given by:
 
-$\mid X / G \mid = \frac{1}{|G|} \sum_{g \in G}{|X^g|}$
-
-Number of necklaces: $N_k(n) = \frac{1}{n} \sum_{d|n}{\varphi(d)k^{n/d}}$.
-
-Number of bracelets: $B_k(n) = 
-\begin{cases}
-\frac{1}{2}N_k(n) + \frac{1}{4}(k+1)k^{\frac{n}{2}},\text{ n even} \\
-\frac{1}{2}N_k(n) + \frac{1}{2}k^{\frac{n+1}{2}},\text{ n odd}
-
-\end{cases}$
+$\mid X / G\mid~= \frac{1}{|G|} \sum_{g \in G}{|X^g|}$
 
 \subsection{Wilson's Theorem}
 $(n-1)! = -1 \mod n \iff n\text{ is prime}$
@@ -163,7 +154,6 @@ $(n-1)! = -1 \mod n \iff n\text{ is prime}$
 \item $F_{n+k} = F_kF_{n+1} + F_{k-1}F_n$
 \item $GCD(F_n, F_m) = F_{GCD(n, m)}$
 \item $F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$
-
 \end{itemize}
 
 \end{multicols}
