@@ -17,4 +17,6 @@ struct custom_hash {
 };
 
 gp_hash_table<long long, int, custom_hash> table;
-
+unordered_map<long long, int, custom_hash> uhash;
+uhash.reserve(1 << 15);
+uhash.max_load_factor(0.25);
