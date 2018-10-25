@@ -3,13 +3,13 @@ char s[N];
 int n, sa[N], tsa[N], lcp[N], r[N], nr[N], c[N];
 
 void sort(int k, int mx){
-    mx++;
+    mx += 2;
     memset(c, 0, sizeof(int) * mx);
-    for(int i = 0; i < n; i++) c[i + k < n ? r[i+k]+1 : 1]++;
+    for(int i = 0; i < n; i++) c[i + k < n ? r[i+k]+2 : 1]++;
     partial_sum(c, c+mx, c);
     int t;
     for(int i = 0; i < n; i++)
-		t = sa[i]+k < n ? r[ sa[i]+k ] : 0,
+		t = sa[i]+k < n ? r[ sa[i]+k ]+1 : 0,
         tsa[ c[t]++ ] = sa[i];
     memcpy(sa, tsa, sizeof(int) * n);
 }
@@ -47,3 +47,8 @@ void build_lcp(){ // lcp[i] = lcp(s[:i], s[:i+1])
     }
 }
 
+int comp_lcp(int i, int j){
+    if(i == j) return n - i;
+    if(r[i] > r[j]) swap(i, j);
+    return min(lcp[k] for k in [r[i], r[j]-1]);
+}
