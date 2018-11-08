@@ -14,6 +14,12 @@
 \usepackage[inline]{enumitem}
 \usepackage{verbatim}
 \usepackage{pxfonts}
+%\usepackage{algorithmic}
+\usepackage{algorithm2e}
+%\usepackage{algorithmicx}
+%\usepackage{program}
+%\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
 \usepackage{multicol}
@@ -92,6 +98,8 @@
 \includes{ColorUpdate}{code/misc/ColorUpdate.cpp}
 \includes{Heavy Light Decomposition}{code/ed/hld.cpp}
 \includes{Iterative Segtree}{code/ed/segtree.cpp}
+\includes{LiChao's Segtree}{code/ed/lichao.cpp}
+\includes{Palindromic tree}{code/ed/eertree.cpp}
 
 
 \section{Math}
@@ -126,6 +134,7 @@
 \includes{All palindrome}{code/string/all_palindrome.cpp}
 \includes{Palindromic Tree}{code/string/ptree.cpp}
 \includes{Suffix Automaton}{code/string/suffix_automaton.cpp}
+\includes{Suffix Tree}{code/ed/suffix_tree.cpp}
 
 \section{Geometry}
 \includes{2D basics}{code/geometry/2D.cpp}
@@ -166,6 +175,24 @@ $(n-1)! = -1 \mod n \iff n\text{ is prime}$
 \item $GCD(F_n, F_m) = F_{GCD(n, m)}$
 \item $F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$
 \end{itemize}
+
+\subsection{Edge coloring}
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwData{A graph G}
+\KwResult{A proper coloring c of the edges of G}
+Let U := E(G)\;
+\While{$U \not= \emptyset$}{
+Let (u,v) be any edge in U\;
+Let F[1:k] be a maximal fan of u starting at F[1]=v\;
+Let c be a color that is free on u and d be a color that is free on F[k]\;
+Invert the $cd_u$ path\;
+Let $w \in V(G)$ be such that $w \in F, F'=[F[1]...w]$ is a fan and d is free on w\;
+Rotate F' and set c(u,w)=d\;
+U := U - {(u,v)}\;
+}
+\end{algorithm}
 
 \subsection{Notes}
 When we repeat something and each time we have probability $p$ to succeed then the expected number or tries is $\frac{1}{p}$, till we succeed.
