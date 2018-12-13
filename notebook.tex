@@ -183,6 +183,19 @@ $(n-1)! = -1 \mod n \iff n\text{ is prime}$
 \item $F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$
 \end{itemize}
 
+\subsection{Kirchhoff's Theorem}
+Laplacian matrix is $L = D - A$, where $D$ is a diagonal matrix with vertex degrees on the diagonals and $A$ is adjacency matrix.
+
+The number of spanning trees is any cofactor of L. i-th cofactor is determinant of the matrix gotten by removing i-th row and column of L.
+
+\subsubsection{Multigraphs}
+In $D[i][i]$ all loops are excluded. $A[i][j]$ = number of edges from $i$ to $j$.
+
+\subsubsection{Directed multigraphs}
+$D[i][i]$ = indegree of i minus the number of loops at i. $A[i][j]$ = number of edges from $i$ to $j$.
+
+The number of oriented spanning trees rooted at a vertex i is the determinant of the matrix gotten by removing the ith row and column of L.
+
 \subsection{Edge coloring}
 
 \begin{algorithm}[H]
