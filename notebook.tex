@@ -1,4 +1,3 @@
-
 \documentclass[a4paper,10pt,oneside]{article}
 % \setcounter{secnumdepth}{-1} 
 
@@ -33,7 +32,7 @@
 \fancyhf{}
 %\rhead{\fancyplain{}{\nouppercase{\rightmark}}, page \bfseries\thepage}
 %\rhead{\leftmark\ \-- \rightmark}
-\rhead{\leftmark}
+\rhead{\leftmark, \thepage}
 
 %\lhead{É dificil xover um nome}
 \lhead{University of Brasilia}
@@ -44,8 +43,11 @@
 \titlespacing*{\section}
 {0pt}{2ex}{1ex}
 
-\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
+%\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
 \definecolor{gray}{rgb}{0.6,0.6,0.6}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \lstset{
 	language=c++,
@@ -56,6 +58,10 @@
 	showstringspaces=false,
 	basicstyle={\small\ttfamily},
 	columns=fullflexible,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
 	numbers=none,
 	%keywordstyle=\bfseries,
 	breaklines=true,
@@ -71,8 +77,9 @@
 
 \setlength{\columnseprule}{1pt}
 
-%\title{ACM ICPC Reference}
-\title{100\% É Pouco,Pagode Importa D+}
+\date{}
+%\title{100\% É Pouco,Pagode Importa D+}
+\title{ICPC Team Reference}
 \author{University of Brasilia}
 
 \begin{document}
