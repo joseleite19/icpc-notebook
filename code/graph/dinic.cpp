@@ -19,7 +19,8 @@ ll run(int s, int sink, ll minE){
     for(; px[s] < (int)g[s].size(); px[s]++){
         int e = g[s][ px[s] ];
         auto &v = edge[e], &rev = edge[e^1];
-        if(lvl[v.to] != lvl[s]+1 || v.flow >= v.cap) continue;
+        if(lvl[v.to] != lvl[s]+1 || v.flow >= v.cap)
+            continue;           // v.cap - v.flow < lim
         ll tmp = run(v.to, sink,min(minE, v.cap-v.flow));
         v.flow += tmp, rev.flow -= tmp;
         ans += tmp, minE -= tmp;
@@ -41,7 +42,8 @@ bool bfs(int source, int sink){
 
         for(int e : g[u]){
             auto v = edge[e];
-            if(v.flow >= v.cap || vis[v.to] == pass) continue;
+            if(v.flow >= v.cap || vis[v.to] == pass)
+                continue; // v.cap - v.flow < lim
             vis[v.to] = pass;
             lvl[v.to] = lvl[u]+1;
             qu[qt++] = v.to;
@@ -52,6 +54,7 @@ bool bfs(int source, int sink){
 
 ll flow(int source = start, int sink = target){
     ll ans = 0;
+    //for(lim = (1LL << 62); lim >= 1; lim /= 2)
     while(bfs(source, sink))
 		ans += run(source, sink, oo);
     return ans;
