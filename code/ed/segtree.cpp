@@ -7,7 +7,7 @@ T query(int l, int r, int &pos){ // [l, r]
     return merge(rl, rr);
 }
 
-// initially save v[i] in st[n+i] for all i
+// initially save v[i] in st[n+i] for all i in [0, n)
 void build(){
     for(int p = n-1; p > 0; p--)
         st[p] = merge(st[2*p], st[2*p+1]);

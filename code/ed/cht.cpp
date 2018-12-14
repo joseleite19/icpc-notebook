@@ -7,7 +7,7 @@ struct Line{
 		const Line* s = succ();
 		if(!s) return 0;
 		ll x = rhs.m;
-		return b - s->b < (s->m - m) * x;
+		return b - s->b < (s->m - m) * x; // OVERFLOW?
 	}
 };
 struct Cht : public multiset<Line>{ // maintain max
@@ -19,7 +19,7 @@ struct Cht : public multiset<Line>{ // maintain max
 		}
 		auto x = prev(y);
 		if(z == end()) return y->m == x->m && y->b <= x->b;
-		return (x->b - y->b)*(z->m - y->m) >= (y->b - z->b)*(y->m - x->m);
+		return (x->b - y->b)*(z->m - y->m) >= (y->b - z->b)*(y->m - x->m); // BE CARREFUL WITH OVERFLOW
 	}
 	void insert_line(ll m, ll b){
 		auto y = insert({ m, b });

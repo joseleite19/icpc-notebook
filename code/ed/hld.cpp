@@ -11,13 +11,13 @@ void dfs_sz(int u){
         p[v] = u;
         dfs_sz(v);
         sz[u] += sz[v];
-        if(sz[v] > sz[g[u][0]])
+        if(sz[v] > sz[ g[u][0] ])
             swap(v, g[u][0]);
     }
 }
 
 // nxt[u] = start of path with u
-// set nxt[root] beforehand
+// set nxt[root] = root beforehand
 void dfs_hld(int u){
     in[u] = t++;
     rin[in[u]] = u;
