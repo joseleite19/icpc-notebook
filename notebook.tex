@@ -220,6 +220,21 @@ U := U - {(u,v)}\;
 \subsection{Notes}
 When we repeat something and each time we have probability $p$ to succeed then the expected number or tries is $\frac{1}{p}$, till we succeed.
 
+\textbf{Small to large}
+
+\textbf{Trick in statement} If $k$ sets are given you should note that the amount of different set sizes is $O(\sqrt{s})$ where $s$ is total size of those sets. And no more than $\sqrt{s}$ sets have size greater than $\sqrt{s}$. For example, a path to the root in Aho-Corasick through suffix links will have at most $O(\sqrt{s})$ vertices.
+
+\textbf{gcd on subsegment}, we have at most $\log(a_i)$ different values in $\{\gcd(a_j, a_{j+1}, ..., a_i)$ for $j < i\}$.
+
+\textbf{From static set to expandable}. To insert, create a new set with the new element. While there are two sets with same size, merge them. There will be at most $\log(n)$ disjoints sets.
+
+\textbf{Matrix exponentiation optimization}. Save binary power of $A_{nxn}$ and answer $q$ queries $b = A^mx$ in $O((n^3 + qn^2)log(m))$.
+
+\textbf{Ternary search on integers into binary search}, comparing f(mid) and f(mid+1), binary search on derivative
+
+\textbf{Dynamic offline set} For each element we will wind segment of time $[a, b]$ such that element is present in the set during this whole segment. Now we can come up with recursive procedure which handles $[l, r]$ time segment considering that all elements such that $[l, r] \subset [a, b]$ are already included into the set. Now, keeping this invariant we recursively go into $[l, m]$ and $[m+1, r]$ subsegments. Finally when we come into segment of length 1.
+
+
 \end{multicols}
 
 
