@@ -16,7 +16,7 @@ void dfs(int u, int p = -1){
 root PONTO DE ARTICULACAO <=> cnt > 1
 
 void tarjanSCC(int u){
-	low[u] = num[u] = cnt++;
+	low[u] = num[u] = ++cnt;
 	vis[u] = 1;
 	S.push_back(u);
 	for(int v : g[u]){
