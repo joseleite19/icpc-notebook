@@ -234,6 +234,7 @@ When we repeat something and each time we have probability $p$ to succeed then t
 
 \textbf{Dynamic offline set} For each element we will wind segment of time $[a, b]$ such that element is present in the set during this whole segment. Now we can come up with recursive procedure which handles $[l, r]$ time segment considering that all elements such that $[l, r] \subset [a, b]$ are already included into the set. Now, keeping this invariant we recursively go into $[l, m]$ and $[m+1, r]$ subsegments. Finally when we come into segment of length 1.
 
+$a > b \implies a \mod b < \frac{a}{2}$
 
 \end{multicols}
 
