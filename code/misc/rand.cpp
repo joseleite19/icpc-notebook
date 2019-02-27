@@ -1,3 +1,6 @@
+#include <random>
+#include <chrono>
+
 cout << RAND_MAX << endl;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 vector<int> permutation(N);
