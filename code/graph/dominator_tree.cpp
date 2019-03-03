@@ -31,12 +31,10 @@ void build_dominator_tree(int root, int sz){
 	// memset(id, 0, sizeof(int) * (sz + 1));
 	// for(int i = 0; i <= sz; i++) T[i].clear();
 	prep(root);
-
 	reverse(S.begin(), S.end());
 
 	int w;
 	for(int u : S){
-
 		for(int v : gt[u]){
 			w = fnd(v);
 			if(id[ sdom[w] ] < id[ sdom[u] ])
@@ -58,12 +56,9 @@ void build_dominator_tree(int root, int sz){
 	}
 
 	reverse(S.begin(), S.end());
-
 	for(int u : S) if(u != root){
 		if(idom[u] != sdom[u]) idom[u] = idom[ idom[u] ];
 		T[ idom[u] ].push_back(u);
 	}
-
 	S.clear();
 }
-
