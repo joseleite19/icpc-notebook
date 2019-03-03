@@ -2,6 +2,7 @@
 //const int N = ; typedef int num;
 num X[N]; int en = 1, Y[N], sz[N], L[N], R[N];
 void calc (int u) { // update node given children info
+	if(!u) return;
 	sz[u] = sz[L[u]] + 1 + sz[R[u]];
 	// code here, no recursion
 }
@@ -30,4 +31,24 @@ int merge(int l, int r) { // els on l <= els on r
 void init(int n=N-1) { // XXX call before using other funcs
 	for(int i = en = 1; i <= n; i++) { Y[i] = i; sz[i] = 1; L[i] = R[i] = 0; }
 	random_shuffle(Y + 1, Y + n + 1);
+}
+void insert(int &u, int it){
+	unlaze(u);
+	if(!u) u = it;
+	else if(Y[it] > Y[u]) split_val(u, X[it], L[it], R[it]), u = it;
+	else insert(X[it] < X[u] ? L[u] : R[u], it);
+	calc(u);
+}
+void erase(int &u, num key){
+	unlaze(u);
+	if(!u) return;
+	if(X[u] == key) u = merge(L[u], R[u]);
+	else erase(key < X[u] ? L[u] : R[u], key);
+	calc(u);
+}
+int create_node(num key){
+	X[en] = key;
+	sz[en] = 1;
+	L[en] = R[en] = 0;
+	return en++;
 }
