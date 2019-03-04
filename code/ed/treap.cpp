@@ -54,8 +54,8 @@ int create_node(num key){
 }
 int query(int u, int l, int r){//0 index
 	unlaze(u);
-	if(r < 0 or l >= sz[u]) return identity_element;
-	if(l <= 0 and r >= sz[u]- 1) return subt_data[u];
+	if(u! or r < 0 or l >= sz[u]) return identity_element;
+	if(l <= 0 and r >= sz[u] - 1) return subt_data[u];
 	int ans = query(L[u], l, r);
 	if(l <= sz[ L[u] ] and sz[ L[u] ] <= r)
 		ans = max(ans, st[u]);
