@@ -15,10 +15,12 @@
 \usepackage{pxfonts}
 %\usepackage{algorithmic}
 \usepackage{algorithm2e}
+%\usepackage{algorithm}
+\usepackage{algpseudocode}
 %\usepackage{algorithmicx}
 %\usepackage{program}
 %\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
+%\usepackage[noend]{algpseudocode}
 
 \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
 \usepackage{multicol}
@@ -201,7 +203,67 @@ $D[i][i]$ = indegree of i minus the number of loops at i. $A[i][j]$ = number of 
 
 The number of oriented spanning trees rooted at a vertex i is the determinant of the matrix gotten by removing the ith row and column of L.
 
-\subsubsection{Matroid}
+\subsection{Matroid}
+Let $X$ set of objects, $I \subseteq 2^X$ set of independents sets such that:
+\begin{enumerate}
+\item $\emptyset \in I$
+\item $A \in I, B \subseteq A \implies B \in I$
+\item Exchange axiom, $A \in I, B \in I, |B| > |A| \implies \exists x \in B \setminus A : A \cup \{x\} \in I$
+\item $A \subseteq X$ and $I$ and $I'$ are maximal independent subsets of A then $|I| = |I'|$
+\end{enumerate}
+Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight.
+
+\subsubsection{Matroid intersection algorithm}
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwData{Two matroids $(X, I_a)$ and $(X, I_b)$}
+\KwResult{Set $I$ with maximum size, $I \in I_a$ and $I \in I_b$}
+$I := \emptyset$\;
+\While{True}{
+	\For{$e_i \in X\setminus I$}{
+		\If{$I+e_i \in I_a$ and $I+e_i \in I_b$}{
+			$I = I + e_i$
+		}
+	}
+	$A = \emptyset, Q = \emptyset, T = \emptyset$\Comment Q is a queue\;
+	\For{$e_i \in X\setminus I$}{
+		\eIf{$I+e_i \in I_a$}{
+			$Q$.push($e_i$), label[$e_i$] := 0
+		}{
+			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_a$}{ $A := A \cup \{(x, e_i)\}$}
+		}
+		\eIf{$I+e_i \in I_b$}{
+			$T := T \cup \{e_i\}$
+		}{
+			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_b$}{ $A := A \cup \{(e_i, x)\}$}			
+		}
+	}
+	found := False\;
+	\While{$Q \not= \emptyset$}{
+		e := $Q$.front(), $Q$.pop()\;
+		\For{$e' \mid (e, e') \in A$ and label[$e'$] = NULL}{
+			label[$e'$] = $e$\;
+			$Q$.push($e$)\;
+			\If{$e' \in T$}{
+				found := True\;
+				$I := I ~\oplus$ path($e'$)\;
+				break\;
+			}
+		}
+		\If{found}{ break }
+	}
+	\If{found = False}{break}
+}
+\end{algorithm}
+
+Where path(e) = [e] if label[e] = 0, path(label[e]) + [e] otherwise.
+
+\subsubsection{Matroid Union}
+Given $k$ matroids over the same set of objects $(X, I_1)$, $(X, I_2)$, \dots, $(X, I_k)$ find $A_1 \in I_1$, $A_2 \in I_2$, \dots, $A_k \in I_k$ such that $i \not= j, A_i \cap A_j = \emptyset$ and $|\bigcup\limits_{i=1}^{k} A_i|$ is maximum. Matroid union can be reduced to matroid intersection as follows.
+
+Let $X' = X \times \{1, 2, \dots, k\}$, ie, $k$ copies of each element of $X$ with different colors. $M1 = (X', Q)$ where $B \in Q \iff \forall ~1 \le i \le k, ~\{x\mid (x, i) \in B\} \in I_i$, ie, for each color, $B$ is independent. $M2 = (X', W)$ where $B \in W \iff i \not= j \implies \lnot((x, i) \in B \land (x, j) \in B)$, ie, each element is picked by at most one color.
+
+Intersection of $M1$ and $M2$ is the answer for the combinatorial problem of matroid union.
 \subsection{Edge coloring}
 
 \begin{algorithm}[H]
