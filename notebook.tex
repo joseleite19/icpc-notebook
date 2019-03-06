@@ -226,9 +226,10 @@ $I := \emptyset$\;
 		}
 	}
 	$A = \emptyset, Q = \emptyset, T = \emptyset$\Comment Q is a queue\;
+	label[$x \in X$] = MARK1\;
 	\For{$e_i \in X\setminus I$}{
 		\eIf{$I+e_i \in I_a$}{
-			$Q$.push($e_i$), label[$e_i$] := 0
+			$Q$.push($e_i$), label[$e_i$] := MARK2
 		}{
 			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_a$}{ $A := A \cup \{(x, e_i)\}$}
 		}
@@ -238,25 +239,25 @@ $I := \emptyset$\;
 			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_b$}{ $A := A \cup \{(e_i, x)\}$}			
 		}
 	}
+	\If{$T = \emptyset$}{break}
 	found := False\;
-	\While{$Q \not= \emptyset$}{
+	\While{$Q \not= \emptyset$ and $found = False$}{
 		e := $Q$.front(), $Q$.pop()\;
-		\For{$e' \mid (e, e') \in A$ and label[$e'$] = NULL}{
-			label[$e'$] = $e$\;
-			$Q$.push($e$)\;
-			\If{$e' \in T$}{
+		\For{$x \mid (e, x) \in A$ and label[$x$] = MARK1}{
+			label[$x$] = $e$\;
+			$Q$.push($x$)\;
+			\If{$x \in T$}{
 				found := True\;
-				$I := I ~\oplus$ path($e'$)\;
+				$I := I ~\oplus$ path($x$)\;
 				break\;
 			}
 		}
-		\If{found}{ break }
 	}
 	\If{found = False}{break}
 }
 \end{algorithm}
 
-Where path(e) = [e] if label[e] = 0, path(label[e]) + [e] otherwise.
+Where path(e) = [e] if label[e] = MARK2, path(label[e]) + [e] otherwise.
 
 \subsubsection{Matroid Union}
 Given $k$ matroids over the same set of objects $(X, I_1)$, $(X, I_2)$, \dots, $(X, I_k)$ find $A_1 \in I_1$, $A_2 \in I_2$, \dots, $A_k \in I_k$ such that $i \not= j, A_i \cap A_j = \emptyset$ and $|\bigcup\limits_{i=1}^{k} A_i|$ is maximum. Matroid union can be reduced to matroid intersection as follows.
