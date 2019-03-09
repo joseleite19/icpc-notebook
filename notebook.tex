@@ -153,11 +153,23 @@
 
 \section{Geometry}
 \includes{2D basics}{code/geometry/2D.cpp}
-\includes{Nearest Points}{code/geometry/near.cpp}
+% \includes{Nearest Points}{code/geometry/near.cpp}
 \includes{Convex Hull}{code/geometry/convexhull.cpp}
 \includes{Check point inside polygon}{code/geometry/in_poly.cpp}
 \includes{Check point inside polygon without lower/upper hull}{code/geometry/in_poly2.cpp}
 \includes{Minkowski sum}{code/geometry/mink.cpp}
+\subsection{Geo Notes}
+\subsubsection{Center of mass}
+\textbf{System of points(2D/3D):} Mass weighted average of points. \\
+\textbf{Frame(2D/3D):} Get middle point of each segment solve as previously. \\
+\textbf{Triangle:} Average of vertices. \\
+\textbf{2D Polygon:} Compute \textbf{signed} area and center of mass of triangle $((0, 0), p_i, p_{i+1})$. Then solve as system of points.\\
+\textbf{Polyhedron surface:} Solve each face as a 2D polygon(be aware of (0, 0)) then replace each face with its center of mass and solve as system of points. \\
+\textbf{Tetrahedron(Triangular pyramid):} As triangles, its the average of points. \\
+\textbf{Polyhedron:} Can be done as 2D polygon, but with tetrahedralization intead of triangulation.
+
+\subsubsection{Pick's Theorem}
+Given a polygon without self-intersections and all its vertices on integer coordinates in some 2D grid. Let $A$ be its area, $I$ the number of points with interger coordinates stricly inside the polygon and $B$ the number of points with interger coordinates in the border of the polygon. The following formula holds: $A = I + \frac{B}{2} - 1$.
 
 \section{Miscellaneous}
 \includes{LIS}{code/misc/lis.cpp}
@@ -173,7 +185,7 @@
 % \includes{Big int}{code/misc/bigint.cpp}
 \includes{Knapsack Bounded with Cost}{code/misc/knapsack_bounded_cost.cpp}
 \includes{LCA \textless O(nlgn), O(1)\textgreater}{code/misc/lca.cpp}
-
+\includes{Buffered reader}{code/misc/buffered_reader.cpp}
 
 \subsection{Burnside's Lemma}
 Let $(G, \oplus)$ be a finite group that acts on a set $X$. It should hold that $e_g*x=x$ and $g_1 *(g_2 * x) = (g_1 \oplus g_2) * x$, $\forall x \in X, g_1, g_2 \in G$. For each $g \in G$ let $X^g = \{x \in X \mid g*x = x \}$. The number of orbits its given by:
@@ -304,6 +316,5 @@ When we repeat something and each time we have probability $p$ to succeed then t
 $a > b \implies a \mod b < \frac{a}{2}$
 
 \end{multicols}
-
 
 \end{document}
