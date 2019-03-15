@@ -76,6 +76,14 @@ struct vec{
 	vec rot(double a) const{
 		return {cos(a)*x -sin(a)*y, sin(a)*x +cos(a)*y};
 	}
+    vec proj(const vec &b) const{ // proj of *this onto b
+        cod k = operator*(b) / (b * b);
+        return b * k;
+    }
+    // proj of (*this) onto the plane orthogonal to b
+    vec rejection(vec b) const{
+        return (*this) - proj(b);
+    }
 };
 
 struct line{
