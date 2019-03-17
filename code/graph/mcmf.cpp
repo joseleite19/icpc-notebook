@@ -1,71 +1,67 @@
 const ll oo = 1e18;
-const int N = 505;
-const int E = 30006;
+const int N = 222, E = 2 * 1000006;
 
 vector<int> g[N];
-
 int ne;
-
 struct Edge{
     int from, to;
     ll cap, cost;
 } edge[E];
 
-int lvl[N], vis[N], pass, source, target, p[N], px[N];
-
+int start = N-1, target = N-2, p[N];
+int inqueue[N];
 ll d[N];
 
-ll back(int s, ll minE){
-    if(s == source) return minE;
-
-    int e = p[s];
-
-    ll f = back(edge[e].from, min(minE, edge[e].cap));
-    edge[e].cap -= f;
-    edge[e^1].cap += f;
-    return f;
-}
-
-int dijkstra(){
-    forn(i, N) d[i] = oo;
-
-    priority_queue<pair<ll, int> > q;
+bool spfa(int source, int sink){
+    for(int i = 0; i < N; i++) d[i] = oo, inqueue[i] = 0;
 
     d[source] = 0;
-
-    q.emplace(0, source);
+    queue<int> q;
+    q.push(source);
+    inqueue[source] = 1;
 
     while(!q.empty()){
-        ll dis = -q.top().ff;
-        int u = q.top().ss; q.pop();
-
-        if(dis > d[u]) continue;
+        int u = q.front(); q.pop();
+        inqueue[u] = 0;
 
         for(int e : g[u]){
             auto v = edge[e];
-            if(v.cap <= 0) continue;
-            if(d[u] + v.cost < d[v.to]){
+            if(v.cap > 0 and d[u] + v.cost < d[v.to]){
                 d[v.to] = d[u] + v.cost;
                 p[v.to] = e;
-                q.emplace(-d[v.to], v.to);
+                if(!inqueue[v.to]){
+                    q.push(v.to);
+                    inqueue[v.to] = 1;
+                }
             }
         }
     }
-    return d[target] != oo;
+    return d[sink] != oo;
 }
 
-pair<ll, ll> mincost(){
+// <max flow, min cost>
+pair<ll, ll> mincost(int source = start, int sink = target){
     ll ans = 0, mf = 0;
-    while(dijkstra()){
-        ll f = back(target, oo);
+    while(spfa(source, sink)){
+        ll f = oo;
+
+        for(int u = sink; u != source; u = edge[ p[u] ].from)
+            f = min(f, edge[ p[u] ].cap);
+        
+        for(int u = sink; u != source; u = edge[ p[u] ].from){
+            edge[ p[u] ].cap -= f;
+            edge[ p[u] ^ 1 ].cap += f;
+        }
+
         mf += f;
-        ans += f * d[target];
+        ans += f * d[sink];
     }
     return {mf, ans};
 }
 
 void addEdge(int u, int v, ll c, ll cost){
     edge[ne] = {u, v, c, cost};
-    g[u].pb(ne++);
+    g[u].push_back(ne++);
+    edge[ne] = {v, u, 0,-cost};
+    g[v].push_back(ne++);
 }
-

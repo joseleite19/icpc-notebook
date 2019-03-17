@@ -76,6 +76,10 @@
    \subsection{#1}
    \lstinputlisting{#2}
 }
+\newcommand\includess[2]{
+   \subsubsection{#1}
+   \lstinputlisting{#2}
+}
 
 \setlength{\columnseprule}{1pt}
 
@@ -112,7 +116,6 @@
 \includes{LiChao's Segtree}{code/ed/lichao.cpp}
 \includes{Palindromic tree}{code/ed/eertree.cpp}
 
-
 \section{Math}
 \includes{Extended Euclidean Algorithm}{code/math/euclides.cpp}
 \includes{Chinese Remainder Theorem}{code/math/crt.cpp}
@@ -127,6 +130,8 @@
 \includes{Simplex Method}{code/math/simplex.cpp}
 \includes{FFT}{code/fft.cpp}
 \includes{NTT}{code/ntt.cpp}
+\includes{Gauss}{code/gauss.cpp}
+\includes{Gauss Xor}{code/gauss_xor.cpp}
 
 \section{Graphs}
 \includes{Dinic}{code/graph/dinic.cpp}
@@ -232,49 +237,51 @@ Let $X$ set of objects, $I \subseteq 2^X$ set of independents sets such that:
 \end{enumerate}
 Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight.
 
-\subsubsection{Matroid intersection algorithm}
-\begin{algorithm}[H]
-\SetAlgoLined
-\KwData{Two matroids $(X, I_a)$ and $(X, I_b)$}
-\KwResult{Set $I$ with maximum size, $I \in I_a$ and $I \in I_b$}
-$I := \emptyset$\;
-\While{True}{
-	\For{$e_i \in X\setminus I$}{
-		\If{$I+e_i \in I_a$ and $I+e_i \in I_b$}{
-			$I = I + e_i$
-		}
-	}
-	$A = \emptyset, Q = \emptyset, T = \emptyset$\Comment Q is a queue\;
-	label[$x \in X$] = MARK1\;
-	\For{$e_i \in X\setminus I$}{
-		\eIf{$I+e_i \in I_a$}{
-			$Q$.push($e_i$), label[$e_i$] := MARK2
-		}{
-			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_a$}{ $A := A \cup \{(x, e_i)\}$}
-		}
-		\eIf{$I+e_i \in I_b$}{
-			$T := T \cup \{e_i\}$
-		}{
-			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_b$}{ $A := A \cup \{(e_i, x)\}$}			
-		}
-	}
-	\If{$T = \emptyset$}{break}
-	found := False\;
-	\While{$Q \not= \emptyset$ and $found = False$}{
-		e := $Q$.front(), $Q$.pop()\;
-		\For{$x \mid (e, x) \in A$ and label[$x$] = MARK1}{
-			label[$x$] = $e$\;
-			$Q$.push($x$)\;
-			\If{$x \in T$}{
-				found := True\;
-				$I := I ~\oplus$ path($x$)\;
-				break\;
-			}
-		}
-	}
-	\If{found = False}{break}
-}
-\end{algorithm}
+%\subsubsection{Matroid intersection algorithm}
+%\begin{algorithm}[H]
+%\SetAlgoLined
+%\KwData{Two matroids $(X, I_a)$ and $(X, I_b)$}
+%\KwResult{Set $I$ with maximum size, $I \in I_a$ and $I \in I_b$}
+%$I := \emptyset$\;
+%\While{True}{
+%	\For{$e_i \in X\setminus I$}{
+%		\If{$I+e_i \in I_a$ and $I+e_i \in I_b$}{
+%			$I = I + e_i$
+%		}
+%	}
+%	$A = \emptyset, Q = \emptyset, T = \emptyset$\Comment Q is a queue\;
+%	label[$x \in X$] = MARK1\;
+%	\For{$e_i \in X\setminus I$}{
+%		\eIf{$I+e_i \in I_a$}{
+%			$Q$.push($e_i$), label[$e_i$] := MARK2
+%		}{
+%			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_a$}{ $A := A \cup \{(x, e_i)\}$}
+%		}
+%		\eIf{$I+e_i \in I_b$}{
+%			$T := T \cup \{e_i\}$
+%		}{
+%			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_b$}{ $A := A \cup \{(e_i, x)\}$}			
+%		}
+%	}
+%	\If{$T = \emptyset$}{break}
+%	found := False\;
+%	\While{$Q \not= \emptyset$ and $found = False$}{
+%		e := $Q$.front(), $Q$.pop()\;
+%		\For{$x \mid (e, x) \in A$ and label[$x$] = MARK1}{
+%			label[$x$] = $e$\;
+%			$Q$.push($x$)\;
+%			\If{$x \in T$}{
+%				found := True\;
+%				$I := I ~\oplus$ path($x$)\;
+%				break\;
+%			}
+%		}
+%	}
+%	\If{found = False}{break}
+%}
+%\end{algorithm}
+
+\includess{Matroid intersection}{code/matroid.cpp}
 
 Where path(e) = [e] if label[e] = MARK2, path(label[e]) + [e] otherwise.
 
