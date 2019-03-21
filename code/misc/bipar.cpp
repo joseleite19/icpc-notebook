@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 struct DSU{
 	vector<int> sz, p, change;
 	vector<tuple<int, int, int>> modifications;
@@ -65,57 +61,3 @@ struct DSU{
 		saves.push_back(modifications.size());
 	}
 };
-
-const int N = 100005;
-const int B = 318;
-
-int n, m, q;
-int x[N], y[N], l[N], r[N], ans[N];
-
-vector<int> qu[N];
-
-int brute(int lef, int rig, DSU &s){
-	s.save();
-	for(int i = lef; i <= rig; i++)
-		s.add_edge(x[i], y[i]);
-	int ret = s.bipartite;
-	s.reload();
-	return ret;
-}
-
-int main(){
-
-	scanf("%d %d %d", &n, &m, &q);
-
-	for(int i = 1; i <= m; i++)
-		scanf("%d %d", x+i, y+i);
-
-	DSU s(n);
-	for(int i = 0; i < q; i++){
-		scanf("%d %d", l+i, r+i);
-		if(r[i] - l[i] <= B + 10)
-			ans[i] = brute(l[i], r[i], s);
-		else qu[l[i] / B].push_back(i);
-	}
-
-	for(int i = 0; i <= m / B; i++){
-		sort(qu[i].begin(), qu[i].end(),[](int a, int b){
-			return r[a] < r[b];
-		});
-		s.reset();
-
-		int R = (i+1)*B-1;
-
-		for(int id : qu[i]){
-			while(R < r[id]) ++R, s.add_edge(x[R], y[R]);
-			s.save();
-			for(int k = l[id]; k < (i+1)*B; k++)
-				s.add_edge(x[k], y[k]);
-			ans[id] = s.bipartite;
-			s.reload();
-		}
-	}
-
-	for(int i = 0; i < q; i++)
-		printf("%s\n",ans[i] ? "Possible":"Impossible");
-}
