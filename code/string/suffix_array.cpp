@@ -1,9 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const int N = 2e6;
-
 int lcp[N], c[N];
 
 // Caractere final da string '\0' esta sendo considerado parte da string s
@@ -36,7 +30,7 @@ void build_sa(char s[], int n, int a[]){
             c1[a1[i]] = cc;
         }
 
-        memcpy(a, sa1, sizeof sa1);
+        memcpy(a, a1, sizeof a1);
         memcpy(c, c1, sizeof c1);
     }
 }
@@ -44,12 +38,11 @@ void build_sa(char s[], int n, int a[]){
 void build_lcp(char s[], int n, int a[]){ // lcp[i] = lcp(s[:i], s[:i+1])
     int k = 0;
 
+    //memset(lcp, 0, sizeof lcp);
     for(int i = 0; i < n; i++){
-        if(c[i] == n-1) k = 0;
-        else{
-            int j = a[c[i]+1];
-            while(i+k < n && j+k < n && s[i+k] == s[j+k]) k++;
-        }
+        if(c[i] == n-1) continue;
+        int j = a[c[i]+1];
+        while(i+k < n && j+k < n && s[i+k] == s[j+k]) k++;
         lcp[c[i]] = k;
         if(k) k--;
     }
@@ -59,13 +52,4 @@ int comp_lcp(int i, int j){
     if(i == j) return n - i;
     if(c[i] > c[j]) swap(i, j);
     return min(lcp[k] for k in [c[i], c[j]-1]);
-}
-
-int main() {
-    scanf("%s", s);
-    build_sa();
-    for(int i = 0; i < n; i++){
-        printf("%d ", sa[i]);
-    }
-    printf("\n");
 }
