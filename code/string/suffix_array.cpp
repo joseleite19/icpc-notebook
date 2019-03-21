@@ -32,6 +32,8 @@ void build_sa(char s[], int n, int a[]){
 
         memcpy(a, a1, sizeof a1);
         memcpy(c, c1, sizeof c1);
+
+        if(cc == n-1) break;
     }
 }
 
