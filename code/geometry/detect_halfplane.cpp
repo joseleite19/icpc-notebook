@@ -1,8 +1,10 @@
+// abs(point a) = absolute value of a
+// ccw(a, b, c) = a.ccw(b, c)
 pair<bool, point> half_inter(vector<pair<point,point> > &vet){
     random_shuffle(all(vet));
     point p;
-    rep(i, 0, sz(vet)) if(ccw(vet[i].x, vet[i].y,p) != 1){
-        point dir = (vet[i].y-vet[i].x) / abs(vet[i].y-vet[i].x);
+    rep(i,0,sz(vet)) if(ccw(vet[i].x,vet[i].y,p) != 1){
+        point dir = (vet[i].y - vet[i].x) / abs(vet[i].y - vet[i].x);
         point l = vet[i].x - dir*1e15;
         point r = vet[i].x + dir*1e15;
         if(r < l) swap(l, r);
