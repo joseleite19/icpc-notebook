@@ -1,15 +1,12 @@
 vector<int> preffix_function(const string &s){
-	int n = s.size();
-	vector<int> b(n+1);
-	b[0] = -1;
-	int i = 0, j = -1;
+	int n = s.size(); vector<int> b(n+1);
+	b[0] = -1; int i = 0, j = -1;
 	while(i < n){
 		while(j >= 0 && s[i] != s[j]) j = b[j];
 		b[++i] = ++j;
 	}
 	return b;
 }
-
 void kmp(const string &t, const string &p){
 	vector<int> b = preffix_function(p);
 	int n = t.size(), m = p.size();

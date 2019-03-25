@@ -8,10 +8,8 @@ void addEdge(int u, int v) {
 }
 void init(int n) {
 	N = n; t = 0;
-	for(int i=0; i<=n; ++i) {
-		conn[i].clear();
-		match[i] = aux[i] = par[i] = 0;
-	}
+	for(int i=0; i<=n; ++i)
+		conn[i].clear(), match[i] = aux[i] = par[i] = 0;
 }
 void augment(int u, int v) {
 	int pv = v, nv;
@@ -35,13 +33,12 @@ void blossom(int v, int w, int a) {
 	while(orig[v] != a) {
 		par[v] = w; w = match[v];
 		if(vis[w] == 1) Q.push(w), vis[w] = 0;
-		orig[v] = orig[w] = a;
-		v = par[w];
+		orig[v] = orig[w] = a; v = par[w];
 	}
 }
 bool bfs(int u) {
 	fill(vis+1, vis+1+N, -1); iota(orig + 1, orig + N + 1, 1);
-	Q = queue<int> (); Q.push(u); vis[u] = 0;
+	Q = queue<int>(); Q.push(u); vis[u] = 0;
 	while(!Q.empty()) {
 		int v = Q.front(); Q.pop();
 		for(int x: conn[v]) {

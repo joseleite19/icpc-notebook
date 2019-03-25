@@ -26,14 +26,11 @@ while(1){
     while(!Q.empty() and !found){
         auto e = Q.front(); Q.pop();
         for(x : A[e]) if(label[x] == MARK1){
-            label[x] = e;
-            Q.push(x);
+            label[x] = e; Q.push(x);
             if(x \in T){
-                found = true;
-                put = 1;
+                found = true; put = 1;
                 while(label[x] != MARK2){
-                    if(put) I = I + x;
-                    else I = I - x;
+                    I = put ? (I + x) : (I - x);
                     put = 1 - put;
                 }
                 I = I + x;

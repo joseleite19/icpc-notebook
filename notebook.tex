@@ -122,7 +122,7 @@
 \includes{Preffix inverse}{code/math/inv.cpp}
 \includes{Pollard Rho}{code/math/pollard_rho.cpp}
 \includes{Miller Rabin}{code/math/miller_rabin.cpp}
-\includes{Totiente}{code/math/tot.cpp}
+% \includes{Totiente}{code/math/tot.cpp}
 \includes{Primitive root}{code/math/primitive_root.cpp}
 \includes{Mobius Function}{code/math/mobius.cpp}
 \includes{Mulmod TOP}{code/math/mod.cpp}
@@ -139,6 +139,8 @@
 \includes{Dinic}{code/graph/dinic.cpp}
 \includes{Push relabel}{code/graph/pushrelabel.cpp}
 \includes{Min Cost Max Flow}{code/graph/mcmf.cpp}
+\includes{Blossom Algorithm for General Matching}{code/graph/blossom.cpp}
+\includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
 \includes{Small to Large}{code/graph/stl.cpp}
 \includes{Centroid Decomposition}{code/graph/centroid_decomp.cpp}
 \includes{Kosaraju}{code/graph/kosaraju.cpp}
@@ -193,12 +195,12 @@ Given a polygon without self-intersections and all its vertices on integer coord
 \includes{DSU rollback}{code/misc/bipar.cpp}
 \includes{Buildings}{code/misc/burn.cpp}
 \includes{Rand}{code/misc/rand.cpp}
-\includes{Klondike}{code/misc/klondike.cpp}
+% \includes{Klondike}{code/misc/klondike.cpp}
 \includes{Hilbert Order}{code/misc/hilbert_order.cpp}
 \includes{Modular Factorial}{code/misc/factmod.cpp}
 \includes{Enumeration all submasks of a bitmask}{code/misc/submasks.cpp}
 \includes{Slope Trick}{code/misc/slope.cpp}
-\includes{Fast IO}{code/misc/fastio.cpp}
+% \includes{Fast IO}{code/misc/fastio.cpp}
 % \includes{Big int}{code/misc/bigint.cpp}
 \includes{Knapsack Bounded with Cost}{code/misc/knapsack_bounded_cost.cpp}
 \includes{LCA \textless O(nlgn), O(1)\textgreater}{code/misc/lca.cpp}
@@ -299,23 +301,23 @@ Given $k$ matroids over the same set of objects $(X, I_1)$, $(X, I_2)$, \dots, $
 Let $X' = X \times \{1, 2, \dots, k\}$, ie, $k$ copies of each element of $X$ with different colors. $M1 = (X', Q)$ where $B \in Q \iff \forall ~1 \le i \le k, ~\{x\mid (x, i) \in B\} \in I_i$, ie, for each color, $B$ is independent. $M2 = (X', W)$ where $B \in W \iff i \not= j \implies \lnot((x, i) \in B \land (x, j) \in B)$, ie, each element is picked by at most one color.
 
 Intersection of $M1$ and $M2$ is the answer for the combinatorial problem of matroid union.
-\subsection{Edge coloring}
-
-\begin{algorithm}[H]
-\SetAlgoLined
-\KwData{A graph G}
-\KwResult{A proper coloring c of the edges of G}
-Let U := E(G)\;
-\While{$U \not= \emptyset$}{
-Let (u,v) be any edge in U\;
-Let F[1:k] be a maximal fan of u starting at F[1]=v\;
-Let c be a color that is free on u and d be a color that is free on F[k]\;
-Invert the $cd_u$ path\;
-Let $w \in V(G)$ be such that $w \in F, F'=[F[1]...w]$ is a fan and d is free on w\;
-Rotate F' and set c(u,w)=d\;
-U := U - {(u,v)}\;
-}
-\end{algorithm}
+%\subsection{Edge coloring}
+%
+%\begin{algorithm}[H]
+%\SetAlgoLined
+%\KwData{A graph G}
+%\KwResult{A proper coloring c of the edges of G}
+%Let U := E(G)\;
+%\While{$U \not= \emptyset$}{
+%Let (u,v) be any edge in U\;
+%Let F[1:k] be a maximal fan of u starting at F[1]=v\;
+%Let c be a color that is free on u and d be a color that is free on F[k]\;
+%Invert the $cd_u$ path\;
+%Let $w \in V(G)$ be such that $w \in F, F'=[F[1]...w]$ is a fan and d is free on w\;
+%Rotate F' and set c(u,w)=d\;
+%U := U - {(u,v)}\;
+%}
+%\end{algorithm}
 
 \subsection{Notes}
 When we repeat something and each time we have probability $p$ to succeed then the expected number or tries is $\frac{1}{p}$, till we succeed.

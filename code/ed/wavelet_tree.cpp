@@ -32,12 +32,10 @@ public:
 		if(bg != tmp) lef = new wavelet(bg, tmp);
 		if(tmp != en) rig = new wavelet(tmp, en);
     }
-
 	~wavelet(){
 		delete lef;
 		delete rig;
 	}
-    
 	// 1 index, first is 1st
     T kth(int i, int j, int k) const{
         if(L >= R) return L;
@@ -45,7 +43,6 @@ public:
         if(c >= k) return lef->kth(l[i-1]+1, l[j], k);
         else return rig->kth(r(i-1)+1, r(j), k - c);
     }
-	
 	// # elements > x on [i, j]
 	int cnt(int i, int j, T x) const{
 		if(L > x) return j - i + 1;
@@ -55,7 +52,6 @@ public:
 		if(rig) ans += rig->cnt(r(i-1)+1, r(j), x);
 		return ans;
 	}
-
 	// sum of elements <= k on [i, j]
 	T sumk(int i, int j, T k){
         if(L == R) return R <= k ? L * (j - i + 1) : 0;
@@ -65,6 +61,5 @@ public:
 		if(rig) ans += rig->sumk(r(i-1)+1, r(j), k);
 		return ans;
 	}
-
 	// swap (i, i+1) just need to update "array" l[i]
 };
