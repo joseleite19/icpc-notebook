@@ -34,6 +34,8 @@ bool bfs(int source, int sink){
         int u = qu[i];
         px[u] = 0;
 		if(u == sink) return true;
+        for(auto& ed : g[u]) {
+            auto v = edge[ed];
             if(v.flow >= v.cap || vis[v.to] == pass)
                 continue; // v.cap - v.flow < lim
             vis[v.to] = pass;
