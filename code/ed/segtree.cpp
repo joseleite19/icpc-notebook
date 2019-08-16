@@ -1,4 +1,4 @@
-T query(int l, int r, int &pos){ // [l, r]
+T query(int l, int r){ // [l, r]
     T rl, rr;
     for(l += n, r += n+1; l < r; l >>= 1, r >>= 1){
         if(l & 1) rl = merge(rl, st[l++]);

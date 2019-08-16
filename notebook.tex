@@ -13,14 +13,8 @@
 \usepackage[inline]{enumitem}
 \usepackage{verbatim}
 \usepackage{pxfonts}
-%\usepackage{algorithmic}
 \usepackage{algorithm2e}
-%\usepackage{algorithm}
 \usepackage{algpseudocode}
-%\usepackage{algorithmicx}
-%\usepackage{program}
-%\usepackage{algorithm}
-%\usepackage[noend]{algpseudocode}
 
 \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
 \usepackage{multicol}
@@ -32,13 +26,9 @@
 \renewcommand{\subsectionmark}[1]{\markright{#1}}
 
 \fancyhf{}
-%\rhead{\fancyplain{}{\nouppercase{\rightmark}}, page \bfseries\thepage}
-%\rhead{\leftmark\ \-- \rightmark}
 \rhead{\leftmark, \thepage}
 
-%\lhead{É dificil xover um nome}
 \lhead{University of Brasilia}
-%\chead{É dificil xover um nome}
 \cfoot{\thepage}
 
 \usepackage{titlesec}
@@ -54,18 +44,16 @@
 \lstset{
 	language=c++,
 	tabsize=4,
-	%frame=tb,
 	aboveskip=.1em,
 	belowskip=.1em,
 	showstringspaces=false,
 	basicstyle={\small\ttfamily},
 	columns=fullflexible,
 	numberstyle=\tiny\color{gray},
-	keywordstyle=\color{blue},
+	% keywordstyle=\color{blue},
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{mauve},
 	numbers=none,
-	%keywordstyle=\bfseries,
 	breaklines=true,
 	breakindent=1.1em,
 	breakatwhitespace=false,
@@ -84,8 +72,8 @@
 \setlength{\columnseprule}{1pt}
 
 \date{}
-%\title{100\% É Pouco,Pagode Importa D+}
-\title{ICPC Team Reference}
+\title{Rock Lee do Pagode Namora D+}
+%\title{ICPC Team Reference}
 \author{University of Brasilia}
 
 \begin{document}
@@ -122,7 +110,7 @@
 \includes{Preffix inverse}{code/math/inv.cpp}
 \includes{Pollard Rho}{code/math/pollard_rho.cpp}
 \includes{Miller Rabin}{code/math/miller_rabin.cpp}
-% \includes{Totiente}{code/math/tot.cpp}
+\includes{Totiente}{code/math/tot.cpp}
 \includes{Primitive root}{code/math/primitive_root.cpp}
 \includes{Mobius Function}{code/math/mobius.cpp}
 \includes{Mulmod TOP}{code/math/mod.cpp}
@@ -140,7 +128,7 @@
 \includes{Push relabel}{code/graph/pushrelabel.cpp}
 \includes{Min Cost Max Flow}{code/graph/mcmf.cpp}
 \includes{Blossom Algorithm for General Matching}{code/graph/blossom.cpp}
-\includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
+% \includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
 \includes{Small to Large}{code/graph/stl.cpp}
 \includes{Centroid Decomposition}{code/graph/centroid_decomp.cpp}
 \includes{Kosaraju}{code/graph/kosaraju.cpp}
@@ -155,15 +143,12 @@
 \includes{Z Algorithm}{code/string/z_algo.cpp}
 \includes{Prefix function/KMP}{code/string/pf.cpp}
 \includes{Min rotation}{code/string/min_rot.cpp}
-\includes{All palindrome}{code/string/all_palindrome.cpp}
-% \includes{Manacher}{code/string/manacher.cpp}
-% \includes{Palindromic Tree}{code/string/ptree.cpp}
+\includes{Manacher}{code/string/all_palindrome.cpp}
 \includes{Suffix Automaton}{code/string/suffix_automaton.cpp}
 \includes{Suffix Tree}{code/ed/suffix_tree.cpp}
 
 \section{Geometry}
 \includes{2D basics}{code/geometry/2D.cpp}
-% \includes{Nearest Points}{code/geometry/near.cpp}
 \includes{Circle line intersection}{code/geometry/circle_line_intersection.cpp}
 \includes{Half plane intersection}{code/geometry/halfplane.cpp}
 \includes{Detect empty Half plane intersection}{code/geometry/detect_halfplane.cpp}
@@ -195,7 +180,7 @@ Given a polygon without self-intersections and all its vertices on integer coord
 \includes{DSU rollback}{code/misc/bipar.cpp}
 \includes{Buildings}{code/misc/burn.cpp}
 \includes{Rand}{code/misc/rand.cpp}
-% \includes{Klondike}{code/misc/klondike.cpp}
+\includes{Klondike}{code/misc/klondike.cpp}
 \includes{Hilbert Order}{code/misc/hilbert_order.cpp}
 \includes{Modular Factorial}{code/misc/factmod.cpp}
 \includes{Enumeration all submasks of a bitmask}{code/misc/submasks.cpp}
@@ -247,50 +232,6 @@ Let $X$ set of objects, $I \subseteq 2^X$ set of independents sets such that:
 \end{enumerate}
 Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight.
 
-%\subsubsection{Matroid intersection algorithm}
-%\begin{algorithm}[H]
-%\SetAlgoLined
-%\KwData{Two matroids $(X, I_a)$ and $(X, I_b)$}
-%\KwResult{Set $I$ with maximum size, $I \in I_a$ and $I \in I_b$}
-%$I := \emptyset$\;
-%\While{True}{
-%	\For{$e_i \in X\setminus I$}{
-%		\If{$I+e_i \in I_a$ and $I+e_i \in I_b$}{
-%			$I = I + e_i$
-%		}
-%	}
-%	$A = \emptyset, Q = \emptyset, T = \emptyset$\Comment Q is a queue\;
-%	label[$x \in X$] = MARK1\;
-%	\For{$e_i \in X\setminus I$}{
-%		\eIf{$I+e_i \in I_a$}{
-%			$Q$.push($e_i$), label[$e_i$] := MARK2
-%		}{
-%			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_a$}{ $A := A \cup \{(x, e_i)\}$}
-%		}
-%		\eIf{$I+e_i \in I_b$}{
-%			$T := T \cup \{e_i\}$
-%		}{
-%			\For{$x \in I \mid I\setminus\{x\} \cup \{e_i\} \in I_b$}{ $A := A \cup \{(e_i, x)\}$}			
-%		}
-%	}
-%	\If{$T = \emptyset$}{break}
-%	found := False\;
-%	\While{$Q \not= \emptyset$ and $found = False$}{
-%		e := $Q$.front(), $Q$.pop()\;
-%		\For{$x \mid (e, x) \in A$ and label[$x$] = MARK1}{
-%			label[$x$] = $e$\;
-%			$Q$.push($x$)\;
-%			\If{$x \in T$}{
-%				found := True\;
-%				$I := I ~\oplus$ path($x$)\;
-%				break\;
-%			}
-%		}
-%	}
-%	\If{found = False}{break}
-%}
-%\end{algorithm}
-
 \includess{Matroid intersection}{code/matroid.cpp}
 
 Where path(e) = [e] if label[e] = MARK2, path(label[e]) + [e] otherwise.
@@ -301,23 +242,6 @@ Given $k$ matroids over the same set of objects $(X, I_1)$, $(X, I_2)$, \dots, $
 Let $X' = X \times \{1, 2, \dots, k\}$, ie, $k$ copies of each element of $X$ with different colors. $M1 = (X', Q)$ where $B \in Q \iff \forall ~1 \le i \le k, ~\{x\mid (x, i) \in B\} \in I_i$, ie, for each color, $B$ is independent. $M2 = (X', W)$ where $B \in W \iff i \not= j \implies \lnot((x, i) \in B \land (x, j) \in B)$, ie, each element is picked by at most one color.
 
 Intersection of $M1$ and $M2$ is the answer for the combinatorial problem of matroid union.
-%\subsection{Edge coloring}
-%
-%\begin{algorithm}[H]
-%\SetAlgoLined
-%\KwData{A graph G}
-%\KwResult{A proper coloring c of the edges of G}
-%Let U := E(G)\;
-%\While{$U \not= \emptyset$}{
-%Let (u,v) be any edge in U\;
-%Let F[1:k] be a maximal fan of u starting at F[1]=v\;
-%Let c be a color that is free on u and d be a color that is free on F[k]\;
-%Invert the $cd_u$ path\;
-%Let $w \in V(G)$ be such that $w \in F, F'=[F[1]...w]$ is a fan and d is free on w\;
-%Rotate F' and set c(u,w)=d\;
-%U := U - {(u,v)}\;
-%}
-%\end{algorithm}
 
 \subsection{Notes}
 When we repeat something and each time we have probability $p$ to succeed then the expected number or tries is $\frac{1}{p}$, till we succeed.
