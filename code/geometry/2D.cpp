@@ -248,31 +248,26 @@ double heron(cod a, cod b, cod c){
 	cod s = (a + b + c) / 2;
 	return sqrt(s * (s - a) * (s - b) * (s - c));
 }
-
+line mediatrix(const vec &a, const vec &b) {
+	auto tmp = (b - a) * 2;
+	return line(tmp.x, tmp.y, a * a - b * b);
+}
 struct circle {
 	vec c; cod r;
 	circle() : c(0, 0), r(0) {}
 	circle(const vec o) : c(o), r(0) {}
 	circle(const vec &a, const vec &b) {
-		c = (a + b) * 0.5;
-		r = (a - c).len();;
+		c = (a + b) * 0.5; r = (a - c).len();
 	}
-	
 	circle(const vec &a, const vec &b, const vec &cc) {
-		auto tmp = (b - a) * 2;
-		auto q = line(tmp.x, tmp.y, a * a - b * b);
-		tmp = (cc - a) * 2;
-		auto w = line(tmp.x, tmp.y, a * a - cc * cc);
-
-		c = q.inter(w);
+		c = mediatrix(a, b).inter(mediatrix(b, cc));
 		r = (a - c).len();
 	}
-
 	bool inside(const vec &a) const {
 		return (a - c).len() <= r;
 	}
 };
-circle min_circle(vector<vec> v) {
+circle min_circle_cover(vector<vec> v) {
 	random_shuffle(v.begin(), v.end());
 	circle ans;
 	int n = (int)v.size();
