@@ -248,3 +248,42 @@ double heron(cod a, cod b, cod c){
 	cod s = (a + b + c) / 2;
 	return sqrt(s * (s - a) * (s - b) * (s - c));
 }
+
+struct circle {
+	vec c; cod r;
+	circle() : c(0, 0), r(0) {}
+	circle(const vec o) : c(o), r(0) {}
+	circle(const vec &a, const vec &b) {
+		c = (a + b) * 0.5;
+		r = (a - c).len();;
+	}
+	
+	circle(const vec &a, const vec &b, const vec &cc) {
+		auto tmp = (b - a) * 2;
+		auto q = line(tmp.x, tmp.y, a * a - b * b);
+		tmp = (cc - a) * 2;
+		auto w = line(tmp.x, tmp.y, a * a - cc * cc);
+
+		c = q.inter(w);
+		r = (a - c).len();
+	}
+
+	bool inside(const vec &a) const {
+		return (a - c).len() <= r;
+	}
+};
+circle min_circle(vector<vec> v) {
+	random_shuffle(v.begin(), v.end());
+	circle ans;
+	int n = (int)v.size();
+	for(int i = 0; i < n; i++) if(!ans.inside(v[i])) {
+		ans = circle(v[i]);
+		for(int j = 0; j < i; j++) if(!ans.inside(v[j])){
+			ans = circle(v[i], v[j]);
+			for(int k=0; k<j; k++)if(!ans.inside(v[k])){
+				ans = circle(v[i], v[j], v[k]);
+			}
+		}
+	}
+	return ans;
+}
