@@ -101,6 +101,7 @@
 \includes{ColorUpdate}{code/misc/ColorUpdate.cpp}
 \includes{Heavy Light Decomposition}{code/ed/hld.cpp}
 \includes{Iterative Segtree}{code/ed/segtree.cpp}
+\includes{Recursive Segtree + lazy}{code/ed/segtree_rec.cpp}
 \includes{LiChao's Segtree}{code/ed/lichao.cpp}
 \includes{Palindromic tree}{code/ed/eertree.cpp}
 
@@ -122,6 +123,8 @@
 \includes{Gauss}{code/gauss.cpp}
 \includes{Gauss Xor}{code/gauss_xor.cpp}
 \includes{Simpson}{code/math/simpson.cpp}
+\includes{Modular Arithmetic}{code/math/mod_arithmetic.cpp}
+\includes{Matrix}{code/math/matrix.cpp}
 
 \section{Graphs}
 \includes{Dinic}{code/graph/dinic.cpp}
@@ -140,6 +143,7 @@
 \section{Strings}
 \includes{Aho Corasick}{code/string/aho_corasick.cpp}
 \includes{Suffix Array}{code/string/suffix_array.cpp}
+\includes{Adamant Suffix Tree}{code/string/adamant_suffix_tree.cpp}
 \includes{Z Algorithm}{code/string/z_algo.cpp}
 \includes{Prefix function/KMP}{code/string/pf.cpp}
 \includes{Min rotation}{code/string/min_rot.cpp}
@@ -270,6 +274,9 @@ When we repeat something and each time we have probability $p$ to succeed then t
 $a > b \implies a \mod b < \frac{a}{2}$
 
 \textbf{Convex Hull}. The expected number of points in the convex hull of a random set of points is $O(log(n))$. The number of points in a convex hull with points coordinates limited by $L$ is $O(L^{2/3})$.
+
+\textbf{Tree path query}. Sometimes the linear query is fast enough. Just do adamant's hld sorting subtrees by their size and remap vertices indexes.
+
 
 \end{multicols}
 
