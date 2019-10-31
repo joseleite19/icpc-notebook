@@ -5,5 +5,5 @@ for(int l = 1, r; l <= n; l = r + 1) {
 for(int l, r = n; r > 0; r = l - 1) {
     int tmp = (n + r - 1) / r;
     l = (n + tmp - 1) / tmp;
-    // (n + x - 1) / x yields the same value for l <= x <= r
+    // (n+x-1) / x yields the same value for l <= x <= r
 }

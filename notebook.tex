@@ -80,20 +80,22 @@
 \maketitle
 \begin{multicols}{2}
 \tableofcontents
-\newpage
+% \newpage
 \thispagestyle{fancy}
 
 \lstinputlisting[language=bash]{vimrc}
 
 \lstinputlisting[language=bash]{bashrc}
+\includes{Template}{code/template.cpp}
 
 \section{Data Structures}
 \includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
+\includes{Fenwick Tree 2D}{code/ed/bit2D.cpp}
 \includes{Wavelet Tree}{code/ed/wavelet_tree.cpp}
 \includes{Order Set}{code/ed/order_set.cpp}
 \includes{Hash table}{code/ed/hash_table.cpp}
 \includes{Convex Hull Trick Simple}{code/ed/cht_simple.cpp}
-% \includes{Convex Hull Trick}{code/ed/cht.cpp}
+\includes{Convex Hull Trick}{code/ed/cht.cpp}
 \includes{Convex Hull Trick}{code/ed/LineContainer.cpp}
 \includes{Min queue}{code/ed/minq.cpp}
 \includes{Sparse Table}{code/ed/sparse_table.cpp}
@@ -108,6 +110,7 @@
 \section{Math}
 \includes{Extended Euclidean Algorithm}{code/math/euclides.cpp}
 \includes{Chinese Remainder Theorem}{code/math/crt.cpp}
+\includes{Diophantine Solver}{code/math/diophantine.cpp}
 \includes{Preffix inverse}{code/math/inv.cpp}
 \includes{Pollard Rho}{code/math/pollard_rho.cpp}
 \includes{Miller Rabin}{code/math/miller_rabin.cpp}
@@ -115,6 +118,8 @@
 \includes{Primitive root}{code/math/primitive_root.cpp}
 \includes{Mobius Function}{code/math/mobius.cpp}
 \includes{Mulmod TOP}{code/math/mod.cpp}
+\includes{Modular multiplication TOPPER}{code/math/fast_mul_mod.cpp}
+\includes{Division Trick}{code/math/division_trick.cpp}
 \includes{Matrix Determinant}{code/math/det.cpp}
 \includes{Simplex Method}{code/math/simplex.cpp}
 \includes{FFT}{code/fft.cpp}
@@ -127,11 +132,12 @@
 \includes{Matrix}{code/math/matrix.cpp}
 
 \section{Graphs}
+\includes{Bipartite Matching}{code/graph/bipartite_matching.cpp}
 \includes{Dinic}{code/graph/dinic.cpp}
 \includes{Push relabel}{code/graph/pushrelabel.cpp}
 \includes{Min Cost Max Flow}{code/graph/mcmf.cpp}
 \includes{Blossom Algorithm for General Matching}{code/graph/blossom.cpp}
-% \includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
+\includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
 \includes{Small to Large}{code/graph/stl.cpp}
 \includes{Centroid Decomposition}{code/graph/centroid_decomp.cpp}
 \includes{Kosaraju}{code/graph/kosaraju.cpp}
