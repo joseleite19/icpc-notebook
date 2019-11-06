@@ -106,6 +106,8 @@
 \includes{Recursive Segtree + lazy}{code/ed/segtree_rec.cpp}
 \includes{LiChao's Segtree}{code/ed/lichao.cpp}
 \includes{Palindromic tree}{code/ed/eertree.cpp}
+\includes{Segtree Beats}{code/ed/seg_beats.cpp}
+\includes{KD Tree}{code/ed/kd_tree.cpp}
 
 \section{Math}
 \includes{Extended Euclidean Algorithm}{code/math/euclides.cpp}
@@ -145,6 +147,7 @@
 \includes{Max Clique}{code/graph/maxcliq.cpp}
 \includes{Dominator Tree}{code/graph/dominator_tree.cpp}
 \includes{Min Cost Matching}{code/graph/hungarian_mcm.cpp}
+\includes{mjhum's flow}{code/graph/mjhum_flow.cpp}
 
 \section{Strings}
 \includes{Aho Corasick}{code/string/aho_corasick.cpp}
@@ -162,6 +165,8 @@
 \includes{Circle line intersection}{code/geometry/circle_line_intersection.cpp}
 \includes{Half plane intersection}{code/geometry/halfplane.cpp}
 \includes{Detect empty Half plane intersection}{code/geometry/detect_halfplane.cpp}
+\includes{Delaunay}{code/geometry/delaynay.cpp}
+\includes{Simple Triangulate}{code/geometry/triangulate.cpp}
 
 \subsection{Circle Circle intersection}
 Assume that the first circle is centered at the origin and second at $(x2, y2)$. Find circle line intersection of first circle and line $Ax + By + C = 0$, where $A = -2x_2$, $B = -2y_2$, $C = x_2^2 + y_2^2 + r_1^2 - r_2^2$.
@@ -282,6 +287,8 @@ $a > b \implies a \mod b < \frac{a}{2}$
 \textbf{Convex Hull}. The expected number of points in the convex hull of a random set of points is $O(log(n))$. The number of points in a convex hull with points coordinates limited by $L$ is $O(L^{2/3})$.
 
 \textbf{Tree path query}. Sometimes the linear query is fast enough. Just do adamant's hld sorting subtrees by their size and remap vertices indexes.
+
+\textbf{Range query} offline can be solved by a sweep, ordering queries by R.
 
 
 \end{multicols}

@@ -1,5 +1,5 @@
 const int N = 100005;
-const int E = 2000006;
+const int E = 2 * 1000006;
 vector<int> g[N];
 int ne;
 struct Edge{
