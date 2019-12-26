@@ -1,5 +1,5 @@
 template<typename T>
-class wavelet{
+class wavelet { // 1-based!!
     T L, R;
     vector<int> l;
 	vector<T> sum; // <<
@@ -9,7 +9,7 @@ class wavelet{
 
 public:
 	template<typename ITER>
-    wavelet(ITER bg, ITER en){
+    wavelet(ITER bg, ITER en) { // it changes the argument array
 		lef = rig = nullptr;
         L = *bg, R = *bg;
 
