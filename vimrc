@@ -5,5 +5,7 @@ nmap <F2> 0V$%d
 nmap <C-down> :m+1<CR>
 nmap <C-up> :m-2<CR>
 nmap <C-a> ggVG
+nmap <S-up> :m-2<CR>
+nmap <S-down> :m+1<CR>
 vmap <C-c> "+y
 syntax on
