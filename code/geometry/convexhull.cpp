@@ -3,7 +3,9 @@ vector<vec> monotone_chain_ch(vector<vec> P){
 
     vector<vec> L, U;
     for(auto p : P){
-        while(L.size() >= 2 && L[L.size() - 2].cross(L.back(), p) < 0)
+        // BE CAREFUL WITH OVERFLOW!
+        // MAX VALUE (2*A)^2, where 0 <= abs(p.x), abs(p.y) <= A
+        while(L.size() >= 2 && L[L.size() - 2].cross(L.back(), p) <= 0)
             L.pop_back();
 
         L.push_back(p);
@@ -11,7 +13,7 @@ vector<vec> monotone_chain_ch(vector<vec> P){
 
     reverse(P.begin(), P.end());
     for(auto p : P){
-        while(U.size() >= 2 && U[U.size() - 2].cross(U.back(), p) < 0)
+        while(U.size() >= 2 && U[U.size() - 2].cross(U.back(), p) <= 0)
             U.pop_back();
 
         U.push_back(p);
