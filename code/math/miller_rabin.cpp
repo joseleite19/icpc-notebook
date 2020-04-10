@@ -4,7 +4,7 @@ bool rabin(ll n){
 	ll s = 0, d = n - 1;
 	while(d % 2 == 0) d /= 2, s++;
 	for(int k = 0; k < 64; k++){
-		ll a = (llrand() % (n - 3)) + 2;
+		ll a = llrand(2, n-2);
 		ll x = fexp(a, d, n);
 		if(x != 1 && x != n-1){
 			for(int r = 1; r < s; r++){
