@@ -1,5 +1,5 @@
 set ts=4 sw=4 sta nu rnu sc stl+=%F cindent
-set bg=dark ruler timeoutlen=100
+set bg=dark ruler timeoutlen=1000
 imap {<CR> {<CR>}<Esc>O
 nmap <F2> 0V$%d
 nmap <C-down> :m+1<CR>
