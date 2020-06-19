@@ -1,2 +1,2 @@
-alias comp='g++ -Wall -Wformat=2 -Wshadow -Wconversion -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -std=c++17'
+alias comp='g++ -std=c++17 -Wshadow -Wall -Wextra -Wformat=2 -Wconversion -fsanitize=address,undefined -fno-sanitize-recover -Wfatal-errors'
 
