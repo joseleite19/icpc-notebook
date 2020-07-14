@@ -45,7 +45,7 @@ pair<ll, ll> mincost(int source = start, int sink = target){
             edge[ p[u] ].cap -= f;
             edge[ p[u] ^ 1 ].cap += f;
         }
-		for(int i = 0; i < N; i++) pot[i] += d[i];
+		for(int i = 0; i < N; i++) pot[i] = min(oo, pot[i] + d[i]);
     }
     return {mf, ans};
 }
