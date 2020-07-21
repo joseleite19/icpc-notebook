@@ -8,6 +8,7 @@ void manacher(char *s, int n, int *rad) {
 	for(int i = 0; i < n; i++) t[2 * i] = s[i];
 
 	int x = 0;
+	rad[0] = 0; // <
 	for(int i = 1; i < m; i++) {
 		int &r = rad[i] = 0;
 		if(i <= x+rad[x]) r = min(rad[x+x-i],x+rad[x]-i);
