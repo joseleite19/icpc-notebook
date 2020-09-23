@@ -1,7 +1,4 @@
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-
-#include <ext/pb_ds/detail/standard_policies.hpp>
+#include <bits/extc++.h>
 
 using namespace __gnu_pbds; // or pb_ds;
 

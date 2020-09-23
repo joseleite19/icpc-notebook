@@ -9,6 +9,7 @@ void prec_add(int x, int y) {
 void init() {
 	for(int i = 1; i < N; i++) {
 		sort(go[i].begin(), go[i].end());
+		go[i].resize(unique(go[i].begin(), go[i].end()) - go[i].begin());
 		ft[i].assign(go[i].size() + 1, 0);
 	}
 }

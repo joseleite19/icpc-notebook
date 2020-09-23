@@ -1,7 +1,5 @@
-% \documentclass[a4paper,10pt,oneside]{article}
 \documentclass[letterpaper,10pt,oneside,footsepline, landscape]{article}
 % \setcounter{secnumdepth}{-1} 
-
 
 \usepackage{amsmath,amssymb, amsbsy}
 \usepackage{fix-cm}
@@ -30,7 +28,6 @@
 \usepackage[normalem]{ulem}
 \usepackage[strict]{changepage}
 
-% \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
 \usepackage[hmargin={0.5cm, 0.5cm}, vmargin={1.4cm, 1.0cm}]{geometry}
 \usepackage{multicol}
 \usepackage{fancyhdr}
@@ -55,38 +52,42 @@
 
 \usepackage{titlesec}
 
-%\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
+\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
 \definecolor{gray}{rgb}{0.6,0.6,0.6}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
-%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+% \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
+\definecolor{mygreen}{HTML}{007000}
+\definecolor{myblue}{HTML}{0000dd}
+
+\definecolor{mymyblue}{HTML}{005cc5}
+
+\definecolor{myred}{HTML}{d73a49}
+\definecolor{myblack}{HTML}{24292e}
+\definecolor{mygray}{HTML}{6a737d}
+
 \lstset{
-	language=c++,
+	language=C++,
 	tabsize=2,
 	frame=t,
 	aboveskip=3pt,
 	belowskip=2pt,
 	showstringspaces=false,
-	basicstyle={\small\ttfamily},
 	columns=fullflexible,
-	numberstyle=\tiny\color{gray},
-	% keywordstyle=\color{blue},
-	commentstyle=\color{dkgreen},
-	stringstyle=\color{mauve},
 	numbers=none,
-	breakatwhitespace=false,
-	commentstyle=\color{gray},
+	breakatwhitespace=true,
+	breaklines=true,
+	breakindent=12pt,
 	inputencoding=utf8,
 	emptylines=*1,
 	showstringspaces=false,
-	breaklines=true,
-	breakindent=12pt,
 	postbreak=\raisebox{0ex}[0ex][0ex]{\color{lightgray}\ensuremath{\hookrightarrow}},
-	% basicstyle=\scriptsize\ttfamily\color{mygreen},
-	commentstyle=\color{darkgray}\itshape,
-	% keywordstyle=\color{myblue},
+	basicstyle=\scriptsize\ttfamily,
 	identifierstyle=\color{black},
+	commentstyle=\color{gray}\itshape,
+	showtabs=true,
+	tab={\color{dkgray}{\tiny $\vartriangleright$}\hfill},
 }
 
 \newcommand{\includes}[2]{
@@ -94,11 +95,7 @@
 	\subsection{#1}
 	\setnormalspacing
 
-	%\vspace{-3pt}
-	%\tiny
-	%\texttt{} \hfill dasd
 	\lstinputlisting{#2}
-	%\normalsize
 }
 \newcommand{\includess}[2]{
 	\subsubsection{#1}
@@ -126,7 +123,6 @@
 \lstinputlisting{code/template.cpp}
 
 \section{Data Structures}
-% \includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
 \includes{Fenwick Tree 2D}{code/ed/bit2D.cpp}
 \includes{Wavelet Tree}{code/ed/wavelet_tree.cpp}
 \includes{Order Set}{code/ed/order_set.cpp}
@@ -140,7 +136,6 @@
 \includes{ColorUpdate}{code/misc/ColorUpdate.cpp}
 \includes{Heavy Light Decomposition}{code/ed/hld.cpp}
 \includes{Iterative Segtree}{code/ed/segtree.cpp}
-\includes{Recursive Segtree + lazy}{code/ed/segtree_rec.cpp}
 \includes{LiChao's Segtree}{code/ed/lichao.cpp}
 \includes{Palindromic tree}{code/ed/eertree.cpp}
 
@@ -151,7 +146,6 @@
 \includes{Preffix inverse}{code/math/inv.cpp}
 \includes{Pollard Rho}{code/math/pollard_rho.cpp}
 \includes{Miller Rabin}{code/math/miller_rabin.cpp}
-\includes{Totiente}{code/math/tot.cpp}
 \includes{Primitive root}{code/math/primitive_root.cpp}
 \includes{Mobius Function}{code/math/mobius.cpp}
 \includes{Mulmod TOP}{code/math/mod.cpp}
@@ -165,7 +159,6 @@
 \includes{Gauss}{code/gauss.cpp}
 \includes{Gauss Xor}{code/gauss_xor.cpp}
 \includes{Simpson}{code/math/simpson.cpp}
-\includes{Modular Arithmetic}{code/math/mod_arithmetic.cpp}
 \includes{Matrix}{code/math/matrix.cpp}
 
 \section{Graphs}
@@ -176,7 +169,6 @@
 \includes{Blossom Algorithm for General Matching}{code/graph/blossom.cpp}
 \includes{Blossom Algorithm for Weighted General Matching}{code/graph/weight_blossom.cpp}
 \includes{Small to Large}{code/graph/stl.cpp}
-\includes{Centroid Decomposition}{code/graph/centroid_decomp.cpp}
 \includes{Kosaraju}{code/graph/kosaraju.cpp}
 \includes{Tarjan}{code/graph/tarjan.cpp}
 \includes{Max Clique}{code/graph/maxcliq.cpp}
@@ -192,7 +184,6 @@
 \includes{Min rotation}{code/string/min_rot.cpp}
 \includes{Manacher}{code/string/all_palindrome.cpp}
 \includes{Suffix Automaton}{code/string/suffix_automaton.cpp}
-\includes{Suffix Tree}{code/ed/suffix_tree.cpp}
 
 \section{Geometry}
 \includes{2D basics}{code/geometry/2D.cpp}
@@ -223,17 +214,16 @@ Be aware of corner case with two circles centered at the same point.
 Given a polygon without self-intersections and all its vertices on integer coordinates in some 2D grid. Let $A$ be its area, $I$ the number of points with integer coordinates stricly inside the polygon and $B$ the number of points with integer coordinates in the border of the polygon. The following formula holds: $A = I + \frac{B}{2} - 1$.
 
 \section{Miscellaneous}
-\includes{LIS}{code/misc/lis.cpp}
-\includes{DSU rollback}{code/misc/bipar.cpp}
+\includes{Cute LIS}{code/misc/lis.cpp}
+\includes{Cute LIS}{code/misc/lis.cpp}
+\includes{Efficient recursive lambda}{code/misc/recursive_lambda.cpp}
+\includes{Bitsets}{code/misc/bitset.cpp}
 \includes{Buildings}{code/misc/burn.cpp}
 \includes{Rand}{code/misc/rand.cpp}
 \includes{Klondike}{code/misc/klondike.cpp}
 \includes{Hilbert Order}{code/misc/hilbert_order.cpp}
 \includes{Modular Factorial}{code/misc/factmod.cpp}
 \includes{Enumeration all submasks of a bitmask}{code/misc/submasks.cpp}
-\includes{Slope Trick}{code/misc/slope.cpp}
-% \includes{Fast IO}{code/misc/fastio.cpp}
-% \includes{Big int}{code/misc/bigint.cpp}
 \includes{Knapsack Bounded with Cost}{code/misc/knapsack_bounded_cost.cpp}
 \includes{LCA \textless O(nlgn), O(1)\textgreater}{code/misc/lca.cpp}
 \includes{Buffered reader}{code/misc/buffered_reader.cpp}

@@ -37,7 +37,7 @@ void build_sa(char s[], int n, int a[]){
     }
 }
 
-void build_lcp(char s[], int n, int a[]){ // lcp[i] = lcp(s[:i], s[:i+1])
+void build_lcp(char s[], int n, int a[]){ // lcp[i] = lcp(s[:a[i]], s[:a[i+1]])
     int k = 0;
 
     //memset(lcp, 0, sizeof lcp);

@@ -1,3 +1,4 @@
+// remember std::rotate
 int min_rotation(int *s, int N) {
   REP(i, N) s[N+i] = s[i];
 

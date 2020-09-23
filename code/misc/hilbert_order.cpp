@@ -1,4 +1,4 @@
-// maybe use B = n / sqrt(q)
+// maybe use B = n / sqrt(q) before this
 inline int64_t hilbertOrder(int x, int y, int pow = 21, int rotate = 0) {
 	if(pow == 0) return 0;
 	int hpow = 1 << (pow-1);
