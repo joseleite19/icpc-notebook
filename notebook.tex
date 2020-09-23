@@ -1,24 +1,47 @@
-\documentclass[a4paper,10pt,oneside]{article}
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside,footsepline, landscape]{article}
 % \setcounter{secnumdepth}{-1} 
 
-\usepackage{amsmath}
-\usepackage{amssymb}
+
+\usepackage{amsmath,amssymb, amsbsy}
+\usepackage{fix-cm}
+\usepackage{paralist}
 \usepackage{courier}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage{color}
 \usepackage{pdflscape}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
+\usepackage{framed}
 \usepackage[inline]{enumitem}
 \usepackage{verbatim}
 \usepackage{pxfonts}
 \usepackage{algorithm2e}
 \usepackage{algpseudocode}
+\usepackage{pdflscape}
+\usepackage{titlesec}
+\usepackage{paralist}
+\usepackage[parfill]{parskip}
 
-\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+
+\usepackage[inline]{enumitem}
+\usepackage[parfill]{parskip}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage[strict]{changepage}
+
+% \usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\usepackage[hmargin={0.5cm, 0.5cm}, vmargin={1.4cm, 1.0cm}]{geometry}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+
+\titlespacing*{\section}{0pt}{-10pt}{-5pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{10}{15}\bfseries}{\thesubsection}{1em}{}
+
+\newcommand{\setcodespacing}{\titlespacing*{\subsection}{0pt}{-10pt}{0pt}}
+\newcommand{\setnormalspacing}{\titlespacing*{\subsection}{0pt}{0pt}{-5pt}}
 
 \pagestyle{fancy}
 
@@ -29,11 +52,8 @@
 \rhead{\leftmark, \thepage}
 
 \lhead{University of Brasilia}
-\cfoot{\thepage}
 
 \usepackage{titlesec}
-\titlespacing*{\section}
-{0pt}{2ex}{1ex}
 
 %\definecolor{dkgray}{rgb}{0.4,0.4,0.4}
 \definecolor{gray}{rgb}{0.6,0.6,0.6}
@@ -43,9 +63,10 @@
 
 \lstset{
 	language=c++,
-	tabsize=4,
-	aboveskip=.1em,
-	belowskip=.1em,
+	tabsize=2,
+	frame=t,
+	aboveskip=3pt,
+	belowskip=2pt,
 	showstringspaces=false,
 	basicstyle={\small\ttfamily},
 	columns=fullflexible,
@@ -54,19 +75,34 @@
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{mauve},
 	numbers=none,
-	breaklines=true,
-	breakindent=1.1em,
 	breakatwhitespace=false,
 	commentstyle=\color{gray},
+	inputencoding=utf8,
+	emptylines=*1,
+	showstringspaces=false,
+	breaklines=true,
+	breakindent=12pt,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\color{lightgray}\ensuremath{\hookrightarrow}},
+	% basicstyle=\scriptsize\ttfamily\color{mygreen},
+	commentstyle=\color{darkgray}\itshape,
+	% keywordstyle=\color{myblue},
+	identifierstyle=\color{black},
 }
 
-\newcommand\includes[2]{
-   \subsection{#1}
-   \lstinputlisting{#2}
+\newcommand{\includes}[2]{
+	\setcodespacing
+	\subsection{#1}
+	\setnormalspacing
+
+	%\vspace{-3pt}
+	%\tiny
+	%\texttt{} \hfill dasd
+	\lstinputlisting{#2}
+	%\normalsize
 }
-\newcommand\includess[2]{
-   \subsubsection{#1}
-   \lstinputlisting{#2}
+\newcommand{\includess}[2]{
+	\subsubsection{#1}
+	\lstinputlisting{#2}
 }
 
 \setlength{\columnseprule}{1pt}
@@ -78,7 +114,7 @@
 
 \begin{document}
 \maketitle
-\begin{multicols}{2}
+\begin{multicols}{3}
 \tableofcontents
 % \newpage
 \thispagestyle{fancy}
@@ -86,10 +122,11 @@
 \lstinputlisting[language=bash]{vimrc}
 
 \lstinputlisting[language=bash]{bashrc}
-\includes{Template}{code/template.cpp}
+
+\lstinputlisting{code/template.cpp}
 
 \section{Data Structures}
-\includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
+% \includes{Merge Sort Tree}{code/ed/merge_sort_tree.cpp}
 \includes{Fenwick Tree 2D}{code/ed/bit2D.cpp}
 \includes{Wavelet Tree}{code/ed/wavelet_tree.cpp}
 \includes{Order Set}{code/ed/order_set.cpp}
@@ -183,7 +220,7 @@ Be aware of corner case with two circles centered at the same point.
 \textbf{Polyhedron:} Can be done as 2D polygon, but with tetrahedralization intead of triangulation.
 
 \subsubsection{Pick's Theorem}
-Given a polygon without self-intersections and all its vertices on integer coordinates in some 2D grid. Let $A$ be its area, $I$ the number of points with interger coordinates stricly inside the polygon and $B$ the number of points with interger coordinates in the border of the polygon. The following formula holds: $A = I + \frac{B}{2} - 1$.
+Given a polygon without self-intersections and all its vertices on integer coordinates in some 2D grid. Let $A$ be its area, $I$ the number of points with integer coordinates stricly inside the polygon and $B$ the number of points with integer coordinates in the border of the polygon. The following formula holds: $A = I + \frac{B}{2} - 1$.
 
 \section{Miscellaneous}
 \includes{LIS}{code/misc/lis.cpp}
@@ -249,7 +286,7 @@ Let $X$ set of objects, $I \subseteq 2^X$ set of independents sets such that:
 \end{enumerate}
 Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight.
 
-\includess{Matroid intersection}{code/matroid.cpp}
+\includes{Matroid intersection}{code/matroid.cpp}
 
 Where path(e) = [e] if label[e] = MARK2, path(label[e]) + [e] otherwise.
 
