@@ -20,6 +20,7 @@
 \usepackage{titlesec}
 \usepackage{paralist}
 \usepackage[parfill]{parskip}
+\usepackage{setspace}
 
 
 \usepackage[inline]{enumitem}
@@ -32,12 +33,15 @@
 \usepackage{multicol}
 \usepackage{fancyhdr}
 
+\usepackage{bashful}
+
+
 \titlespacing*{\section}{0pt}{-10pt}{-5pt}
 \titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
 \titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\fontsize{10}{15}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{10}{10}\bfseries}{\thesubsection}{1em}{}
 
-\newcommand{\setcodespacing}{\titlespacing*{\subsection}{0pt}{-10pt}{0pt}}
+\newcommand{\setcodespacing}{\titlespacing*{\subsection}{0pt}{-10pt}{-10pt}}
 \newcommand{\setnormalspacing}{\titlespacing*{\subsection}{0pt}{0pt}{-5pt}}
 
 \pagestyle{fancy}
@@ -76,7 +80,7 @@
 	showstringspaces=false,
 	columns=fullflexible,
 	numbers=none,
-	breakatwhitespace=true,
+	%breakatwhitespace=true,
 	breaklines=true,
 	breakindent=12pt,
 	inputencoding=utf8,
@@ -92,7 +96,15 @@
 
 \newcommand{\includes}[2]{
 	\setcodespacing
-	\subsection{#1}
+	
+	\immediate\write18{echo "$(cat #2 | cpp -dD -P -fpreprocessed | tr -d [:space:] | md5sum | cut -d ' ' -f1), $(cat #2 | grep -c ^) lines" > __mytempfile}
+	%\subsection{#1}
+	
+	{\subsection[#1]{#1} {\scriptsize\protect\input{__mytempfile}}}
+	%\immediate{\small \input{__mytempfile}}
+
+	\immediate\write18{rm __mytempfile}
+	
 	\setnormalspacing
 
 	\lstinputlisting{#2}
@@ -194,12 +206,14 @@
 \subsection{Circle Circle intersection}
 Assume that the first circle is centered at the origin and second at $(x2, y2)$. Find circle line intersection of first circle and line $Ax + By + C = 0$, where $A = -2x_2$, $B = -2y_2$, $C = x_2^2 + y_2^2 + r_1^2 - r_2^2$.
 
-Be aware of corner case with two circles centered at the same point.
+Be aware of corner case with two circles centered at the same point. \\
+
 \includes{Tangents of two circles}{code/geometry/tangents.cpp}
 \includes{Convex Hull}{code/geometry/convexhull.cpp}
 \includes{Check point inside polygon}{code/geometry/in_poly.cpp}
 \includes{Check point inside polygon without lower/upper hull}{code/geometry/in_poly2.cpp}
 \includes{Minkowski sum}{code/geometry/mink.cpp}
+
 \subsection{Geo Notes}
 \subsubsection{Center of mass}
 \textbf{System of points(2D/3D):} Mass weighted average of points. \\
@@ -215,7 +229,6 @@ Given a polygon without self-intersections and all its vertices on integer coord
 
 \section{Miscellaneous}
 \includes{Cute LIS}{code/misc/lis.cpp}
-\includes{Cute LIS}{code/misc/lis.cpp}
 \includes{Efficient recursive lambda}{code/misc/recursive_lambda.cpp}
 \includes{Bitsets}{code/misc/bitset.cpp}
 \includes{Buildings}{code/misc/burn.cpp}
@@ -223,9 +236,9 @@ Given a polygon without self-intersections and all its vertices on integer coord
 \includes{Klondike}{code/misc/klondike.cpp}
 \includes{Hilbert Order}{code/misc/hilbert_order.cpp}
 \includes{Modular Factorial}{code/misc/factmod.cpp}
-\includes{Enumeration all submasks of a bitmask}{code/misc/submasks.cpp}
+\includes{Iterate over submasks}{code/misc/submasks.cpp}
 \includes{Knapsack Bounded with Cost}{code/misc/knapsack_bounded_cost.cpp}
-\includes{LCA \textless O(nlgn), O(1)\textgreater}{code/misc/lca.cpp}
+\includes{LCA \textless O(nlgn),O(1)\textgreater}{code/misc/lca.cpp}
 \includes{Buffered reader}{code/misc/buffered_reader.cpp}
 \includes{Modular summation}{code/misc/sum_mod.cpp}
 \includes{Edge coloring CPP}{code/misc/edge_coloring.cpp}
@@ -274,7 +287,7 @@ Let $X$ set of objects, $I \subseteq 2^X$ set of independents sets such that:
 \item Exchange axiom, $A \in I, B \in I, |B| > |A| \implies \exists x \in B \setminus A : A \cup \{x\} \in I$
 \item $A \subseteq X$ and $I$ and $I'$ are maximal independent subsets of A then $|I| = |I'|$
 \end{enumerate}
-Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight.
+Then $(X, I)$ is a matroid. The combinatorial optimization problem associated with it is: Given a weight $w(e) \geq 0 ~\forall e \in X$, find an independet subset that has the largest possible total weight. \\
 
 \includes{Matroid intersection}{code/matroid.cpp}
 

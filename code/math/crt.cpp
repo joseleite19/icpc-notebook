@@ -6,7 +6,7 @@ ll crt(const vector<pair<ll, ll>> &vet){
         tie(a, b) = p;
         tie(g, x, y) = gcd(lcm, b);
         if((a - ans) % g != 0) return -1; // no solution
-        ans = ans + x * ((a - ans) / g) % (b / g) * lcm;
+        ans = ans + x * ((a - ans) / g) % (b / g) * lcm; //!!OVERFLOW
         lcm = lcm * (b / g);
         ans = (ans % lcm + lcm) % lcm;
     }

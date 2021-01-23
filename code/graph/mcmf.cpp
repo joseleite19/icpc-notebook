@@ -50,7 +50,7 @@ pair<ll, ll> mincost(int source = start, int sink = target){
     return {mf, ans};
 }
 void addEdge(int u, int v, ll c, ll cost){
-	assert(cost >= 0);
+	assert(cost >= 0); //IF not, pot[i]=short.path source
     edge[ne] = {u, v, c, cost};
     g[u].push_back(ne++);
     edge[ne] = {v, u, 0,-cost};
