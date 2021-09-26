@@ -7,12 +7,12 @@ vector<int> preffix_function(const string &s){
 	}
 	return b;
 }
-void kmp(const string &t, const string &p){
-	vector<int> b = preffix_function(p);
-	int n = t.size(), m = p.size();
+void kmp(const string &text, const string &p){
+	vector<int> b = prefix_function(p);
+	int m = p.size();
 	int j = 0;
-	for(int i = 0; i < n; i++){
-		while(j >= 0 && t[i] != p[j]) j = b[j];
+	for(char c : text){
+		while(j >= 0 && c != p[j]) j = b[j];
 		j++;
 		if(j == m){
 			//patern of p found on t

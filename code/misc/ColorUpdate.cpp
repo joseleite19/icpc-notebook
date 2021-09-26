@@ -1,4 +1,5 @@
-// source: https://github.com/tfg50/Competitive-Programming/tree/master/Biblioteca/Data%20Structures
+// source: https://github.com/tfg50/Competitive-Programming/
+
 template <class Info = int>
 class ColorUpdate {
 	set<Range> ranges;

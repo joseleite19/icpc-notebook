@@ -1,68 +1,33 @@
-#include <bits/stdc++.h>
- 
-using namespace std;
- 
-const int maxn = 3e5 + 1, sigma = 26;
-int len[maxn], link[maxn], to[maxn][sigma];
-int slink[maxn], diff[maxn], series_ans[maxn];
-int sz, last, n;
-char s[maxn];
- 
-void init()
-{
-    s[n++] = -1;
-    link[0] = 1;
-    len[1] = -1;
-    sz = 2;
-}
- 
-int get_link(int v)
-{
-    while(s[n - len[v] - 2] != s[n - 1]) v = link[v];
-    return v;
-}
- 
-void add_letter(char c)
-{
-    s[n++] = c -= 'a';
-    last = get_link(last);
-    if(!to[last][c])
-    {
-        len[sz] = len[last] + 2;
-        link[sz] = to[get_link(link[last])][c];
-        diff[sz] = len[sz] - len[link[sz]];
-        if(diff[sz] == diff[link[sz]])
-            slink[sz] = slink[link[sz]];
-        else
-            slink[sz] = link[sz];
-        to[last][c] = sz++;
+struct palindromic_tree {
+    struct node {
+        int length, link;
+        map<char, int> to;
+        node(int length, int link): length(length), link(link) {}
+    };
+    vector<node> nodes;
+    int current;
+    palindromic_tree(): current(1) {
+        nodes.push_back(node(-1, 0));
+        nodes.push_back(node(0, 0));
     }
-    last = to[last][c];
-}
- 
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    init();
-    string s;
-    cin >> s;
-    int n = s.size();
-    int ans[n + 1];
-    memset(ans, 63, sizeof(ans));
-    ans[0] = 0;
-    for(int i = 1; i <= n; i++)
-    {
-        add_letter(s[i - 1]);
-        for(int v = last; len[v] > 0; v = slink[v])
-        {
-            series_ans[v] = ans[i - (len[slink[v]] + diff[v])];
-            if(diff[v] == diff[link[v]])
-                series_ans[v] = min(series_ans[v], series_ans[link[v]]);
-            ans[i] = min(ans[i], series_ans[v] + 1);
+    void add(int i, string& s) {
+        int parent = nodes[current].length == i ? nodes[current].link : current;
+        while (s[i - nodes[parent].length - 1] != s[i])
+            parent = nodes[parent].link;
+        if (nodes[parent].to.find(s[i]) != nodes[parent].to.end()) {
+            current = nodes[parent].to[s[i]];
+        } else {
+            int link = nodes[parent].link;
+            while (s[i - nodes[link].length - 1] != s[i])
+                link = nodes[link].link;
+            link = max(1, nodes[link].to[s[i]]);
+            current = nodes[parent].to[s[i]] = nodes.size();
+            nodes.push_back(node(nodes[parent].length + 2, link));
         }
-        cout << ans[i] << "\n";
     }
-    return 0;
-}
- 
+    void insert(string& s) {
+        current = 1;
+        for (int i = 0; i < int(s.size()); i++)
+            add(i, s);
+    }
+};

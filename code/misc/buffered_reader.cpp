@@ -1,4 +1,5 @@
-// source: https://github.com/ngthanhtrung23/ACM_Notebook_new/blob/master/buffered_reader.h
+// source: https://github.com/ngthanhtrung23/ACM_Notebook_new
+// /blob/master/buffered_reader.h
 int INP,AM,REACHEOF;
 #define BUFSIZE (1<<12)
 char BUF[BUFSIZE+1], *inp=BUF;

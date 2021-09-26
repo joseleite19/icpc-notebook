@@ -1,6 +1,7 @@
 /**
  * Author: Simon Lindholm
- * source: https://github.com/kth-competitive-programming/kactl/blob/master/content/data-structures/LineContainer.h
+ * source: https://github.com/kth-competitive-programming/kactl
+ /blob/master/content/data-structures/LineContainer.h
  * License: CC0
  */
 

@@ -80,7 +80,7 @@
 	showstringspaces=false,
 	columns=fullflexible,
 	numbers=none,
-	%breakatwhitespace=true,
+	breakatwhitespace=true,
 	breaklines=true,
 	breakindent=12pt,
 	inputencoding=utf8,
@@ -88,10 +88,11 @@
 	showstringspaces=false,
 	postbreak=\raisebox{0ex}[0ex][0ex]{\color{lightgray}\ensuremath{\hookrightarrow}},
 	basicstyle=\scriptsize\ttfamily,
+	keywordstyle=\color{myblue},
 	identifierstyle=\color{black},
 	commentstyle=\color{gray}\itshape,
-	showtabs=true,
-	tab={\color{dkgray}{\tiny $\vartriangleright$}\hfill},
+	showtabs=false,
+	tab={\color{dkgray}{\tiny $\vartriangleright$}\hfill},	
 }
 
 \newcommand{\includes}[2]{
@@ -172,6 +173,8 @@
 \includes{Gauss Xor}{code/gauss_xor.cpp}
 \includes{Simpson}{code/math/simpson.cpp}
 \includes{Matrix}{code/math/matrix.cpp}
+\includes{Berlekamp Massey}{code/math/berlekamp_massey.cpp}
+\includes{Multipoint Evaluation}{code/math/multipoint_evaluation.cpp}
 
 \section{Graphs}
 \includes{Bipartite Matching}{code/graph/bipartite_matching.cpp}
@@ -242,6 +245,10 @@ Given a polygon without self-intersections and all its vertices on integer coord
 \includes{Buffered reader}{code/misc/buffered_reader.cpp}
 \includes{Modular summation}{code/misc/sum_mod.cpp}
 \includes{Edge coloring CPP}{code/misc/edge_coloring.cpp}
+\includes{K-Shortest Path}{code/misc/k_shortest_path.cpp}
+\includes{Directed MST}{code/misc/directed_mst.cpp}
+\includes{Convex Layers}{code/misc/convex_layers.cpp}
+
 
 \subsection{Burnside's Lemma}
 Let $(G, \oplus)$ be a finite group that acts on a set $X$. It should hold that $e_g*x=x$ and $g_1 *(g_2 * x) = (g_1 \oplus g_2) * x$, $\forall x \in X, g_1, g_2 \in G$. For each $g \in G$ let $X^g = \{x \in X \mid g*x = x \}$. The number of orbits its given by:
